@@ -1,4 +1,4 @@
-CREATE TRIGGER CheckForPaymentNotActive ON [11_Gregoricchio_EsameFinaleDB].[dbo].[Ordine]
+CREATE TRIGGER CheckForPaymentNotActive ON Shop_Gregoricchio.[dbo].[Ordine]
 AFTER INSERT, update 
 as 
 BEGIN  
@@ -12,4 +12,4 @@ END;
 GO  
 
 
-select * from [11_Gregoricchio_EsameFinaleDB].sys.triggers
+select * from Shop_Gregoricchio.sys.triggers

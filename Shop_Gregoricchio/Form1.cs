@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shop_Gregoricchio.CRUD_Form;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace Shop_Gregoricchio
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void tsiNewOrdine_Click(object sender, EventArgs e)
+        {
+            NewProduct n = new NewProduct();
+            n.ShowDialog();
         }
     }
 }

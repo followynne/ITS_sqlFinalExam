@@ -1,0 +1,10 @@
+C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.csprojAssemblyReference.cache
+C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.Form1.resources
+C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.Properties.Resources.resources
+C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.csproj.GenerateResource.cache
+C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.csproj.CoreCompileInputs.cache
+C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\bin\Debug\Shop_Gregoricchio.exe.config
+C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\bin\Debug\Shop_Gregoricchio.exe
+C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\bin\Debug\Shop_Gregoricchio.pdb
+C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.exe
+C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.pdb
