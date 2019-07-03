@@ -8,3 +8,15 @@ C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregor
 C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\bin\Debug\Shop_Gregoricchio.pdb
 C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.exe
 C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.pdb
+C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.DelCategory.resources
+C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.DelClient.resources
+C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.DelOrder.resources
+C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.DelProduct.resources
+C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.NewCategory.resources
+C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.NewClient.resources
+C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.NewOrder.resources
+C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.UpdCategory.resources
+C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.UpdClient.resources
+C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.UpdOrder.resources
+C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.UpdProduct.resources
+C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.NewProduct.resources

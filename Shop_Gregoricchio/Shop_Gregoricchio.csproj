@@ -51,6 +51,72 @@
     <Compile Include="Classes\Ordine.cs" />
     <Compile Include="Classes\Prodotto.cs" />
     <Compile Include="Classes\TipiPagamento.cs" />
+    <Compile Include="CRUD Form\AddProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD Form\AddProducts.Designer.cs">
+      <DependentUpon>AddProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD Form\DelCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD Form\DelCategory.Designer.cs">
+      <DependentUpon>DelCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD Form\DelClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD Form\DelClient.Designer.cs">
+      <DependentUpon>DelClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD Form\DelOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD Form\DelOrder.Designer.cs">
+      <DependentUpon>DelOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD Form\DelProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD Form\DelProduct.Designer.cs">
+      <DependentUpon>DelProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD Form\NewCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD Form\NewCategory.Designer.cs">
+      <DependentUpon>NewCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD Form\NewClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD Form\NewClient.Designer.cs">
+      <DependentUpon>NewClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD Form\NewOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD Form\NewOrder.Designer.cs">
+      <DependentUpon>NewOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD Form\UpdCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD Form\UpdCategory.Designer.cs">
+      <DependentUpon>UpdCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD Form\UpdClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD Form\UpdClient.Designer.cs">
+      <DependentUpon>UpdClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD Form\UpdOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD Form\UpdOrder.Designer.cs">
+      <DependentUpon>UpdOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRUD Form\UpdProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +139,36 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CRUD Form\DelCategory.resx">
+      <DependentUpon>DelCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD Form\DelClient.resx">
+      <DependentUpon>DelClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD Form\DelOrder.resx">
+      <DependentUpon>DelOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD Form\DelProduct.resx">
+      <DependentUpon>DelProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD Form\NewCategory.resx">
+      <DependentUpon>NewCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD Form\NewClient.resx">
+      <DependentUpon>NewClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD Form\NewOrder.resx">
+      <DependentUpon>NewOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD Form\UpdCategory.resx">
+      <DependentUpon>UpdCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD Form\UpdClient.resx">
+      <DependentUpon>UpdClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD Form\UpdOrder.resx">
+      <DependentUpon>UpdOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CRUD Form\UpdProduct.resx">
       <DependentUpon>UpdProduct.cs</DependentUpon>
     </EmbeddedResource>

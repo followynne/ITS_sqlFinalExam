@@ -8,12 +8,12 @@ namespace Shop_Gregoricchio.Classes
 {
     class Ordine
     {
-        public Ordine(int id, string codiceOrdine, int idCliente, DateTime data,
-            TipiPagamento tp, Dictionary<int, int> listaProdotti )
+        public Ordine(int id, string codiceOrdine, Cliente cliente, DateTime data,
+            TipiPagamento tp, Dictionary<Prodotto, int> listaProdotti )
         {
             _id = id;
             _codiceordine = codiceOrdine;
-            _idCliente = idCliente;
+            _cliente = cliente;
             _data = data;
             _tipopagamento = tp;
             _listaprodotti = listaProdotti;
@@ -33,12 +33,12 @@ namespace Shop_Gregoricchio.Classes
             get { return _codiceordine; }
             set { _codiceordine = value; }
         }
-        private int _idCliente;
+        private Cliente _cliente;
 
-        public int IdCliente
+        public Cliente Cliente
         {
-            get { return _idCliente; }
-            set { _idCliente = value; }
+            get { return _cliente; }
+            set { _cliente = value; }
         }
         private DateTime _data;
 
@@ -54,9 +54,9 @@ namespace Shop_Gregoricchio.Classes
             get { return _tipopagamento; }
             set { _tipopagamento = value; }
         }
-        private Dictionary<int, int> _listaprodotti;
+        private Dictionary<Prodotto, int> _listaprodotti;
 
-        public Dictionary<int, int> ListaProdotti
+        public Dictionary<Prodotto, int> ListaProdotti
         {
             get { return _listaprodotti; }
             set { _listaprodotti = value; }

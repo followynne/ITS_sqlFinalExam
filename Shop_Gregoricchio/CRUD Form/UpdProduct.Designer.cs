@@ -150,7 +150,7 @@
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(124, 36);
             this.btnSend.TabIndex = 20;
-            this.btnSend.Text = "CREATE";
+            this.btnSend.Text = "UPDATE";
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 

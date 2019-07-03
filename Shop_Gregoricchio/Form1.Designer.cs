@@ -98,18 +98,21 @@
             this.tsiNewCliente.Name = "tsiNewCliente";
             this.tsiNewCliente.Size = new System.Drawing.Size(216, 26);
             this.tsiNewCliente.Text = "Cliente";
+            this.tsiNewCliente.Click += new System.EventHandler(this.tsiNewCliente_Click);
             // 
             // tsiNewProdotto
             // 
             this.tsiNewProdotto.Name = "tsiNewProdotto";
             this.tsiNewProdotto.Size = new System.Drawing.Size(216, 26);
             this.tsiNewProdotto.Text = "Prodotto";
+            this.tsiNewProdotto.Click += new System.EventHandler(this.tsiNewProdotto_Click);
             // 
             // tsiNewCategoria
             // 
             this.tsiNewCategoria.Name = "tsiNewCategoria";
             this.tsiNewCategoria.Size = new System.Drawing.Size(216, 26);
             this.tsiNewCategoria.Text = "Categoria";
+            this.tsiNewCategoria.Click += new System.EventHandler(this.tsiNewCategoria_Click);
             // 
             // tsmUpdate
             // 
@@ -127,24 +130,28 @@
             this.tsiUpdOrdine.Name = "tsiUpdOrdine";
             this.tsiUpdOrdine.Size = new System.Drawing.Size(216, 26);
             this.tsiUpdOrdine.Text = "Ordine";
+            this.tsiUpdOrdine.Click += new System.EventHandler(this.tsiUpdOrdine_Click);
             // 
             // tsiUpdCliente
             // 
             this.tsiUpdCliente.Name = "tsiUpdCliente";
             this.tsiUpdCliente.Size = new System.Drawing.Size(216, 26);
             this.tsiUpdCliente.Text = "Cliente";
+            this.tsiUpdCliente.Click += new System.EventHandler(this.tsiUpdCliente_Click);
             // 
             // tsiUpdProdotto
             // 
             this.tsiUpdProdotto.Name = "tsiUpdProdotto";
             this.tsiUpdProdotto.Size = new System.Drawing.Size(216, 26);
             this.tsiUpdProdotto.Text = "Prodotto";
+            this.tsiUpdProdotto.Click += new System.EventHandler(this.tsiUpdProdotto_Click);
             // 
             // tsiUpdCategoria
             // 
             this.tsiUpdCategoria.Name = "tsiUpdCategoria";
             this.tsiUpdCategoria.Size = new System.Drawing.Size(216, 26);
             this.tsiUpdCategoria.Text = "Categoria";
+            this.tsiUpdCategoria.Click += new System.EventHandler(this.tsiUpdCategoria_Click);
             // 
             // tsmDelete
             // 
@@ -162,24 +169,28 @@
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(216, 26);
             this.toolStripMenuItem2.Text = "Ordine";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // toolStripMenuItem9
             // 
             this.toolStripMenuItem9.Name = "toolStripMenuItem9";
             this.toolStripMenuItem9.Size = new System.Drawing.Size(216, 26);
             this.toolStripMenuItem9.Text = "Cliente";
+            this.toolStripMenuItem9.Click += new System.EventHandler(this.toolStripMenuItem9_Click);
             // 
             // toolStripMenuItem10
             // 
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
             this.toolStripMenuItem10.Size = new System.Drawing.Size(216, 26);
             this.toolStripMenuItem10.Text = "Prodotto";
+            this.toolStripMenuItem10.Click += new System.EventHandler(this.toolStripMenuItem10_Click);
             // 
             // toolStripMenuItem11
             // 
             this.toolStripMenuItem11.Name = "toolStripMenuItem11";
             this.toolStripMenuItem11.Size = new System.Drawing.Size(216, 26);
             this.toolStripMenuItem11.Text = "Categoria";
+            this.toolStripMenuItem11.Click += new System.EventHandler(this.toolStripMenuItem11_Click);
             // 
             // tsmElenco
             // 
@@ -195,25 +206,25 @@
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(216, 26);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(149, 26);
             this.toolStripMenuItem6.Text = "Ordine";
             // 
             // toolStripMenuItem12
             // 
             this.toolStripMenuItem12.Name = "toolStripMenuItem12";
-            this.toolStripMenuItem12.Size = new System.Drawing.Size(216, 26);
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(149, 26);
             this.toolStripMenuItem12.Text = "Cliente";
             // 
             // toolStripMenuItem13
             // 
             this.toolStripMenuItem13.Name = "toolStripMenuItem13";
-            this.toolStripMenuItem13.Size = new System.Drawing.Size(216, 26);
+            this.toolStripMenuItem13.Size = new System.Drawing.Size(149, 26);
             this.toolStripMenuItem13.Text = "Prodotto";
             // 
             // toolStripMenuItem14
             // 
             this.toolStripMenuItem14.Name = "toolStripMenuItem14";
-            this.toolStripMenuItem14.Size = new System.Drawing.Size(216, 26);
+            this.toolStripMenuItem14.Size = new System.Drawing.Size(149, 26);
             this.toolStripMenuItem14.Text = "Categoria";
             // 
             // tsmDettaglio
@@ -230,25 +241,25 @@
             // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(216, 26);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(149, 26);
             this.toolStripMenuItem7.Text = "Ordine";
             // 
             // toolStripMenuItem15
             // 
             this.toolStripMenuItem15.Name = "toolStripMenuItem15";
-            this.toolStripMenuItem15.Size = new System.Drawing.Size(216, 26);
+            this.toolStripMenuItem15.Size = new System.Drawing.Size(149, 26);
             this.toolStripMenuItem15.Text = "Cliente";
             // 
             // toolStripMenuItem16
             // 
             this.toolStripMenuItem16.Name = "toolStripMenuItem16";
-            this.toolStripMenuItem16.Size = new System.Drawing.Size(216, 26);
+            this.toolStripMenuItem16.Size = new System.Drawing.Size(149, 26);
             this.toolStripMenuItem16.Text = "Prodotto";
             // 
             // toolStripMenuItem17
             // 
             this.toolStripMenuItem17.Name = "toolStripMenuItem17";
-            this.toolStripMenuItem17.Size = new System.Drawing.Size(216, 26);
+            this.toolStripMenuItem17.Size = new System.Drawing.Size(149, 26);
             this.toolStripMenuItem17.Text = "Categoria";
             // 
             // Form1
