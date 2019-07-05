@@ -17,5 +17,10 @@ namespace Shop_Gregoricchio.CRUD_Form
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ProductsToOrder p = new ProductsToOrder(this);
+            p.ShowDialog();
+        }
     }
 }

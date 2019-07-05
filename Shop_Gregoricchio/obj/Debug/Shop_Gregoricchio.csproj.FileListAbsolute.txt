@@ -20,3 +20,28 @@ C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregor
 C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.UpdOrder.resources
 C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.UpdProduct.resources
 C:\Users\matte\Documents\Personale\Personal MG\ITS\Shop_Gregoricchio\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.NewProduct.resources
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\BasiDiDati2\ITS_sqlFinalExam\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.csprojAssemblyReference.cache
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\BasiDiDati2\ITS_sqlFinalExam\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.DelCategory.resources
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\BasiDiDati2\ITS_sqlFinalExam\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.DelClient.resources
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\BasiDiDati2\ITS_sqlFinalExam\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.DelOrder.resources
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\BasiDiDati2\ITS_sqlFinalExam\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.DelProduct.resources
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\BasiDiDati2\ITS_sqlFinalExam\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.NewCategory.resources
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\BasiDiDati2\ITS_sqlFinalExam\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.NewClient.resources
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\BasiDiDati2\ITS_sqlFinalExam\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.NewOrder.resources
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\BasiDiDati2\ITS_sqlFinalExam\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.ProductsToOrder.resources
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\BasiDiDati2\ITS_sqlFinalExam\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.UpdCategory.resources
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\BasiDiDati2\ITS_sqlFinalExam\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.UpdClient.resources
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\BasiDiDati2\ITS_sqlFinalExam\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.UpdOrder.resources
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\BasiDiDati2\ITS_sqlFinalExam\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.UpdProduct.resources
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\BasiDiDati2\ITS_sqlFinalExam\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.NewProduct.resources
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\BasiDiDati2\ITS_sqlFinalExam\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.Form1.resources
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\BasiDiDati2\ITS_sqlFinalExam\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.Properties.Resources.resources
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\BasiDiDati2\ITS_sqlFinalExam\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.csproj.GenerateResource.cache
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\BasiDiDati2\ITS_sqlFinalExam\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.csproj.CoreCompileInputs.cache
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\BasiDiDati2\ITS_sqlFinalExam\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.exe
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\BasiDiDati2\ITS_sqlFinalExam\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.pdb
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\BasiDiDati2\ITS_sqlFinalExam\Shop_Gregoricchio\bin\Debug\Shop_Gregoricchio.exe.config
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\BasiDiDati2\ITS_sqlFinalExam\Shop_Gregoricchio\bin\Debug\Shop_Gregoricchio.exe
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\BasiDiDati2\ITS_sqlFinalExam\Shop_Gregoricchio\bin\Debug\Shop_Gregoricchio.pdb
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\BasiDiDati2\ITS_sqlFinalExam\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.ShowAll.resources
+C:\Users\m.gregoricchio\Desktop\MatteoGregoricchio\BasiDiDati2\ITS_sqlFinalExam\Shop_Gregoricchio\obj\Debug\Shop_Gregoricchio.CRUD_Form.ShowByID.resources

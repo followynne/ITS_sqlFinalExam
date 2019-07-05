@@ -74,5 +74,16 @@ namespace Shop_Gregoricchio.Classes
             get { return _giacenza; }
             set { _giacenza = value; }
         }
+
+        public float PrezzoIvato()
+        {
+            return _prezzo + (_prezzo * 22 / 100) - (_prezzo * _sconto);
+        }
+
+        public override string ToString()
+        {
+            return "Prodotto: ID - " + _id + ", Nome - " + _denominazione + ", Descrizione - " + _descrizione
+                + ", " + _categoria.ToString() + "Prezzo - " + _prezzo + ", Sconto - " + _sconto + ", Giacenza - " + _giacenza; 
+        }
     }
 }

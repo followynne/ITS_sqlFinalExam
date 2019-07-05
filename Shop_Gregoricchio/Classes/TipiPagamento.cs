@@ -38,5 +38,10 @@ namespace Shop_Gregoricchio.Classes
             get { return _attivo; }
             set { _attivo = value; }
         }
+
+        public override string ToString()
+        {
+            return "Pagamento scelto : " + _denominazione + ".";
+        }
     }
 }

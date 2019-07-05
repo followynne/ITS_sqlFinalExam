@@ -40,64 +40,72 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(284, 86);
+            this.label7.Location = new System.Drawing.Point(213, 70);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(210, 25);
+            this.label7.Size = new System.Drawing.Size(168, 20);
             this.label7.TabIndex = 38;
             this.label7.Text = "CREATE CATEGORY";
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(315, 310);
+            this.btnSend.Location = new System.Drawing.Point(236, 252);
+            this.btnSend.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(124, 36);
+            this.btnSend.Size = new System.Drawing.Size(93, 29);
             this.btnSend.TabIndex = 37;
             this.btnSend.Text = "CREATE";
             this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // txtDescrizione
             // 
-            this.txtDescrizione.Location = new System.Drawing.Point(289, 206);
+            this.txtDescrizione.Location = new System.Drawing.Point(217, 167);
+            this.txtDescrizione.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDescrizione.Name = "txtDescrizione";
-            this.txtDescrizione.Size = new System.Drawing.Size(294, 22);
+            this.txtDescrizione.Size = new System.Drawing.Size(222, 20);
             this.txtDescrizione.TabIndex = 28;
             // 
             // Descrizione
             // 
             this.Descrizione.AutoSize = true;
-            this.Descrizione.Location = new System.Drawing.Point(164, 206);
+            this.Descrizione.Location = new System.Drawing.Point(123, 167);
+            this.Descrizione.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Descrizione.Name = "Descrizione";
-            this.Descrizione.Size = new System.Drawing.Size(82, 17);
+            this.Descrizione.Size = new System.Drawing.Size(62, 13);
             this.Descrizione.TabIndex = 27;
             this.Descrizione.Text = "Descrizione";
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(289, 155);
+            this.txtNome.Location = new System.Drawing.Point(217, 126);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(294, 22);
+            this.txtNome.Size = new System.Drawing.Size(222, 20);
             this.txtNome.TabIndex = 26;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(164, 155);
+            this.label2.Location = new System.Drawing.Point(123, 126);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 17);
+            this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 25;
             this.label2.Text = "Nome";
             // 
             // NewCategory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(780, 469);
+            this.ClientSize = new System.Drawing.Size(585, 381);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.txtDescrizione);
             this.Controls.Add(this.Descrizione);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "NewCategory";
             this.Text = "NewCategory";
             this.ResumeLayout(false);

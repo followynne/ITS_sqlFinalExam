@@ -19,8 +19,7 @@ namespace Shop_Gregoricchio.CRUD_Form
         {
             InitializeComponent();
             cc = new CrudComp();
-            //open connection & get all categoria
-            foreach (Categoria c in connData)
+            foreach (Categoria c in ) //connData)
             {
                 cbxCategoria.Items.Add(c);
             }
@@ -28,9 +27,12 @@ namespace Shop_Gregoricchio.CRUD_Form
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            float.TryParse(txtPrezzo.Text, out float price);
-            float.TryParse(txtSconto.Text, out float sale);
-            int.TryParse(txtGiacenza.Text, out int giacenza);
+            if (!float.TryParse(txtPrezzo.Text, out float price) || !float.TryParse(txtSconto.Text, out float sale)
+                || !int.TryParse(txtGiacenza.Text, out int giacenza))
+            {
+                MessageBox.Show("Errore, dato non valido.");
+                return;
+            }
             Prodotto p = new Prodotto(1, txtNome.Text, txtDescrizione.Text, (Categoria)cbxCategoria.SelectedItem,
                 price, sale, giacenza);
             bool res = cc.NewProdotto(p);
@@ -39,7 +41,6 @@ namespace Shop_Gregoricchio.CRUD_Form
             } else {
                 MessageBox.Show("Prodotto non aggiunto!");
             }
-        
         }
     }
 }

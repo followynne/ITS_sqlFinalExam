@@ -20,18 +20,22 @@ namespace Shop_Gregoricchio.CRUD
         }
         public bool NewCategoria(Categoria p)
         {
+            bool result = false;
             //connDb
             //openDb --> query sql insert into ... passandogli i dati di P + l'Id Casuale
+            return result;
         }
         public bool NewOrdine(Ordine p)
         {
             //connDb
             //openDb --> query sql insert into ... passandogli i dati di P + l'Id Casuale
+            return true;
         }
         public bool NewCliente(Cliente p)
         {
             //connDb
             //openDb --> query sql insert into ... passandogli i dati di P + l'Id Casuale
+            return true;
         }
         public bool UpdProdotto(Prodotto p)
         {
@@ -43,20 +47,67 @@ namespace Shop_Gregoricchio.CRUD
         {
             //connDb
             //openDb --> query sql insert into ... passandogli i dati di P + l'Id Casuale
+            return true;
         }
         public bool UpdOrdine(Ordine p)
         {
             //connDb
             //openDb --> query sql insert into ... passandogli i dati di P + l'Id Casuale
+            return true;
         }
         public bool UpdCliente(Cliente p)
         {
             //connDb
+            //openDb --> query sql isert into ... passandogli i dati di P + l'Id Casuale
+            return true;
+        }
+        public bool DelProdotto(Prodotto p)
+        {
+            //connDb
             //openDb --> query sql insert into ... passandogli i dati di P + l'Id Casuale
+            return true;
+        }
+        public bool DelCategoria(Categoria p)
+        {
+            //connDb
+            //openDb --> query sql insert into ... passandogli i dati di P + l'Id Casuale
+            return true;
+        }
+        public bool DelOrdine(Ordine p)
+        {
+            //connDb
+            //openDb --> query sql insert into ... passandogli i dati di P + l'Id Casuale
+            return true;
+        }
+        public bool DelCliente(Cliente p)
+        {
+            //connDb
+            //openDb --> query sql isert into ... passandogli i dati di P + l'Id Casuale
+            return true;
         }
         public Prodotto SearchProdotto(int id)
         {
-            return new Prodotto();
+
+        }
+        public Categoria SearchCategoria(int id)
+        {
+
+        }
+        public Ordine SearchOrdine(int id)
+        {
+
+        }
+        public Cliente SearchCliente(int id)
+        {
+
+        }
+        public string SearchAll(string s)
+        {
+            return "";
+        }
+        public string SearchbyId(string s, int id)
+        {
+            return "";
         }
     }
 }

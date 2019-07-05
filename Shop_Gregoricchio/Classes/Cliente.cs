@@ -133,5 +133,14 @@ namespace Shop_Gregoricchio.Classes
             get { return _sitoWeb; }
             set { _sitoWeb = value; }
         }
+
+        public override string ToString()
+        {
+            return "Cliente: ID -  " + _id + ", P.Iva - " + _piva + ", C.Fiscale - " + _codFiscale 
+                + ", Rag. Sociale - " + _ragioneSociale + ", Nome - " + _nome + ", Cognome - " + _cognome
+                + ", Via - " + _via + ", Città - " + _città + ", CAP - " + _cap + ", PV - " + _pv 
+                + ", Telefono - " + _telefono + ", Cellulare - " + _cellulare
+                + ", Fax - " + _fax + ", Mail - " + _mail + ", Sito Web - " + _sitoWeb + ".\r\n";
+        }
     }
 }

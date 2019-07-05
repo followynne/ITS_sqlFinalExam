@@ -62,7 +62,26 @@ namespace Shop_Gregoricchio.Classes
             set { _listaprodotti = value; }
         }
 
+        public float TotaleIvato()
+        {
+            float total = 0.0f;
+            foreach(KeyValuePair<Prodotto, int> p in _listaprodotti)
+            {
+                total += p.Value * p.Key.PrezzoIvato();
+            }
+            return total;
+        }
 
+        public override string ToString()
+        {
+            string fattura = "Categoria: ID - " + _id + ", Codice - " + _codiceordine + ", " + _cliente.ToString()
+                + "Data - " + _data + ", " + _tipopagamento.ToString() + ", Prodotti:\r\n";
+            foreach(KeyValuePair<Prodotto, int> p in _listaprodotti)
+            {
+                fattura += p.Key.Denominazione + " - prezzo (iva inclusa): " + p.Key.Prezzo + " - quantità" + p.Value + "\r\n";
+            }
+            return fattura += "Totale: " + TotaleIvato();
+        }
 
     }
 }

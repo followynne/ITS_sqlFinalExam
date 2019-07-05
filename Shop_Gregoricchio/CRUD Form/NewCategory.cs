@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Shop_Gregoricchio.Classes;
+using Shop_Gregoricchio.CRUD;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,27 @@ namespace Shop_Gregoricchio.CRUD_Form
 {
     public partial class NewCategory : Form
     {
+        CrudComp c = null;
+
         public NewCategory()
         {
             InitializeComponent();
+            c = new CrudComp();
+        }
+
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+            string name = txtNome.Text;
+            string description = txtDescrizione.Text;
+            Categoria cat = new Categoria(1, name, description);
+            bool result = c.NewCategoria(cat);
+            if (!result)
+            {
+                MessageBox.Show("Nuova categoria inserita!");
+            } else
+            {
+                MessageBox.Show("Errore, dato non inserito.");
+            }
         }
     }
 }

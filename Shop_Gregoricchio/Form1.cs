@@ -89,5 +89,17 @@ namespace Shop_Gregoricchio
             DelCategory n = new DelCategory();
             n.ShowDialog();
         }
+
+        private void tsmElenco_Click(object sender, EventArgs e)
+        {
+            ShowAll s = new ShowAll();
+            s.ShowDialog();
+        }
+
+        private void tsmDettaglio_Click(object sender, EventArgs e)
+        {
+            ShowByID s = new ShowByID();
+            s.ShowDialog();
+        }
     }
 }

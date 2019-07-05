@@ -51,12 +51,6 @@
     <Compile Include="Classes\Ordine.cs" />
     <Compile Include="Classes\Prodotto.cs" />
     <Compile Include="Classes\TipiPagamento.cs" />
-    <Compile Include="CRUD Form\AddProducts.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CRUD Form\AddProducts.Designer.cs">
-      <DependentUpon>AddProducts.cs</DependentUpon>
-    </Compile>
     <Compile Include="CRUD Form\DelCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +92,24 @@
     </Compile>
     <Compile Include="CRUD Form\NewOrder.Designer.cs">
       <DependentUpon>NewOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD Form\ProductsToOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD Form\ProductsToOrder.Designer.cs">
+      <DependentUpon>ProductsToOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD Form\ShowAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD Form\ShowAll.Designer.cs">
+      <DependentUpon>ShowAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD Form\ShowByID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD Form\ShowByID.Designer.cs">
+      <DependentUpon>ShowByID.cs</DependentUpon>
     </Compile>
     <Compile Include="CRUD Form\UpdCategory.cs">
       <SubType>Form</SubType>
@@ -159,6 +171,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD Form\NewOrder.resx">
       <DependentUpon>NewOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD Form\ProductsToOrder.resx">
+      <DependentUpon>ProductsToOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD Form\ShowAll.resx">
+      <DependentUpon>ShowAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD Form\ShowByID.resx">
+      <DependentUpon>ShowByID.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD Form\UpdCategory.resx">
       <DependentUpon>UpdCategory.cs</DependentUpon>

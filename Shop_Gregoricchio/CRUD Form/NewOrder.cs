@@ -19,7 +19,7 @@ namespace Shop_Gregoricchio.CRUD_Form
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AddProducts n = new AddProducts();
+            ProductsToOrder n = new ProductsToOrder();
             n.ShowDialog();
         }
     }
