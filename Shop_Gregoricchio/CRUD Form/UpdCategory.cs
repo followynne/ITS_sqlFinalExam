@@ -61,6 +61,8 @@ namespace Shop_Gregoricchio.CRUD_Form
                 txtNome.Enabled = true;
                 txtDescrizione.Enabled = true;
                 txtId.Enabled = false;
+                btnSend.Enabled = true;
+
             }
         }
 
@@ -72,6 +74,8 @@ namespace Shop_Gregoricchio.CRUD_Form
             txtNome.Enabled = false;
             txtDescrizione.Enabled = false;
             txtId.Enabled = true;
+            btnSend.Enabled = false;
+
         }
     }
 }

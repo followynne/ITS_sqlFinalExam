@@ -43,6 +43,8 @@ namespace Shop_Gregoricchio.CRUD_Form
                 txtPrezzo.Text = "" + p.Prezzo;
                 txtSconto.Text = "" + p.Sconto;
                 txtGiacenza.Text = "" + p.Giacenza;
+                btnSend.Enabled = true;
+
             }
         }
 

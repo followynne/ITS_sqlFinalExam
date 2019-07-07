@@ -48,6 +48,7 @@
             // cbxPagamento
             // 
             this.cbxPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxPagamento.Enabled = false;
             this.cbxPagamento.FormattingEnabled = true;
             this.cbxPagamento.Location = new System.Drawing.Point(318, 254);
             this.cbxPagamento.Name = "cbxPagamento";
@@ -56,6 +57,7 @@
             // 
             // dtpDate
             // 
+            this.dtpDate.Enabled = false;
             this.dtpDate.Location = new System.Drawing.Point(318, 202);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(294, 22);
@@ -73,16 +75,19 @@
             // 
             // btnSend
             // 
+            this.btnSend.Enabled = false;
             this.btnSend.Location = new System.Drawing.Point(298, 457);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(104, 41);
             this.btnSend.TabIndex = 42;
             this.btnSend.Text = "DELETE";
             this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // cbxCliente
             // 
             this.cbxCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCliente.Enabled = false;
             this.cbxCliente.FormattingEnabled = true;
             this.cbxCliente.Location = new System.Drawing.Point(318, 157);
             this.cbxCliente.Name = "cbxCliente";
@@ -124,6 +129,7 @@
             this.btnSearch.TabIndex = 48;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtId
             // 
@@ -169,6 +175,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(318, 297);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -195,6 +202,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Data);
+            this.Enabled = false;
             this.Name = "DelOrder";
             this.Text = "DelOrder";
             this.ResumeLayout(false);

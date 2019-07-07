@@ -33,14 +33,17 @@
             this.rdbProduct = new System.Windows.Forms.RadioButton();
             this.rdbOrder = new System.Windows.Forms.RadioButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // rdbClient
             // 
             this.rdbClient.AutoSize = true;
-            this.rdbClient.Location = new System.Drawing.Point(537, 49);
+            this.rdbClient.Location = new System.Drawing.Point(592, 34);
+            this.rdbClient.Margin = new System.Windows.Forms.Padding(4);
             this.rdbClient.Name = "rdbClient";
-            this.rdbClient.Size = new System.Drawing.Size(51, 17);
+            this.rdbClient.Size = new System.Drawing.Size(64, 21);
             this.rdbClient.TabIndex = 11;
             this.rdbClient.TabStop = true;
             this.rdbClient.Text = "Client";
@@ -49,9 +52,10 @@
             // rdbCategory
             // 
             this.rdbCategory.AutoSize = true;
-            this.rdbCategory.Location = new System.Drawing.Point(408, 49);
+            this.rdbCategory.Location = new System.Drawing.Point(71, 34);
+            this.rdbCategory.Margin = new System.Windows.Forms.Padding(4);
             this.rdbCategory.Name = "rdbCategory";
-            this.rdbCategory.Size = new System.Drawing.Size(67, 17);
+            this.rdbCategory.Size = new System.Drawing.Size(86, 21);
             this.rdbCategory.TabIndex = 10;
             this.rdbCategory.TabStop = true;
             this.rdbCategory.Text = "Category";
@@ -60,9 +64,10 @@
             // rdbProduct
             // 
             this.rdbProduct.AutoSize = true;
-            this.rdbProduct.Location = new System.Drawing.Point(279, 49);
+            this.rdbProduct.Location = new System.Drawing.Point(234, 34);
+            this.rdbProduct.Margin = new System.Windows.Forms.Padding(4);
             this.rdbProduct.Name = "rdbProduct";
-            this.rdbProduct.Size = new System.Drawing.Size(62, 17);
+            this.rdbProduct.Size = new System.Drawing.Size(78, 21);
             this.rdbProduct.TabIndex = 9;
             this.rdbProduct.TabStop = true;
             this.rdbProduct.Text = "Product";
@@ -71,9 +76,10 @@
             // rdbOrder
             // 
             this.rdbOrder.AutoSize = true;
-            this.rdbOrder.Location = new System.Drawing.Point(150, 49);
+            this.rdbOrder.Location = new System.Drawing.Point(425, 34);
+            this.rdbOrder.Margin = new System.Windows.Forms.Padding(4);
             this.rdbOrder.Name = "rdbOrder";
-            this.rdbOrder.Size = new System.Drawing.Size(51, 17);
+            this.rdbOrder.Size = new System.Drawing.Size(66, 21);
             this.rdbOrder.TabIndex = 8;
             this.rdbOrder.TabStop = true;
             this.rdbOrder.Text = "Order";
@@ -81,24 +87,38 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(124, 106);
+            this.textBox1.Location = new System.Drawing.Point(129, 151);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(549, 297);
+            this.textBox1.Size = new System.Drawing.Size(731, 365);
             this.textBox1.TabIndex = 7;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rdbProduct);
+            this.groupBox1.Controls.Add(this.rdbClient);
+            this.groupBox1.Controls.Add(this.rdbCategory);
+            this.groupBox1.Controls.Add(this.rdbOrder);
+            this.groupBox1.Location = new System.Drawing.Point(129, 43);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(731, 79);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
             // 
             // ShowAll
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.rdbClient);
-            this.Controls.Add(this.rdbCategory);
-            this.Controls.Add(this.rdbProduct);
-            this.Controls.Add(this.rdbOrder);
+            this.ClientSize = new System.Drawing.Size(976, 554);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ShowAll";
             this.Text = "ShowAll";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,5 +130,6 @@
         private System.Windows.Forms.RadioButton rdbProduct;
         private System.Windows.Forms.RadioButton rdbOrder;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

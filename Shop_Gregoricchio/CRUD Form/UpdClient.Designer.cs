@@ -57,20 +57,22 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtPIva = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCognome = new System.Windows.Forms.TextBox();
+            this.txtCognome2 = new System.Windows.Forms.TextBox();
             this.Descrizione = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnReset = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(602, 222);
+            this.btnSearch.Location = new System.Drawing.Point(590, 210);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(113, 24);
+            this.btnSearch.Size = new System.Drawing.Size(132, 36);
             this.btnSearch.TabIndex = 121;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtId
             // 
@@ -90,6 +92,7 @@
             // 
             // txtSito
             // 
+            this.txtSito.Enabled = false;
             this.txtSito.Location = new System.Drawing.Point(237, 700);
             this.txtSito.Name = "txtSito";
             this.txtSito.Size = new System.Drawing.Size(294, 22);
@@ -106,6 +109,7 @@
             // 
             // txtCF
             // 
+            this.txtCF.Enabled = false;
             this.txtCF.Location = new System.Drawing.Point(237, 271);
             this.txtCF.Name = "txtCF";
             this.txtCF.Size = new System.Drawing.Size(294, 22);
@@ -113,6 +117,7 @@
             // 
             // txtMail
             // 
+            this.txtMail.Enabled = false;
             this.txtMail.Location = new System.Drawing.Point(237, 653);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(294, 22);
@@ -129,6 +134,7 @@
             // 
             // txtFax
             // 
+            this.txtFax.Enabled = false;
             this.txtFax.Location = new System.Drawing.Point(237, 606);
             this.txtFax.Name = "txtFax";
             this.txtFax.Size = new System.Drawing.Size(294, 22);
@@ -145,6 +151,7 @@
             // 
             // txtCell
             // 
+            this.txtCell.Enabled = false;
             this.txtCell.Location = new System.Drawing.Point(237, 559);
             this.txtCell.Name = "txtCell";
             this.txtCell.Size = new System.Drawing.Size(294, 22);
@@ -161,6 +168,7 @@
             // 
             // txtTel
             // 
+            this.txtTel.Enabled = false;
             this.txtTel.Location = new System.Drawing.Point(237, 512);
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(294, 22);
@@ -177,6 +185,7 @@
             // 
             // txtPV
             // 
+            this.txtPV.Enabled = false;
             this.txtPV.Location = new System.Drawing.Point(237, 465);
             this.txtPV.Name = "txtPV";
             this.txtPV.Size = new System.Drawing.Size(294, 22);
@@ -193,6 +202,7 @@
             // 
             // txtCap
             // 
+            this.txtCap.Enabled = false;
             this.txtCap.Location = new System.Drawing.Point(237, 418);
             this.txtCap.Name = "txtCap";
             this.txtCap.Size = new System.Drawing.Size(294, 22);
@@ -209,6 +219,7 @@
             // 
             // txtCity
             // 
+            this.txtCity.Enabled = false;
             this.txtCity.Location = new System.Drawing.Point(237, 371);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(294, 22);
@@ -241,6 +252,7 @@
             this.btnSend.TabIndex = 100;
             this.btnSend.Text = "UPDATE";
             this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // label6
             // 
@@ -253,6 +265,7 @@
             // 
             // txtVia
             // 
+            this.txtVia.Enabled = false;
             this.txtVia.Location = new System.Drawing.Point(237, 324);
             this.txtVia.Name = "txtVia";
             this.txtVia.Size = new System.Drawing.Size(294, 22);
@@ -269,6 +282,7 @@
             // 
             // txtRSoc
             // 
+            this.txtRSoc.Enabled = false;
             this.txtRSoc.Location = new System.Drawing.Point(237, 130);
             this.txtRSoc.Name = "txtRSoc";
             this.txtRSoc.Size = new System.Drawing.Size(294, 22);
@@ -285,6 +299,7 @@
             // 
             // txtPIva
             // 
+            this.txtPIva.Enabled = false;
             this.txtPIva.Location = new System.Drawing.Point(237, 83);
             this.txtPIva.Name = "txtPIva";
             this.txtPIva.Size = new System.Drawing.Size(294, 22);
@@ -299,12 +314,13 @@
             this.label3.TabIndex = 93;
             this.label3.Text = "Partita IVA";
             // 
-            // txtCognome
+            // txtCognome2
             // 
-            this.txtCognome.Location = new System.Drawing.Point(237, 224);
-            this.txtCognome.Name = "txtCognome";
-            this.txtCognome.Size = new System.Drawing.Size(294, 22);
-            this.txtCognome.TabIndex = 92;
+            this.txtCognome2.Enabled = false;
+            this.txtCognome2.Location = new System.Drawing.Point(237, 224);
+            this.txtCognome2.Name = "txtCognome2";
+            this.txtCognome2.Size = new System.Drawing.Size(294, 22);
+            this.txtCognome2.TabIndex = 92;
             // 
             // Descrizione
             // 
@@ -317,6 +333,7 @@
             // 
             // txtNome
             // 
+            this.txtNome.Enabled = false;
             this.txtNome.Location = new System.Drawing.Point(237, 177);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(294, 22);
@@ -331,11 +348,24 @@
             this.label2.TabIndex = 89;
             this.label2.Text = "Nome";
             // 
+            // btnReset
+            // 
+            this.btnReset.Enabled = false;
+            this.btnReset.Location = new System.Drawing.Point(590, 262);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(132, 40);
+            this.btnReset.TabIndex = 122;
+            this.btnReset.Text = "RESET";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // UpdClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 748);
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label15);
@@ -365,7 +395,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtPIva);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtCognome);
+            this.Controls.Add(this.txtCognome2);
             this.Controls.Add(this.Descrizione);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label2);
@@ -407,9 +437,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtPIva;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCognome;
+        private System.Windows.Forms.TextBox txtCognome2;
         private System.Windows.Forms.Label Descrizione;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnReset;
     }
 }

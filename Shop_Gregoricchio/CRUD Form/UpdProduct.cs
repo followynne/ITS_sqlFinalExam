@@ -71,6 +71,8 @@ namespace Shop_Gregoricchio.CRUD_Form
                 txtSconto.Enabled = true;
                 txtGiacenza.Text = "" + p.Giacenza;
                 txtGiacenza.Enabled = true;
+                btnSend.Enabled = true;
+
             }
         }
 
@@ -88,8 +90,10 @@ namespace Shop_Gregoricchio.CRUD_Form
             txtSconto.Text = "";
             txtSconto.Enabled = false;
             txtGiacenza.Text = "";
-            txtGiacenza.Enabled = true;
+            txtGiacenza.Enabled = false;
+            btnSend.Enabled = false;
+
         }
-        
+
     }
 }

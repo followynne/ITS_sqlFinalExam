@@ -38,6 +38,7 @@ namespace Shop_Gregoricchio.CRUD_Form
             {
                 txtNome.Text = cat.Denominazione;
                 txtDescrizione.Text = cat.Descrizione;
+                btnSend.Enabled = true;
             }
         }
 

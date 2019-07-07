@@ -109,5 +109,9 @@ namespace Shop_Gregoricchio.CRUD
         {
             return "";
         }
+        public bool CheckGiacenza(int id)
+        {
+            return false;
+        }
     }
 }

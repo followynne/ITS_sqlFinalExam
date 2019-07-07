@@ -78,6 +78,7 @@
             this.btnSend.TabIndex = 37;
             this.btnSend.Text = "CREATE";
             this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // label6
             // 

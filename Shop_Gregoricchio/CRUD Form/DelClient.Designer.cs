@@ -210,12 +210,14 @@
             // 
             // btnSend
             // 
+            this.btnSend.Enabled = false;
             this.btnSend.Location = new System.Drawing.Point(629, 351);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(141, 62);
             this.btnSend.TabIndex = 67;
             this.btnSend.Text = "DELETE";
             this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // label6
             // 
@@ -308,12 +310,13 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(641, 222);
+            this.btnSearch.Location = new System.Drawing.Point(629, 222);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(113, 24);
+            this.btnSearch.Size = new System.Drawing.Size(125, 38);
             this.btnSearch.TabIndex = 88;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtId
             // 
