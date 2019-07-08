@@ -30,7 +30,12 @@ namespace Shop_Gregoricchio.CRUD_Form
             {
                 MessageBox.Show("Errore, dato non valido.");
                 return;
-            };
+            }
+            if (name == "")
+            {
+                MessageBox.Show("Errore, nome non inserito.");
+                return;
+            }
             Categoria cat = new Categoria(id, name, description);
             bool result = c.UpdCategoria(cat);
             if (!result)
@@ -75,7 +80,6 @@ namespace Shop_Gregoricchio.CRUD_Form
             txtDescrizione.Enabled = false;
             txtId.Enabled = true;
             btnSend.Enabled = false;
-
         }
     }
 }

@@ -28,11 +28,12 @@ namespace Shop_Gregoricchio.CRUD_Form
         private void btnSend_Click(object sender, EventArgs e)
         {
             if (!float.TryParse(txtPrezzo.Text, out float price) || !float.TryParse(txtSconto.Text, out float sale)
-                || !int.TryParse(txtGiacenza.Text, out int giacenza))
+                || !int.TryParse(txtGiacenza.Text, out int giacenza) || txtNome.Text == "")
             {
                 MessageBox.Show("Errore, dato non valido.");
                 return;
             }
+
             Prodotto p = new Prodotto(1, txtNome.Text, txtDescrizione.Text, (Categoria)cbxCategoria.SelectedItem,
                 price, sale, giacenza);
             bool res = cc.NewProdotto(p);

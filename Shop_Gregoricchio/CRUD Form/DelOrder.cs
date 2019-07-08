@@ -16,6 +16,7 @@ namespace Shop_Gregoricchio.CRUD_Form
     {
         private CrudComp c = null;
         private Dictionary<Prodotto, int> _listaP = null;
+        private int id;
 
         public DelOrder()
         {
@@ -28,7 +29,7 @@ namespace Shop_Gregoricchio.CRUD_Form
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (!int.TryParse(txtId.Text, out int id))
+            if (!int.TryParse(txtId.Text, out id))
             {
                 MessageBox.Show("Errore, dato non valido.");
                 return;
@@ -41,7 +42,6 @@ namespace Shop_Gregoricchio.CRUD_Form
             }
             else
             {
-                txtId.Enabled = false;
                 txtCodOrdine.Text = order.CodiceOrdine;
                 txtCodOrdine.Enabled = true;
                 cbxCliente.SelectedItem = order.Cliente;
@@ -62,6 +62,11 @@ namespace Shop_Gregoricchio.CRUD_Form
 
         private void btnSend_Click(object sender, EventArgs e)
         {
+            if (!int.TryParse(txtId.Text, out int id2) || (id2 != id))
+            {
+                MessageBox.Show("Id non valido.");
+                return;
+            }
             Ordine order = new Ordine(int.Parse(txtId.Text), txtCodOrdine.Text, (Cliente)cbxCliente.SelectedItem, dtpDate.Value, (TipiPagamento)cbxPagamento.SelectedItem, _listaP);
             bool res = c.DelOrdine(order);
             if (res)

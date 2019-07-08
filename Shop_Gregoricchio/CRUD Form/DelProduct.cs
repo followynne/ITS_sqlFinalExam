@@ -14,17 +14,20 @@ namespace Shop_Gregoricchio.CRUD_Form
 {
     public partial class DelProduct : Form
     {
-        CrudComp c = null;
+        private CrudComp c = null;
+        private int idd;
+
         public DelProduct()
         {
             InitializeComponent();
             c = new CrudComp();
+            id = 0;
             // db connection
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (!int.TryParse(txtId.Text, out int id))
+            if (!int.TryParse(txtId.Text, out idd))
             {
                 MessageBox.Show("Errore, dato non valido.");
                 return;
@@ -50,10 +53,15 @@ namespace Shop_Gregoricchio.CRUD_Form
 
         private void btnSend_Click(object sender, EventArgs e)
         {
+            if (!int.TryParse(txtId.Text, out int id2) || (idd!=id2))
+            {
+                MessageBox.Show("Errore, id non valido.");
+                return;
+            }
             if (!int.TryParse(txtId.Text, out int id) || !float.TryParse(txtPrezzo.Text, out float price)
                 || !float.TryParse(txtSconto.Text, out float sale) || !int.TryParse(txtGiacenza.Text, out int giacenza))
             {
-                MessageBox.Show("Errore, dati non valido.");
+                MessageBox.Show("Errore, dati non validi.");
                 return;
             }
             Prodotto p = new Prodotto(id, txtNome.Text, txtDescrizione.Text, (Categoria)cbxCategoria.SelectedItem,

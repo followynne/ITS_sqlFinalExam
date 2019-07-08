@@ -15,6 +15,7 @@ namespace Shop_Gregoricchio.CRUD_Form
     public partial class DelClient : Form
     {
         CrudComp c = null;
+        int id = 0;
         public DelClient()
         {
             InitializeComponent();
@@ -23,7 +24,7 @@ namespace Shop_Gregoricchio.CRUD_Form
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (!int.TryParse(txtId.Text, out int id))
+            if (!int.TryParse(txtId.Text, out id))
             {
                 MessageBox.Show("Errore, dato non valido.");
                 return;
@@ -36,7 +37,6 @@ namespace Shop_Gregoricchio.CRUD_Form
             }
             else
             {
-                txtId.Enabled = false;
                 txtPIva.Text = client.PartitaIva;
                 txtPIva.Enabled = true;
                 txtCF.Text = client.CodiceFiscale;
@@ -72,6 +72,11 @@ namespace Shop_Gregoricchio.CRUD_Form
 
         private void btnSend_Click(object sender, EventArgs e)
         {
+            if (!int.TryParse(txtId.Text, out int id2) || (id2!=id))
+            {
+                MessageBox.Show("Errore, dato non valido.");
+                return;
+            }
             Cliente client = new Cliente(int.Parse(txtId.Text), txtPIva.Text, txtCF.Text, txtRSoc.Text, txtNome.Text, txtCognome.Text, txtVia.Text,
                  txtCity.Text, int.Parse(txtCap.Text), txtPV.Text, txtTel.Text, txtFax.Text, txtCell.Text, txtMail.Text, txtSito.Text);
             bool res = c.DelCliente(client);

@@ -15,6 +15,7 @@ namespace Shop_Gregoricchio.CRUD_Form
     public partial class DelCategory : Form
     {
         CrudComp c = null;
+        int id = 0;
 
         public DelCategory()
         {
@@ -24,7 +25,7 @@ namespace Shop_Gregoricchio.CRUD_Form
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (!int.TryParse(txtId.Text, out int id))
+            if (!int.TryParse(txtId.Text, out id))
             {
                 MessageBox.Show("Errore, dato non valido.");
                 return;
@@ -46,7 +47,7 @@ namespace Shop_Gregoricchio.CRUD_Form
         {
             string name = txtNome.Text;
             string description = txtDescrizione.Text;
-            if (!int.TryParse(txtId.Text, out int id))
+            if (!int.TryParse(txtId.Text, out int id2) || (id2!= id))
             {
                 MessageBox.Show("Errore, dato non valido.");
                 return;

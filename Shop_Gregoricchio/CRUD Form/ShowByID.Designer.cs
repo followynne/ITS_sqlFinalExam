@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.rdbOrder = new System.Windows.Forms.RadioButton();
-            this.rdbProduct = new System.Windows.Forms.RadioButton();
-            this.rdbCategory = new System.Windows.Forms.RadioButton();
-            this.rdbClient = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdbProduct = new System.Windows.Forms.RadioButton();
+            this.rdbClient = new System.Windows.Forms.RadioButton();
+            this.rdbCategory = new System.Windows.Forms.RadioButton();
+            this.rdbOrder = new System.Windows.Forms.RadioButton();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
@@ -45,50 +47,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(552, 247);
             this.textBox1.TabIndex = 0;
-            // 
-            // rdbOrder
-            // 
-            this.rdbOrder.AutoSize = true;
-            this.rdbOrder.Location = new System.Drawing.Point(140, 53);
-            this.rdbOrder.Name = "rdbOrder";
-            this.rdbOrder.Size = new System.Drawing.Size(51, 17);
-            this.rdbOrder.TabIndex = 1;
-            this.rdbOrder.TabStop = true;
-            this.rdbOrder.Text = "Order";
-            this.rdbOrder.UseVisualStyleBackColor = true;
-            // 
-            // rdbProduct
-            // 
-            this.rdbProduct.AutoSize = true;
-            this.rdbProduct.Location = new System.Drawing.Point(269, 53);
-            this.rdbProduct.Name = "rdbProduct";
-            this.rdbProduct.Size = new System.Drawing.Size(62, 17);
-            this.rdbProduct.TabIndex = 2;
-            this.rdbProduct.TabStop = true;
-            this.rdbProduct.Text = "Product";
-            this.rdbProduct.UseVisualStyleBackColor = true;
-            // 
-            // rdbCategory
-            // 
-            this.rdbCategory.AutoSize = true;
-            this.rdbCategory.Location = new System.Drawing.Point(398, 53);
-            this.rdbCategory.Name = "rdbCategory";
-            this.rdbCategory.Size = new System.Drawing.Size(67, 17);
-            this.rdbCategory.TabIndex = 3;
-            this.rdbCategory.TabStop = true;
-            this.rdbCategory.Text = "Category";
-            this.rdbCategory.UseVisualStyleBackColor = true;
-            // 
-            // rdbClient
-            // 
-            this.rdbClient.AutoSize = true;
-            this.rdbClient.Location = new System.Drawing.Point(527, 53);
-            this.rdbClient.Name = "rdbClient";
-            this.rdbClient.Size = new System.Drawing.Size(51, 17);
-            this.rdbClient.TabIndex = 4;
-            this.rdbClient.TabStop = true;
-            this.rdbClient.Text = "Client";
-            this.rdbClient.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -114,22 +72,81 @@
             this.btnSearch.TabIndex = 7;
             this.btnSearch.Text = "GO";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rdbProduct);
+            this.groupBox1.Controls.Add(this.rdbClient);
+            this.groupBox1.Controls.Add(this.rdbCategory);
+            this.groupBox1.Controls.Add(this.rdbOrder);
+            this.groupBox1.Location = new System.Drawing.Point(136, 21);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(548, 64);
+            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // rdbProduct
+            // 
+            this.rdbProduct.AutoSize = true;
+            this.rdbProduct.Location = new System.Drawing.Point(176, 28);
+            this.rdbProduct.Name = "rdbProduct";
+            this.rdbProduct.Size = new System.Drawing.Size(62, 17);
+            this.rdbProduct.TabIndex = 9;
+            this.rdbProduct.TabStop = true;
+            this.rdbProduct.Text = "Product";
+            this.rdbProduct.UseVisualStyleBackColor = true;
+            // 
+            // rdbClient
+            // 
+            this.rdbClient.AutoSize = true;
+            this.rdbClient.Location = new System.Drawing.Point(444, 28);
+            this.rdbClient.Name = "rdbClient";
+            this.rdbClient.Size = new System.Drawing.Size(51, 17);
+            this.rdbClient.TabIndex = 11;
+            this.rdbClient.TabStop = true;
+            this.rdbClient.Text = "Client";
+            this.rdbClient.UseVisualStyleBackColor = true;
+            // 
+            // rdbCategory
+            // 
+            this.rdbCategory.AutoSize = true;
+            this.rdbCategory.Location = new System.Drawing.Point(53, 28);
+            this.rdbCategory.Name = "rdbCategory";
+            this.rdbCategory.Size = new System.Drawing.Size(67, 17);
+            this.rdbCategory.TabIndex = 10;
+            this.rdbCategory.TabStop = true;
+            this.rdbCategory.Text = "Category";
+            this.rdbCategory.UseVisualStyleBackColor = true;
+            // 
+            // rdbOrder
+            // 
+            this.rdbOrder.AutoSize = true;
+            this.rdbOrder.Location = new System.Drawing.Point(319, 28);
+            this.rdbOrder.Name = "rdbOrder";
+            this.rdbOrder.Size = new System.Drawing.Size(51, 17);
+            this.rdbOrder.TabIndex = 8;
+            this.rdbOrder.TabStop = true;
+            this.rdbOrder.Text = "Order";
+            this.rdbOrder.UseVisualStyleBackColor = true;
             // 
             // ShowByID
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.rdbClient);
-            this.Controls.Add(this.rdbCategory);
-            this.Controls.Add(this.rdbProduct);
-            this.Controls.Add(this.rdbOrder);
             this.Controls.Add(this.textBox1);
             this.Name = "ShowByID";
             this.Text = "ShowByID";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,12 +155,13 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RadioButton rdbOrder;
-        private System.Windows.Forms.RadioButton rdbProduct;
-        private System.Windows.Forms.RadioButton rdbCategory;
-        private System.Windows.Forms.RadioButton rdbClient;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rdbProduct;
+        private System.Windows.Forms.RadioButton rdbClient;
+        private System.Windows.Forms.RadioButton rdbCategory;
+        private System.Windows.Forms.RadioButton rdbOrder;
     }
 }

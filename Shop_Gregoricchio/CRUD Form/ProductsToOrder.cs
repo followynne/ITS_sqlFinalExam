@@ -54,6 +54,10 @@ namespace Shop_Gregoricchio.CRUD_Form
         private void ProductsToOrder_FormClosed(object sender, FormClosedEventArgs e)
         {
             _result = dReceived;
+            if (_result.Count == 0)
+            {
+                return;
+            }
             DialogResult = DialogResult.OK;
         }
 

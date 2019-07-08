@@ -25,7 +25,7 @@ namespace Shop_Gregoricchio.CRUD_Form
         private void btnSend_Click(object sender, EventArgs e)
         {
             if (!int.TryParse(txtId.Text, out int id) || !float.TryParse(txtPrezzo.Text, out float price)
-                || !float.TryParse(txtSconto.Text, out float sale) || !int.TryParse(txtGiacenza.Text, out int giacenza))
+                || !float.TryParse(txtSconto.Text, out float sale) || !int.TryParse(txtGiacenza.Text, out int giacenza) || txtNome.Text=="")
             {
                 MessageBox.Show("Errore, dati non valido.");
                 return;

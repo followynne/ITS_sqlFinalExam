@@ -26,6 +26,11 @@ namespace Shop_Gregoricchio.CRUD_Form
         {
             string name = txtNome.Text;
             string description = txtDescrizione.Text;
+            if (name == "")
+            {
+                MessageBox.Show("Errore, nome non inserito.");
+                return;
+            }
             Categoria cat = new Categoria(1, name, description);
             bool result = c.NewCategoria(cat);
             if (!result)

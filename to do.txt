@@ -1,23 +1,25 @@
-aggiungere trigger e check di giacenza
+﻿aggiungere trigger e check di giacenza
 ossia nel aggiunta/mod prodotto richiesto allora...
 
 db:
-aggiunta colonna di ridondanza sconto/prodotto = per avere l'elemento temporale
+//aggiunta colonna di ridondanza sconto/prodotto = per avere
+	l'elemento temporale
 
 trigger:
 
-inserimento automatico sconto nei dati dell'ordine-prodotto
+//inserimento automatico sconto nei dati dell'ordine-prodotto
 
-rollback for giacenza < 0
+//[rollback for giacenza < 0]
 
-diminuzione giacenza in base a acquisto ordine
+//diminuzione giacenza in base a acquisto ordine
 
 applicativo: 
 
 check ammissibilità ordine x giacenza >0
 
-check sui dati inseriti es nn + di 16, regex...
-check sui dati che accettano null o meno!
+//check sui dati inseriti es nn + di 16, regex...
+//check sui dati che accettano null o meno!
 
-pulsanti send data for upd/ecc --> enabled false + abilita da codice
+//pulsanti send data for upd/ecc --> enabled false + abilita da codice
+
 check pulsanti che van attivati/disatt a seconda del...

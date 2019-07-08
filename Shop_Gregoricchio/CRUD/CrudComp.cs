@@ -9,6 +9,10 @@ namespace Shop_Gregoricchio.CRUD
 {
     class CrudComp
     {
+        public CrudComp()
+        {
+            
+        }
         // dbAccess = null
 
         public bool NewProdotto(Prodotto p)
@@ -16,6 +20,9 @@ namespace Shop_Gregoricchio.CRUD
             //connDb
             //openDb --> query sql insert into ... passandogli i dati di P + l'Id Casuale
             //se il dato è inserito (query pos) true altrimenti...
+
+            string sql = "insert into prodotto values(?,?,?,?,?)";
+
             return true;
         }
         public bool NewCategoria(Categoria p)
@@ -29,6 +36,17 @@ namespace Shop_Gregoricchio.CRUD
         {
             //connDb
             //openDb --> query sql insert into ... passandogli i dati di P + l'Id Casuale
+            string numbers = "0123456789";
+            string characters = "abcdefghijklmnopqrstuvwxyz";
+
+            string pattern = characters + characters.ToUpper() + numbers;
+            string pw = "";
+            Random r = new Random();
+
+            for (int i = 0; i < 8; i++)
+                pw += pattern.ElementAt(r.Next(pattern.Length));
+
+
             return true;
         }
         public bool NewCliente(Cliente p)

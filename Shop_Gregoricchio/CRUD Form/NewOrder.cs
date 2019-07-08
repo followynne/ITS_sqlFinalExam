@@ -42,6 +42,11 @@ namespace Shop_Gregoricchio.CRUD_Form
 
         private void btnSend_Click(object sender, EventArgs e)
         {
+            if (_listaP.Count == 0)
+            {
+                MessageBox.Show("Errore, non hai inserito prodotti.");
+                return;
+            }
             Ordine o = new Ordine(1, "", (Cliente)cbxCliente.SelectedItem, dtpDate.Value,
                 (TipiPagamento)cbxPagamento.SelectedItem, _listaP);
             bool res = c.NewOrdine(o);

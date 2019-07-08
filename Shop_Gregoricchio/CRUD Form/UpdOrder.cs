@@ -59,7 +59,6 @@ namespace Shop_Gregoricchio.CRUD_Form
             {
                 txtId.Enabled = false;
                 txtCodOrdine.Text = order.CodiceOrdine;
-                txtCodOrdine.Enabled = true;
                 cbxCliente.SelectedItem = order.Cliente;
                 cbxCliente.Enabled = true;
                 dtpDate.Value = order.Data;
@@ -81,7 +80,6 @@ namespace Shop_Gregoricchio.CRUD_Form
         {
             txtId.Enabled = true;
             txtCodOrdine.Text = "";
-            txtCodOrdine.Enabled = false;
             cbxCliente.SelectedItem = "";
             cbxCliente.Enabled = false;
             dtpDate.Value = DateTime.Now;
@@ -96,6 +94,11 @@ namespace Shop_Gregoricchio.CRUD_Form
 
         private void btnSend_Click(object sender, EventArgs e)
         {
+            if (_listaP.Count == 0)
+            {
+                MessageBox.Show("Errore, non hai inserito prodotti.");
+                return;
+            }
             Ordine order = new Ordine(int.Parse(txtId.Text), txtCodOrdine.Text, (Cliente)cbxCliente.SelectedItem, dtpDate.Value, (TipiPagamento)cbxPagamento.SelectedItem, _listaP);
             bool res = c.UpdOrdine(order);
             if (res)

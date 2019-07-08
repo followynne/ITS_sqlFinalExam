@@ -8,5 +8,9 @@ namespace Shop_Gregoricchio.CRUD
 {
     class DBConnection
     {
+
+
+
+
     }
 }
