@@ -76,7 +76,7 @@
             // btnSend
             // 
             this.btnSend.Enabled = false;
-            this.btnSend.Location = new System.Drawing.Point(298, 457);
+            this.btnSend.Location = new System.Drawing.Point(327, 447);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(104, 41);
             this.btnSend.TabIndex = 42;
@@ -123,9 +123,9 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(537, 63);
+            this.btnSearch.Location = new System.Drawing.Point(553, 56);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(113, 24);
+            this.btnSearch.Size = new System.Drawing.Size(104, 41);
             this.btnSearch.TabIndex = 48;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -133,7 +133,7 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(318, 65);
+            this.txtId.Location = new System.Drawing.Point(334, 65);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(145, 22);
             this.txtId.TabIndex = 47;
@@ -141,7 +141,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(196, 65);
+            this.label1.Location = new System.Drawing.Point(212, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(19, 17);
             this.label1.TabIndex = 46;
@@ -167,7 +167,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(196, 324);
+            this.label4.Location = new System.Drawing.Point(194, 347);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 17);
             this.label4.TabIndex = 66;
@@ -176,7 +176,7 @@
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(318, 297);
+            this.textBox1.Location = new System.Drawing.Point(315, 295);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(372, 126);
@@ -202,7 +202,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Data);
-            this.Enabled = false;
             this.Name = "DelOrder";
             this.Text = "DelOrder";
             this.ResumeLayout(false);

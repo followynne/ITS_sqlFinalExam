@@ -13,7 +13,6 @@ namespace Shop_Gregoricchio.CRUD
         {
             
         }
-        // dbAccess = null
 
         public bool NewProdotto(Prodotto p)
         {
@@ -21,7 +20,7 @@ namespace Shop_Gregoricchio.CRUD
             //openDb --> query sql insert into ... passandogli i dati di P + l'Id Casuale
             //se il dato è inserito (query pos) true altrimenti...
 
-            string sql = "insert into prodotto values(?,?,?,?,?)";
+            //string sql = "insert into prodotto values(?,?,?,?,?)";
 
             return true;
         }
@@ -36,15 +35,7 @@ namespace Shop_Gregoricchio.CRUD
         {
             //connDb
             //openDb --> query sql insert into ... passandogli i dati di P + l'Id Casuale
-            string numbers = "0123456789";
-            string characters = "abcdefghijklmnopqrstuvwxyz";
 
-            string pattern = characters + characters.ToUpper() + numbers;
-            string pw = "";
-            Random r = new Random();
-
-            for (int i = 0; i < 8; i++)
-                pw += pattern.ElementAt(r.Next(pattern.Length));
 
 
             return true;
@@ -105,19 +96,23 @@ namespace Shop_Gregoricchio.CRUD
         }
         public Prodotto SearchProdotto(int id)
         {
-
+            Prodotto p = null;
+            return p;
         }
         public Categoria SearchCategoria(int id)
         {
-
+            Categoria cat = null;
+            return cat;
         }
         public Ordine SearchOrdine(int id)
         {
-
+            Ordine o = null;
+            return o;
         }
         public Cliente SearchCliente(int id)
         {
-
+            Cliente client = null;
+            return client;
         }
         public string SearchAll(string s)
         {
@@ -128,6 +123,27 @@ namespace Shop_Gregoricchio.CRUD
             return "";
         }
         public bool CheckGiacenza(int id)
+        {
+            return false;
+        }
+        public string CreateRandomReference()
+        {
+            string numbers = "0123456789";
+            string characters = "abcdefghijklmnopqrstuvwxyz";
+
+            string pattern = characters + characters.ToUpper() + numbers;
+            string pw = "";
+            Random r = new Random();
+
+            do
+            {
+                for (int i = 0; i < 8; i++)
+                    pw += pattern.ElementAt(r.Next(pattern.Length));
+            } while (SearchByReference(pw));
+
+            return pw;
+        }
+        private bool SearchByReference(string id)
         {
             return false;
         }

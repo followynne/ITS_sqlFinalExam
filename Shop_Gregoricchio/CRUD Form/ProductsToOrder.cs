@@ -26,10 +26,10 @@ namespace Shop_Gregoricchio.CRUD_Form
             c = new CrudComp();
             d = new Dictionary<Prodotto, int>();
             //chiamata db e recupero all elements
-            foreach(Prodotto p in calldb)
-            {
-                cbxNewProd.Items.Add(p);
-            }
+            //foreach(Prodotto p in calldb)
+            //{
+            //    cbxNewProd.Items.Add(p);
+            //}
 
         }
 
@@ -42,10 +42,10 @@ namespace Shop_Gregoricchio.CRUD_Form
             dReceived = d1;
             c = new CrudComp();
             //chiamata db e recupero all elements prodotto
-            foreach (Prodotto p in calldb)
-            {
-                cbxNewProd.Items.Add(p);
-            }
+            //foreach (Prodotto p in calldb)
+            //{
+            //    cbxNewProd.Items.Add(p);
+            //}
             FillCheckBox(cbxModProd, dReceived);
 
             FillCheckBox(cbxDelProd, dReceived);
@@ -54,8 +54,9 @@ namespace Shop_Gregoricchio.CRUD_Form
         private void ProductsToOrder_FormClosed(object sender, FormClosedEventArgs e)
         {
             _result = dReceived;
-            if (_result.Count == 0)
+            if (_result.Count == 0 || _result == null)
             {
+                MessageBox.Show("Dati non validabili.");
                 return;
             }
             DialogResult = DialogResult.OK;

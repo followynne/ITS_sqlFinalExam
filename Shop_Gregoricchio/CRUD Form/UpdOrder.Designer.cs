@@ -236,7 +236,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Data);
-            this.Enabled = false;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UpdOrder";
             this.Text = "UpdOrder";

@@ -41,10 +41,10 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(480, 108);
+            this.btnSearch.Location = new System.Drawing.Point(493, 109);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(147, 37);
+            this.btnSearch.Size = new System.Drawing.Size(124, 36);
             this.btnSearch.TabIndex = 41;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -91,6 +91,7 @@
             // 
             // txtDescrizione
             // 
+            this.txtDescrizione.Enabled = false;
             this.txtDescrizione.Location = new System.Drawing.Point(288, 268);
             this.txtDescrizione.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescrizione.Name = "txtDescrizione";
@@ -108,6 +109,7 @@
             // 
             // txtNome
             // 
+            this.txtNome.Enabled = false;
             this.txtNome.Location = new System.Drawing.Point(288, 218);
             this.txtNome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNome.Name = "txtNome";

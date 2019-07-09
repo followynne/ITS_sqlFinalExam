@@ -19,10 +19,10 @@ namespace Shop_Gregoricchio.CRUD_Form
         {
             InitializeComponent();
             cc = new CrudComp();
-            foreach (Categoria c in ) //connData)
-            {
-                cbxCategoria.Items.Add(c);
-            }
+            //foreach (Categoria c in ) //connData)
+            //{
+            //    cbxCategoria.Items.Add(c);
+            //}
         }
 
         private void btnSend_Click(object sender, EventArgs e)

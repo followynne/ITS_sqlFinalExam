@@ -350,7 +350,6 @@
             // 
             // btnReset
             // 
-            this.btnReset.Enabled = false;
             this.btnReset.Location = new System.Drawing.Point(590, 262);
             this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReset.Name = "btnReset";

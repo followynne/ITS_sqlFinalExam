@@ -21,7 +21,7 @@ namespace Shop_Gregoricchio.CRUD_Form
         {
             InitializeComponent();
             c = new CrudComp();
-            id = 0;
+            idd = 0;
             // db connection
         }
 
@@ -32,7 +32,7 @@ namespace Shop_Gregoricchio.CRUD_Form
                 MessageBox.Show("Errore, dato non valido.");
                 return;
             }
-            Prodotto p = c.SearchProdotto(id);
+            Prodotto p = c.SearchProdotto(idd);
             if (p == null)
             {
                 MessageBox.Show("Dato non trovato");

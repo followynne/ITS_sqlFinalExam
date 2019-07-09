@@ -134,7 +134,6 @@
             // 
             // btnDel
             // 
-            this.btnDel.Enabled = false;
             this.btnDel.Location = new System.Drawing.Point(768, 207);
             this.btnDel.Margin = new System.Windows.Forms.Padding(4);
             this.btnDel.Name = "btnDel";
@@ -147,7 +146,6 @@
             // cbxDelProd
             // 
             this.cbxDelProd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxDelProd.Enabled = false;
             this.cbxDelProd.FormattingEnabled = true;
             this.cbxDelProd.Location = new System.Drawing.Point(691, 97);
             this.cbxDelProd.Margin = new System.Windows.Forms.Padding(4);

@@ -65,6 +65,7 @@
             // 
             // txtSito
             // 
+            this.txtSito.Enabled = false;
             this.txtSito.Location = new System.Drawing.Point(276, 700);
             this.txtSito.Name = "txtSito";
             this.txtSito.Size = new System.Drawing.Size(294, 22);
@@ -81,6 +82,7 @@
             // 
             // txtCF
             // 
+            this.txtCF.Enabled = false;
             this.txtCF.Location = new System.Drawing.Point(276, 271);
             this.txtCF.Name = "txtCF";
             this.txtCF.Size = new System.Drawing.Size(294, 22);
@@ -88,6 +90,7 @@
             // 
             // txtMail
             // 
+            this.txtMail.Enabled = false;
             this.txtMail.Location = new System.Drawing.Point(276, 653);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(294, 22);
@@ -104,6 +107,7 @@
             // 
             // txtFax
             // 
+            this.txtFax.Enabled = false;
             this.txtFax.Location = new System.Drawing.Point(276, 606);
             this.txtFax.Name = "txtFax";
             this.txtFax.Size = new System.Drawing.Size(294, 22);
@@ -120,6 +124,7 @@
             // 
             // txtCell
             // 
+            this.txtCell.Enabled = false;
             this.txtCell.Location = new System.Drawing.Point(276, 559);
             this.txtCell.Name = "txtCell";
             this.txtCell.Size = new System.Drawing.Size(294, 22);
@@ -136,6 +141,7 @@
             // 
             // txtTel
             // 
+            this.txtTel.Enabled = false;
             this.txtTel.Location = new System.Drawing.Point(276, 512);
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(294, 22);
@@ -152,6 +158,7 @@
             // 
             // txtPV
             // 
+            this.txtPV.Enabled = false;
             this.txtPV.Location = new System.Drawing.Point(276, 465);
             this.txtPV.Name = "txtPV";
             this.txtPV.Size = new System.Drawing.Size(294, 22);
@@ -168,6 +175,7 @@
             // 
             // txtCap
             // 
+            this.txtCap.Enabled = false;
             this.txtCap.Location = new System.Drawing.Point(276, 418);
             this.txtCap.Name = "txtCap";
             this.txtCap.Size = new System.Drawing.Size(294, 22);
@@ -184,6 +192,7 @@
             // 
             // txtCity
             // 
+            this.txtCity.Enabled = false;
             this.txtCity.Location = new System.Drawing.Point(276, 371);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(294, 22);
@@ -211,9 +220,9 @@
             // btnSend
             // 
             this.btnSend.Enabled = false;
-            this.btnSend.Location = new System.Drawing.Point(629, 351);
+            this.btnSend.Location = new System.Drawing.Point(638, 353);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(141, 62);
+            this.btnSend.Size = new System.Drawing.Size(125, 38);
             this.btnSend.TabIndex = 67;
             this.btnSend.Text = "DELETE";
             this.btnSend.UseVisualStyleBackColor = true;
@@ -230,6 +239,7 @@
             // 
             // txtVia
             // 
+            this.txtVia.Enabled = false;
             this.txtVia.Location = new System.Drawing.Point(276, 324);
             this.txtVia.Name = "txtVia";
             this.txtVia.Size = new System.Drawing.Size(294, 22);
@@ -246,6 +256,7 @@
             // 
             // txtRSoc
             // 
+            this.txtRSoc.Enabled = false;
             this.txtRSoc.Location = new System.Drawing.Point(276, 130);
             this.txtRSoc.Name = "txtRSoc";
             this.txtRSoc.Size = new System.Drawing.Size(294, 22);
@@ -262,6 +273,7 @@
             // 
             // txtPIva
             // 
+            this.txtPIva.Enabled = false;
             this.txtPIva.Location = new System.Drawing.Point(276, 83);
             this.txtPIva.Name = "txtPIva";
             this.txtPIva.Size = new System.Drawing.Size(294, 22);
@@ -278,6 +290,7 @@
             // 
             // txtCognome
             // 
+            this.txtCognome.Enabled = false;
             this.txtCognome.Location = new System.Drawing.Point(276, 224);
             this.txtCognome.Name = "txtCognome";
             this.txtCognome.Size = new System.Drawing.Size(294, 22);
@@ -294,6 +307,7 @@
             // 
             // txtNome
             // 
+            this.txtNome.Enabled = false;
             this.txtNome.Location = new System.Drawing.Point(276, 177);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(294, 22);
@@ -310,7 +324,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(629, 222);
+            this.btnSearch.Location = new System.Drawing.Point(638, 224);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(125, 38);
             this.btnSearch.TabIndex = 88;
@@ -320,7 +334,7 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(610, 161);
+            this.txtId.Location = new System.Drawing.Point(611, 164);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(170, 22);
             this.txtId.TabIndex = 87;
@@ -328,7 +342,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(680, 115);
+            this.label15.Location = new System.Drawing.Point(681, 118);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(19, 17);
             this.label15.TabIndex = 86;

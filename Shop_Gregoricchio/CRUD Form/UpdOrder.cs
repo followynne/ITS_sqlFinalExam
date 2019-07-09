@@ -79,6 +79,7 @@ namespace Shop_Gregoricchio.CRUD_Form
         private void btnReset_Click(object sender, EventArgs e)
         {
             txtId.Enabled = true;
+            txtId.Text = "";
             txtCodOrdine.Text = "";
             cbxCliente.SelectedItem = "";
             cbxCliente.Enabled = false;

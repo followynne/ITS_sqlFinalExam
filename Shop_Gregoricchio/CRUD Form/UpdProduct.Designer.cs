@@ -162,7 +162,7 @@
             this.btnSend.Location = new System.Drawing.Point(291, 490);
             this.btnSend.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(124, 36);
+            this.btnSend.Size = new System.Drawing.Size(132, 34);
             this.btnSend.TabIndex = 20;
             this.btnSend.Text = "UPDATE";
             this.btnSend.UseVisualStyleBackColor = true;
@@ -180,7 +180,7 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(268, 103);
+            this.txtId.Location = new System.Drawing.Point(269, 107);
             this.txtId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(145, 22);
@@ -189,7 +189,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(159, 107);
+            this.label1.Location = new System.Drawing.Point(160, 111);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(19, 17);
             this.label1.TabIndex = 22;
@@ -211,7 +211,7 @@
             this.btnReset.Location = new System.Drawing.Point(453, 126);
             this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(132, 31);
+            this.btnReset.Size = new System.Drawing.Size(132, 34);
             this.btnReset.TabIndex = 43;
             this.btnReset.Text = "RESET";
             this.btnReset.UseVisualStyleBackColor = true;
@@ -240,7 +240,6 @@
             this.Controls.Add(this.Descrizione);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label2);
-            this.Enabled = false;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UpdProduct";
             this.Text = "NewProduct";
