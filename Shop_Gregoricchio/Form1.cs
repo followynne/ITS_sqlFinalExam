@@ -1,8 +1,10 @@
-﻿using Shop_Gregoricchio.CRUD_Form;
+﻿using Shop_Gregoricchio.CRUD;
+using Shop_Gregoricchio.CRUD_Form;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,9 +15,91 @@ namespace Shop_Gregoricchio
 {
     public partial class Form1 : Form
     {
+        SqlConnectionStringBuilder db;
+
         public Form1()
         {
             InitializeComponent();
+            try
+            {
+                db = DBConnection.DB();
+                using (SqlConnection s = new SqlConnection(db.ConnectionString))
+                {
+                    s.Open();
+                    using (SqlCommand command = new SqlCommand())
+                    {
+                        command.Connection = s;
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.CommandText = "sp_total_order_completed";
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            textBox1.Text = "\r\nIl numero totale di ordini registrati al " + DateTime.Now.ToString() +
+                                " è:\r\n";
+                            while (reader.Read())
+                            {
+                                textBox1.Text += reader.GetInt32(0) + "\r\n";
+                            }
+                        }
+                    }
+                    using (SqlCommand command2 = new SqlCommand())
+                    {
+                        command2.Connection = s;
+                        command2.CommandType = CommandType.StoredProcedure;
+
+                        command2.CommandText = "sp_best_selling_product";
+                        using (SqlDataReader reader = command2.ExecuteReader())
+                        {
+                            textBox1.Text += "Prodotto più venduto\r\n";
+                            while (reader.Read())
+                            {
+                                textBox1.Text += reader.GetInt32(0) + "Somma acquistata: " + reader.GetFloat(1) + "\r\n";
+                            }
+                        }
+                    }
+                    using (SqlCommand command3 = new SqlCommand())
+                    {
+                        command3.Connection = s;
+                        command3.CommandType = CommandType.StoredProcedure;
+
+                        command3.CommandText = "sp_prodotti_in_scorta";
+                        using (SqlDataReader reader = command3.ExecuteReader())
+                        {
+                            textBox1.Text += "I seguenti prodotti sono in scorta:\r\n";
+                            while (reader.Read())
+                            {
+                                textBox1.Text += "ID " + reader.GetInt32(0) + " - " + reader.GetString(1)
+                                    + " - Giacenza: " + reader.GetString(6) + "\r\n";
+                            }
+                        }
+                    }
+                    using (SqlCommand command4 = new SqlCommand())
+                    {
+                        command4.Connection = s;
+                        command4.CommandType = CommandType.StoredProcedure;
+
+                        command4.CommandText = "sp_top10clients_by_fatturato";
+                        using (SqlDataReader reader = command4.ExecuteReader())
+                        {
+                            textBox1.Text += "I 10 migliori clienti per fatturato sono:\r\n";
+                            while (reader.Read())
+                            {
+                                textBox1.Text += reader.GetInt32(0) + " - Fatturato: " + reader.GetFloat(1) + "\r\n";
+                            }
+                        }
+
+                    }
+                }
+
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("Connessione al database non funzionante, controlla per favore i dati di connessione.");
+                tsmNew.Enabled = false;
+                tsmUpdate.Enabled = false;
+                tsmDelete.Enabled = false;
+                tsmElenco.Enabled = false;
+                tsmDettaglio.Enabled = false;
+            }
         }
 
         private void tsiNewOrdine_Click(object sender, EventArgs e)

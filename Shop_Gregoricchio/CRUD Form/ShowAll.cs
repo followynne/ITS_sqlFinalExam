@@ -1,4 +1,5 @@
-﻿using Shop_Gregoricchio.CRUD;
+﻿using Shop_Gregoricchio.Classes;
+using Shop_Gregoricchio.CRUD;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,25 +28,39 @@ namespace Shop_Gregoricchio.CRUD_Form
 
         private void radioButtons_CheckedChanged(object sender, EventArgs e)
         {
-            string choice = "";
+            textBox1.Text = "";
             RadioButton rd = sender as RadioButton;
             if (rdbCategory.Checked)
             {
-                choice = "categoria";
+                List<Categoria> list = c.SearchAllCategoria(); 
+                foreach(Categoria cat in list)
+                {
+                    textBox1.Text += cat.ToString() + "\r\n";
+                }
             } else if (rdbClient.Checked)
             {
-                choice = "cliente";
+                List<Cliente> list = c.SearchAllCliente();
+                foreach (Cliente cat in list)
+                {
+                    textBox1.Text += cat.ToString() + "\r\n";
+                }
             }
             else if (rdbOrder.Checked)
             {
-                choice = "ordine";
+                List<Ordine> list = c.SearchAllOrdine();
+                foreach (Ordine cat in list)
+                {
+                    textBox1.Text += cat.ToString() + "\r\n";
+                }
             }
             else if (rdbProduct.Checked)
             {
-                choice = "prodotto";
+                List<Prodotto> list = c.SearchAllProdotto();
+                foreach (Prodotto cat in list)
+                {
+                    textBox1.Text += cat.ToString() + "\r\n";
+                }
             }
-            //string res = c.SearchAll(choice);
-            //textBox1.Text = res;
         }
     }
 }

@@ -44,8 +44,8 @@ namespace Shop_Gregoricchio.CRUD_Form
             }
             Cliente client = new Cliente(1, txtPIva.Text, txtCF.Text, txtRSoc.Text, txtNome.Text, txtCognome.Text, txtVia.Text,
                  txtCity.Text, cap, txtPV.Text, txtTel.Text, txtFax.Text, txtCell.Text, txtMail.Text, txtSito.Text);
-            bool res = c.NewCliente(client);
-            if (res)
+            int res = c.NewCliente(client);
+            if (res!=0)
             {
                 MessageBox.Show("Cliente aggiunto!");
             }

@@ -7,6 +7,7 @@ using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Shop_Gregoricchio.CRUD
 {
@@ -43,9 +44,10 @@ namespace Shop_Gregoricchio.CRUD
                     command.Parameters.Add("@giacenza", SqlDbType.Int).Value = p.Giacenza;
                     x = command.ExecuteNonQuery();
                 }
-                return x;
             }
+            return x;
         }
+
         public int NewCategoria(Categoria p)
         {
             int x = 0;
@@ -66,24 +68,70 @@ namespace Shop_Gregoricchio.CRUD
                     }
                     x = command.ExecuteNonQuery();
                 }
-                return x;
             }
+            return x;
         }
-        public bool NewOrdine(Ordine p)
+
+        public int NewOrdine(Ordine p)
         {
+            int x = 0;
+
             //connDb
             //openDb --> query sql insert into ... passandogli i dati di P + l'Id Casuale
-
-
-
-            return true;
+            return x;
         }
-        public bool NewCliente(Cliente p)
+
+        public int NewCliente(Cliente p)
         {
-            //connDb
-            //openDb --> query sql insert into ... passandogli i dati di P + l'Id Casuale
-            return true;
+            int x = 0;
+            using (SqlConnection connection = new SqlConnection(db.ConnectionString))
+            {
+                connection.Open();
+                string sql = "insert into Cliente values (@PartitaIva, @CF, @RagioneSociale, @Nome, @Cognome," +
+                    "@Via, @Cap, @Citta, @Provincia, @Telefono, @Cellulare, @Fax, @Email, @Sito)";
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    command.Parameters.Add("@PartitaIva", SqlDbType.VarChar).Value = p.PartitaIva;
+                    command.Parameters.Add("@CF", SqlDbType.VarChar).Value = p.CodiceFiscale;
+                    command.Parameters.Add("@RagioneSociale", SqlDbType.VarChar).Value = p.RagioneSociale;
+                    command.Parameters.Add("@Nome", SqlDbType.VarChar).Value = p.Nome;
+                    command.Parameters.Add("@Cognome", SqlDbType.VarChar).Value = p.Cognome;
+                    command.Parameters.Add("@Via", SqlDbType.VarChar).Value = p.Via;
+                    command.Parameters.Add("@Cap", SqlDbType.Int).Value = p.Cap;
+                    command.Parameters.Add("@Citta", SqlDbType.VarChar).Value = p.Città;
+                    command.Parameters.Add("@Provincia", SqlDbType.VarChar).Value = p.PV;
+                    if (p.Telefono == "")
+                    {
+                        command.Parameters.Add("@Telefono", SqlDbType.VarChar).Value = DBNull.Value;
+                    }
+                    else
+                    {
+                        command.Parameters.Add("@Telefono", SqlDbType.VarChar).Value = p.Telefono;
+                    }
+                    command.Parameters.Add("@Cellulare", SqlDbType.VarChar).Value = p.Cellulare;
+                    if (p.Fax == "")
+                    {
+                        command.Parameters.Add("@Fax", SqlDbType.VarChar).Value = DBNull.Value;
+                    }
+                    else
+                    {
+                        command.Parameters.Add("@Fax", SqlDbType.VarChar).Value = p.Fax;
+                    }
+                    command.Parameters.Add("@Email", SqlDbType.VarChar).Value = p.Mail;
+                    if (p.SitoWeb == "")
+                    {
+                        command.Parameters.Add("@Sito", SqlDbType.VarChar).Value = DBNull.Value;
+                    }
+                    else
+                    {
+                        command.Parameters.Add("@Sito", SqlDbType.VarChar).Value = p.SitoWeb;
+                    }
+                    command.ExecuteNonQuery();
+                }
+            }
+            return x;
         }
+
         public bool UpdProdotto(Prodotto p)
         {
             //connDb
@@ -206,12 +254,14 @@ namespace Shop_Gregoricchio.CRUD
                             try
                             {
                                 tel = reader.GetString(10);
-                                fax = reader.GetString(2);
-                                sito = reader.GetString(2);
+                                fax = reader.GetString(11);
+                                sito = reader.GetString(14);
                             }
                             catch (SqlNullValueException)
                             {
-                                descrip = null;
+                                tel = null;
+                                fax = null;
+                                sito = null;
                             }
                             l.Add(new Cliente(
                                 reader.GetInt32(0),
@@ -224,15 +274,11 @@ namespace Shop_Gregoricchio.CRUD
                                 reader.GetString(7),
                                 reader.GetInt32(8),
                                 reader.GetString(9),
-                                telefono
-                                fax
-                                cell
-                                mail sito
-                                descrip,
-                                SearchCategoria(reader.GetInt32(3)),
-                                reader.GetFloat(4),
-                                reader.GetFloat(5),
-                                reader.GetInt32(6)
+                                tel,
+                                fax,
+                                reader.GetString(12),
+                                reader.GetString(13),
+                                sito
                             ));
                         }
                     }
@@ -294,7 +340,8 @@ namespace Shop_Gregoricchio.CRUD
                             try
                             {
                                 descrip = reader.GetString(2);
-                            } catch (SqlNullValueException)
+                            }
+                            catch (SqlNullValueException)
                             {
                                 descrip = null;
                             }
@@ -309,12 +356,19 @@ namespace Shop_Gregoricchio.CRUD
             }
             return l;
         }
+
+        public List<Ordine> SearchAllOrdine()
+        {
+            List<Ordine> l = new List<Ordine>();
+            return l;
+        }
+
         public List<TipiPagamento> SearchAllTipiPagamento()
         {
             List<TipiPagamento> s = new List<TipiPagamento>();
             return s;
         }
-        
+
         public bool CheckGiacenza(int id)
         {
             return false;

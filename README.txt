@@ -9,6 +9,8 @@ Dentro la cartella SQL Data, sono salvati:
 - 1 file sql per il ripristino del db via codice
 - 1 file .bak contenente un backup completo del database
 
+Nel caso il ripristino via .bak non permetta di aprire il diagramma database, vedasi istruzioni in SQLData\Se il Diagramma Database non si apre err15517.odt
+
 Rispetto al progetto originale, ho aggiunto alla tabella Dettaglio Ordine un attributo ScontoApplicato. Serve a memorizzare, per ogni prodotto dell'ordine, lo sconto che era stato applicato al momento dell'acquisto.
 È un elemento ridondante ma che è utile per salvare l'elemento temporale legato allo sconto per recuperi futuri della fattura dell'ordine.
 (ex: c'è uno sconto base indicato per ogni prodotto, modificabile a seconda dell'offerta in corso. Se viene modificato e si esegue la stored procedure per recuperare la fattura di un ordine precedente (con sconti differenti), il totale sarà errato rispetto al prezzo pagato al momento dell'acquisto. Salvando il riferimento dello sconto nel dettaglio ordine, si risale direttamente allo sconto che era attivo al momento dell'ordine.)
@@ -25,4 +27,4 @@ select * from Shop_Gregoricchio.sys.triggers
 
 La spiegazione delle StoredProcedure è presente come commento nel file .sql delle Stored Procedures.
 
-Per eventuali problemi, questioni, dubbi etc., scrivere a matteo.gregoricchio@edu.itspiemonte.it - [rispondo sempre]
+Per eventuali problemi, questioni, dubbi etc., scrivere a matteo.gregoricchio@edu.itspiemonte.it [rispondo sempre]

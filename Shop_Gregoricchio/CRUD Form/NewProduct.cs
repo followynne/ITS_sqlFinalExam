@@ -23,7 +23,10 @@ namespace Shop_Gregoricchio.CRUD_Form
             {
                 cbxCategoria.Items.Add(c);
             }
-            cbxCategoria.SelectedIndex = 0;
+            if (cbxCategoria.Items.Count != 0)
+            {
+                cbxCategoria.SelectedIndex = 0;
+            }
         }
 
         private void btnSend_Click(object sender, EventArgs e)
@@ -38,9 +41,12 @@ namespace Shop_Gregoricchio.CRUD_Form
             Prodotto p = new Prodotto(1, txtNome.Text, txtDescrizione.Text, (Categoria)cbxCategoria.SelectedItem,
                 price, sale, giacenza);
             int res = cc.NewProdotto(p);
-            if (res!=0) {
+            if (res != 0)
+            {
                 MessageBox.Show("Prodotto aggiunto!");
-            } else {
+            }
+            else
+            {
                 MessageBox.Show("Prodotto non aggiunto!");
             }
         }

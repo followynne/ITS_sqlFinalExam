@@ -204,10 +204,12 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.OldLace;
+            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Georgia", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
             this.textBox1.Location = new System.Drawing.Point(69, 96);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(741, 426);
@@ -217,7 +219,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(663, 76);
+            this.label1.Location = new System.Drawing.Point(688, 77);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 29);

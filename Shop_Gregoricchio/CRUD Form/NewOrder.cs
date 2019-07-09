@@ -49,8 +49,8 @@ namespace Shop_Gregoricchio.CRUD_Form
             }
             Ordine o = new Ordine(1, "", (Cliente)cbxCliente.SelectedItem, dtpDate.Value,
                 (TipiPagamento)cbxPagamento.SelectedItem, _listaP);
-            bool res = c.NewOrdine(o);
-            if (res)
+            int res = c.NewOrdine(o);
+            if (res!=0)
             {
                 MessageBox.Show("Ordine aggiunto!");
             }
