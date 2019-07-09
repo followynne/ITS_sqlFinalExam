@@ -44,8 +44,8 @@ namespace Shop_Gregoricchio.CRUD_Form
                 MessageBox.Show("Dato non valido.");
                 return;
             }
-            string s = c.SearchbyId(choice, id);
-            textBox1.Text = s;
+            //string s = c.SearchbyId(choice, id);
+            //textBox1.Text = s;
         }
     }
 }

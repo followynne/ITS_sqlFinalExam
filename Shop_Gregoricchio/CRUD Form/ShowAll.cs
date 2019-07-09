@@ -44,8 +44,8 @@ namespace Shop_Gregoricchio.CRUD_Form
             {
                 choice = "prodotto";
             }
-            string res = c.SearchAll(choice);
-            textBox1.Text = res;
+            //string res = c.SearchAll(choice);
+            //textBox1.Text = res;
         }
     }
 }

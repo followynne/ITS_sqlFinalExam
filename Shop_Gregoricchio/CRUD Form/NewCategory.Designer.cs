@@ -50,7 +50,7 @@
             // btnSend
             // 
             this.btnSend.Location = new System.Drawing.Point(236, 252);
-            this.btnSend.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSend.Margin = new System.Windows.Forms.Padding(2);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(93, 29);
             this.btnSend.TabIndex = 37;
@@ -61,7 +61,7 @@
             // txtDescrizione
             // 
             this.txtDescrizione.Location = new System.Drawing.Point(217, 167);
-            this.txtDescrizione.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescrizione.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescrizione.Name = "txtDescrizione";
             this.txtDescrizione.Size = new System.Drawing.Size(222, 20);
             this.txtDescrizione.TabIndex = 28;
@@ -72,14 +72,14 @@
             this.Descrizione.Location = new System.Drawing.Point(123, 167);
             this.Descrizione.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Descrizione.Name = "Descrizione";
-            this.Descrizione.Size = new System.Drawing.Size(62, 13);
+            this.Descrizione.Size = new System.Drawing.Size(88, 13);
             this.Descrizione.TabIndex = 27;
-            this.Descrizione.Text = "Descrizione";
+            this.Descrizione.Text = "Descrizione [opz]";
             // 
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(217, 126);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(2);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(222, 20);
             this.txtNome.TabIndex = 26;
@@ -105,7 +105,7 @@
             this.Controls.Add(this.Descrizione);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NewCategory";
             this.Text = "NewCategory";
             this.ResumeLayout(false);

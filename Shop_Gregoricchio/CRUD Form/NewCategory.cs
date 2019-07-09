@@ -32,8 +32,8 @@ namespace Shop_Gregoricchio.CRUD_Form
                 return;
             }
             Categoria cat = new Categoria(1, name, description);
-            bool result = c.NewCategoria(cat);
-            if (!result)
+            int result = c.NewCategoria(cat);
+            if (result!=0)
             {
                 MessageBox.Show("Nuova categoria inserita!");
             } else

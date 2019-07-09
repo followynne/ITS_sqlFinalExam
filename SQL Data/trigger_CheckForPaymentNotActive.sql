@@ -10,5 +10,3 @@ ROLLBACK TRANSACTION;
 RETURN
 END;
 GO 
-
-select * from Shop_Gregoricchio.sys.triggers

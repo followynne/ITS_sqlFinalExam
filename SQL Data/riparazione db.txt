@@ -1,8 +1,0 @@
-a creazione db, controlla che dbo del db sia riferito all'account generale del dbowner
-
-sotto account, crea account ecc e checka che riferisca solo al db come owner
-
-riportarl su con il backup
-
-checka accesso con i diff account anche al diagramma
-
