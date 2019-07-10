@@ -22,24 +22,38 @@ namespace Shop_Gregoricchio.CRUD_Form
             InitializeComponent();
             c = new CrudComp();
             _listaP = new Dictionary<Prodotto, int>();
-            // codice per caricare tutti i clienti
-            // codice per caricare tutti i pagamenti
-
+            foreach (Cliente c in c.SearchAllCliente())
+            {
+                cbxCliente.Items.Add(c);
+            }
+            if (cbxCliente.Items.Count != 0)
+            {
+                cbxCliente.SelectedIndex = 0;
+            }
+            foreach (TipiPagamento t in c.SearchAllTipiPagamento())
+            {
+                cbxPagamento.Items.Add(t);
+            }
+            if (cbxPagamento.Items.Count != 0)
+            {
+                cbxPagamento.SelectedIndex = 0;
+            }
 
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ProductsToOrder n = new ProductsToOrder();
+            ProductsToOrder n = new ProductsToOrder(this, _listaP);
             n.ShowDialog();
             if (n.DialogResult == DialogResult.OK)
             {
                 _listaP = n._result;
             }
+            txtShow.Text = "";
             foreach(KeyValuePair<Prodotto, int> k in _listaP)
             {
-                txtShow.Text += k.Key + " - " + k.Value + "\r\n";
+                txtShow.Text += k.Key + "Quantità: " + k.Value + "\r\n";
             }
         }
 

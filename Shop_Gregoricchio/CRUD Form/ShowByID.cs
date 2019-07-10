@@ -22,30 +22,32 @@ namespace Shop_Gregoricchio.CRUD_Form
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string choice = "";
+            textBox1.Text = "";
+            if (!int.TryParse(txtId.Text, out int id))
+            {
+                MessageBox.Show("Id non valido, riprova.");
+                return;
+            }
             if (rdbCategory.Checked)
             {
-                choice = "categoria";
+                if (c.SearchCategoria(id)!= null)
+                    textBox1.Text = c.SearchCategoria(id).ToString();
             }
             else if (rdbClient.Checked)
             {
-                choice = "cliente";
+                if (c.SearchCliente(id) != null)
+                    textBox1.Text = c.SearchCliente(id).ToString();
             }
             else if (rdbOrder.Checked)
             {
-                choice = "ordine";
+                if (c.SearchOrdine(id) != null)
+                    textBox1.Text = c.SearchOrdine(id).ToString();
             }
             else if (rdbProduct.Checked)
             {
-                choice = "prodotto";
+                if (c.SearchProdotto(id) != null)
+                    textBox1.Text = c.SearchProdotto(id).ToString();
             }
-            if (!int.TryParse(txtId.Text, out int id))
-            {
-                MessageBox.Show("Dato non valido.");
-                return;
-            }
-            //string s = c.SearchbyId(choice, id);
-            //textBox1.Text = s;
         }
     }
 }

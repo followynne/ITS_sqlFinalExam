@@ -18,7 +18,7 @@ namespace Shop_Gregoricchio.CRUD
         }//DESKTOP-O1ADUOV    BE-PRI-A-11\\SQLEXPRESS01 (catchare errore server)
 
         static public SqlConnectionStringBuilder DB(){
-            connection.DataSource = "BE-PRI-A-11\\SQLEXPRESS01";
+            connection.DataSource = "DESKTOP-O1ADUOV";
             connection.UserID = "ITS_IBS";
             connection.Password = "!Its-2019";
             connection.InitialCatalog = "Shop_Gregoricchio";

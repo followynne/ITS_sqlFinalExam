@@ -40,14 +40,14 @@ namespace Shop_Gregoricchio.CRUD_Form
             }
             Prodotto p = new Prodotto(id, txtNome.Text, txtDescrizione.Text, (Categoria)cbxCategoria.SelectedItem,
                 price, sale, giacenza);
-            bool res = cc.UpdProdotto(p);
-            if (res)
+            int res = cc.UpdProdotto(p);
+            if (res!=0)
             {
                 MessageBox.Show("Prodotto modificato!");
             }
             else
             {
-                MessageBox.Show("Prodotto non modificato!");
+                MessageBox.Show("Prodotto non modificato.");
             }
         }
 

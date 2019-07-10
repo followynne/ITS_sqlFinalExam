@@ -4,10 +4,12 @@ ossia nel aggiunta/mod prodotto richiesto allora...
 -modifica stored procedure per a vere i nomi delle cose
 - controlla in db connectiond i pulire il proprio server  + aggiungi nel readme come mettere il srv
 - su ogni form controllare i vari "nelcaso siano 0 gli el del db......"
+
 -rinomina azienda in cliente
--regex
+-regex (togli a-z)
 -questione prezzo ivato no + iva a categorie?!
 .--info su connessione, come conn, dove + catchato
+- i prezzi vari checkare db e appl
 
 db:
 //aggiunta colonna di ridondanza sconto/prodotto = per avere

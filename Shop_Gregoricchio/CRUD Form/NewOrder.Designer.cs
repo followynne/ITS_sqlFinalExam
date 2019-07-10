@@ -64,8 +64,10 @@
             // 
             // cbxCliente
             // 
+            this.cbxCliente.DropDownHeight = 200;
             this.cbxCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCliente.FormattingEnabled = true;
+            this.cbxCliente.IntegralHeight = false;
             this.cbxCliente.Location = new System.Drawing.Point(293, 84);
             this.cbxCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxCliente.Name = "cbxCliente";

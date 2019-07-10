@@ -183,7 +183,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ProductsToOrder";
             this.Text = "ProductsToOrder";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ProductsToOrder_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ProductsToOrder_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -9,8 +9,13 @@ Dentro la cartella SQL Data, sono salvati:
 - 1 file sql per il ripristino del db via codice
 - 1 file .bak contenente un backup completo del database
 
-Nel caso il ripristino via .bak non permetta di aprire il diagramma database, vedasi istruzioni in SQLData\Se il Diagramma Database non si apre err15517.odt
+Nel caso il ripristino via .bak non permetta di aprire il diagramma database, vedasi istruzioni in "SQLData\Se il Diagramma Database non si apre err15517.odt"
 
+---------CONNESSIONE AL DATABASE-----------
+I dati di connessione al database sono contenuti nella classe "", nella soluzione c#. Per connettersi al database da casa, modificare il campo .DataSource con l'indirizzo del proprio server personale.
+L'errore di connessione è catchato nel caso siano errati i dati indicati in connessione (a eccezione dell'indicazione del server, dato che se errato non fa avviare l'applicativo).
+
+---------MODIFICHE RISPETTO AL DB ORIGINALE--------------
 Rispetto al progetto originale, ho aggiunto alla tabella Dettaglio Ordine un attributo ScontoApplicato. Serve a memorizzare, per ogni prodotto dell'ordine, lo sconto che era stato applicato al momento dell'acquisto.
 È un elemento ridondante ma che è utile per salvare l'elemento temporale legato allo sconto per recuperi futuri della fattura dell'ordine.
 (ex: c'è uno sconto base indicato per ogni prodotto, modificabile a seconda dell'offerta in corso. Se viene modificato e si esegue la stored procedure per recuperare la fattura di un ordine precedente (con sconti differenti), il totale sarà errato rispetto al prezzo pagato al momento dell'acquisto. Salvando il riferimento dello sconto nel dettaglio ordine, si risale direttamente allo sconto che era attivo al momento dell'ordine.)
@@ -18,6 +23,7 @@ Rispetto al progetto originale, ho aggiunto alla tabella Dettaglio Ordine un att
 Tale aggiunta è gestita in automatico dal database, ossia l'utente non deve inserire manualmente lo sconto per ogni prodotto scelto. Tramite l'uso di un trigger, alla conferma di un ordine viene copiato lo sconto attivo per il Prodotto X nel campo corrispondente del Dettaglio Ordine.
 EX: Azienda 1 acquista Prodotto id 1. Il Prodotto id 1 ha lo sconto attivo del 20%. Nel dettaglio Ordine verrà indicato IdAzienda 1, IdProdotto 1, Quantità desiderata, ScontoApplicato. Quest'ultimo campo verrà copiato automaticamente dal campo Sconto presente per il Prodotto id 1. In futuro il totale della fattura verrà ricreata riferendosi allo ScontoApplicato, non al campo Sconto di Prodotto (che potrebbe essere mutato da allora).
 
+-----------FUNZIONE TRIGGER-----------
 I trigger servono ad eseguire i seguenti controlli:
 - trigger_CheckForPaymentNotActive: controlla che ,se viene scelto un pagamento non attivo per un ordine, la transazione non avvenga.
 - trigger_ValidateInsertInDettaglioOrdine: fa 3 controlli sull'inserimento di un prodotto per l'ordine, ossia 1. controlla che la giacenza del Prodotto sia maggiore della Quantità richiesta (altrimenti annulla la transazione); 2. se la quantità è valida, aggiorna la giacenza in magazzino del Prodotto (Prodotto.giacenza - DettaglioProdotto.Quantità); 3. se la quantità è valida, copia il valore di sconto presente in Prodotto nell'attributo ScontoApplicato.
@@ -27,4 +33,5 @@ select * from Shop_Gregoricchio.sys.triggers
 
 La spiegazione delle StoredProcedure è presente come commento nel file .sql delle Stored Procedures.
 
+---------------ADDENDUM----------
 Per eventuali problemi, questioni, dubbi etc., scrivere a matteo.gregoricchio@edu.itspiemonte.it [rispondo sempre]

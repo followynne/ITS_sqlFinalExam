@@ -52,7 +52,7 @@ namespace Shop_Gregoricchio
                             textBox1.Text += "Prodotto più venduto\r\n";
                             while (reader.Read())
                             {
-                                textBox1.Text += reader.GetInt32(0) + "Somma acquistata: " + reader.GetFloat(1) + "\r\n";
+                                textBox1.Text += reader.GetInt32(0) + "Somma acquistata: " + reader.GetInt32(1) + "\r\n";
                             }
                         }
                     }
@@ -83,7 +83,7 @@ namespace Shop_Gregoricchio
                             textBox1.Text += "I 10 migliori clienti per fatturato sono:\r\n";
                             while (reader.Read())
                             {
-                                textBox1.Text += reader.GetInt32(0) + " - Fatturato: " + reader.GetFloat(1) + "\r\n";
+                                //textBox1.Text += reader.GetInt32(0) + " - Fatturato: " + reader.GetFloat(1) + "\r\n";
                             }
                         }
 

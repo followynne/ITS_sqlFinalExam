@@ -23,8 +23,22 @@ namespace Shop_Gregoricchio.CRUD_Form
             InitializeComponent();
             c = new CrudComp();
             _listaP = new Dictionary<Prodotto, int>();
-            // codice per caricare tutti i clienti
-            // codice per tirare fuori i tipi di pagamento
+            foreach (Cliente c in c.SearchAllCliente())
+            {
+                cbxCliente.Items.Add(c);
+            }
+            if (cbxCliente.Items.Count != 0)
+            {
+                cbxCliente.SelectedIndex = 0;
+            }
+            foreach (TipiPagamento t in c.SearchAllTipiPagamento())
+            {
+                cbxPagamento.Items.Add(t);
+            }
+            if (cbxPagamento.Items.Count != 0)
+            {
+                cbxPagamento.SelectedIndex = 0;
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -43,13 +57,9 @@ namespace Shop_Gregoricchio.CRUD_Form
             else
             {
                 txtCodOrdine.Text = order.CodiceOrdine;
-                txtCodOrdine.Enabled = true;
                 cbxCliente.SelectedItem = order.Cliente;
-                cbxCliente.Enabled = true;
                 dtpDate.Value = order.Data;
-                dtpDate.Enabled = true;
                 cbxPagamento.SelectedItem = order.TipoPagamento;
-                cbxPagamento.Enabled = true;
                 _listaP = order.ListaProdotti;
                 textBox1.Text = "";
                 foreach (KeyValuePair<Prodotto, int> k in _listaP)
@@ -68,8 +78,8 @@ namespace Shop_Gregoricchio.CRUD_Form
                 return;
             }
             Ordine order = new Ordine(int.Parse(txtId.Text), txtCodOrdine.Text, (Cliente)cbxCliente.SelectedItem, dtpDate.Value, (TipiPagamento)cbxPagamento.SelectedItem, _listaP);
-            bool res = c.DelOrdine(order);
-            if (res)
+            int res = c.DelOrdine(order);
+            if (res!=0)
             {
                 MessageBox.Show("Cliente eliminato!");
             }

@@ -41,7 +41,7 @@
             // 
             this.rdbClient.AutoSize = true;
             this.rdbClient.Location = new System.Drawing.Point(592, 34);
-            this.rdbClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbClient.Margin = new System.Windows.Forms.Padding(4);
             this.rdbClient.Name = "rdbClient";
             this.rdbClient.Size = new System.Drawing.Size(64, 21);
             this.rdbClient.TabIndex = 11;
@@ -53,7 +53,7 @@
             // 
             this.rdbCategory.AutoSize = true;
             this.rdbCategory.Location = new System.Drawing.Point(71, 34);
-            this.rdbCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbCategory.Margin = new System.Windows.Forms.Padding(4);
             this.rdbCategory.Name = "rdbCategory";
             this.rdbCategory.Size = new System.Drawing.Size(86, 21);
             this.rdbCategory.TabIndex = 10;
@@ -65,7 +65,7 @@
             // 
             this.rdbProduct.AutoSize = true;
             this.rdbProduct.Location = new System.Drawing.Point(235, 34);
-            this.rdbProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbProduct.Margin = new System.Windows.Forms.Padding(4);
             this.rdbProduct.Name = "rdbProduct";
             this.rdbProduct.Size = new System.Drawing.Size(78, 21);
             this.rdbProduct.TabIndex = 9;
@@ -77,7 +77,7 @@
             // 
             this.rdbOrder.AutoSize = true;
             this.rdbOrder.Location = new System.Drawing.Point(425, 34);
-            this.rdbOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbOrder.Margin = new System.Windows.Forms.Padding(4);
             this.rdbOrder.Name = "rdbOrder";
             this.rdbOrder.Size = new System.Drawing.Size(66, 21);
             this.rdbOrder.TabIndex = 8;
@@ -87,10 +87,13 @@
             // 
             // textBox1
             // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(129, 151);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox1.Size = new System.Drawing.Size(731, 365);
             this.textBox1.TabIndex = 7;
             // 
@@ -119,7 +122,7 @@
             this.ClientSize = new System.Drawing.Size(976, 554);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ShowAll";
             this.Text = "ShowAll";
             this.groupBox1.ResumeLayout(false);

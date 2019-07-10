@@ -29,7 +29,7 @@ namespace Shop_Gregoricchio.CRUD_Form
         private void radioButtons_CheckedChanged(object sender, EventArgs e)
         {
             textBox1.Text = "";
-            RadioButton rd = sender as RadioButton;
+            //RadioButton rd = sender as RadioButton;
             if (rdbCategory.Checked)
             {
                 List<Categoria> list = c.SearchAllCategoria(); 

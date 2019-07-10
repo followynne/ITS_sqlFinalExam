@@ -69,7 +69,7 @@ namespace Shop_Gregoricchio.CRUD_Form
         {
             if (!int.TryParse(txtId.Text, out int id2) || (idd!=id2))
             {
-                MessageBox.Show("Errore, id non valido.");
+                MessageBox.Show("Errore, id modificato rispetto alla search, non valido.");
                 return;
             }
             if (!int.TryParse(txtId.Text, out int id) || !float.TryParse(txtPrezzo.Text, out float price)
@@ -80,14 +80,14 @@ namespace Shop_Gregoricchio.CRUD_Form
             }
             Prodotto p = new Prodotto(id, txtNome.Text, txtDescrizione.Text, (Categoria)cbxCategoria.SelectedItem,
                 price, sale, giacenza);
-            bool res = c.DelProdotto(p);
-            if (res)
+            int res = c.DelProdotto(p);
+            if (res!=0)
             {
-                MessageBox.Show("Prodotto modificato!");
+                MessageBox.Show("Prodotto eliminato!");
             }
             else
             {
-                MessageBox.Show("Prodotto non modificato!");
+                MessageBox.Show("Errore, categoria non cancellata. Vincolo di integrità referenziale attivo.");
             }
         }
     }

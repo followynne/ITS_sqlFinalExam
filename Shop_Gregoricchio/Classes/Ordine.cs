@@ -80,7 +80,7 @@ namespace Shop_Gregoricchio.Classes
             {
                 fattura += p.Key.Denominazione + " - prezzo (iva inclusa): " + p.Key.Prezzo + " - quantità" + p.Value + "\r\n";
             }
-            return fattura += "Totale: " + TotaleIvato();
+            return fattura += "Totale con Iva: " + TotaleIvato() + "\r\nTotale Scontato: " + "";
         }
 
         public override bool Equals(object obj)

@@ -77,13 +77,13 @@ namespace Shop_Gregoricchio.Classes
 
         public float PrezzoIvato()
         {
-            return _prezzo + (_prezzo * 22 / 100) - (_prezzo * _sconto);
+            return (_prezzo + (_prezzo * 22 / 100));
         }
 
         public override string ToString()
         {
             return "Prodotto: ID - " + _id + ", Nome - " + _denominazione + ", Descrizione - " + _descrizione
-                + ", " + _categoria.ToString() + "Prezzo - " + _prezzo + ", Sconto - " + _sconto + ", Giacenza - " + _giacenza; 
+                + ", " + _categoria.ToString() + "Prezzo - " + _prezzo + ", Sconto - " + _sconto + ", Giacenza - " + _giacenza +"\r\n"; 
         }
 
         public override bool Equals(object obj)
