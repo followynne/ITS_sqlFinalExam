@@ -49,18 +49,19 @@ namespace Shop_Gregoricchio.CRUD_Form
             string description = txtDescrizione.Text;
             if (!int.TryParse(txtId.Text, out int id2) || (id2!= id))
             {
-                MessageBox.Show("Errore, dato non valido.");
+                MessageBox.Show("Errore, id modificato rispetto alla search, non valido.");
                 return;
             };
             Categoria cat = new Categoria(id, name, description);
-            bool result = c.DelCategoria(cat);
-            if (!result)
+
+            int result = c.DelCategoria(cat);
+            if (result!=0)
             {
-                MessageBox.Show("Nuova categoria inserita!");
+                MessageBox.Show("Categoria eliminata!");
             }
             else
             {
-                MessageBox.Show("Errore, dato non inserito.");
+                MessageBox.Show("Errore, categoria non cancellata. Vincolo di integrità referenziale attivo.");
             }
         }
     }

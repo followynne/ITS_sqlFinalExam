@@ -22,7 +22,15 @@ namespace Shop_Gregoricchio.CRUD_Form
             InitializeComponent();
             c = new CrudComp();
             idd = 0;
-            // db connection
+            List<Categoria> l = c.SearchAllCategoria();
+            foreach (Categoria cat in l)
+            {
+                cbxCategoria.Items.Add(cat);
+            }
+            if (cbxCategoria.Items.Count != 0)
+            {
+                cbxCategoria.SelectedIndex = 0;
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -42,7 +50,13 @@ namespace Shop_Gregoricchio.CRUD_Form
             {
                 txtNome.Text = p.Denominazione;
                 txtDescrizione.Text = p.Descrizione;
-                cbxCategoria.SelectedItem = p.Categoria;
+                foreach (Categoria c in cbxCategoria.Items)
+                {
+                    if (c.Equals(p.Categoria))
+                    {
+                        cbxCategoria.SelectedItem = c;
+                    }
+                }
                 txtPrezzo.Text = "" + p.Prezzo;
                 txtSconto.Text = "" + p.Sconto;
                 txtGiacenza.Text = "" + p.Giacenza;

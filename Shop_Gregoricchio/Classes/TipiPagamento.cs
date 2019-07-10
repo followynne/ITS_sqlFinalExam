@@ -43,5 +43,17 @@ namespace Shop_Gregoricchio.Classes
         {
             return "Pagamento scelto : " + _denominazione + ".";
         }
+
+        public override bool Equals(object obj)
+        {
+            var pagamento = obj as TipiPagamento;
+            return pagamento != null &&
+                   _id == pagamento._id &&
+                   Id == pagamento.Id &&
+                   _denominazione == pagamento._denominazione &&
+                   Denominazione == pagamento.Denominazione &&
+                   _attivo == pagamento._attivo &&
+                   Attivo == pagamento.Attivo;
+        }
     }
 }

@@ -83,5 +83,22 @@ namespace Shop_Gregoricchio.Classes
             return fattura += "Totale: " + TotaleIvato();
         }
 
+        public override bool Equals(object obj)
+        {
+            var ordine = obj as Ordine;
+            return ordine != null &&
+                   _id == ordine._id &&
+                   Id == ordine.Id &&
+                   _codiceordine == ordine._codiceordine &&
+                   CodiceOrdine == ordine.CodiceOrdine &&
+                   EqualityComparer<Cliente>.Default.Equals(_cliente, ordine._cliente) &&
+                   EqualityComparer<Cliente>.Default.Equals(Cliente, ordine.Cliente) &&
+                   _data == ordine._data &&
+                   Data == ordine.Data &&
+                   EqualityComparer<TipiPagamento>.Default.Equals(_tipopagamento, ordine._tipopagamento) &&
+                   EqualityComparer<TipiPagamento>.Default.Equals(TipoPagamento, ordine.TipoPagamento) &&
+                   EqualityComparer<Dictionary<Prodotto, int>>.Default.Equals(_listaprodotti, ordine._listaprodotti) &&
+                   EqualityComparer<Dictionary<Prodotto, int>>.Default.Equals(ListaProdotti, ordine.ListaProdotti);
+        }
     }
 }

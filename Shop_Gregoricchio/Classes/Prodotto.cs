@@ -85,5 +85,25 @@ namespace Shop_Gregoricchio.Classes
             return "Prodotto: ID - " + _id + ", Nome - " + _denominazione + ", Descrizione - " + _descrizione
                 + ", " + _categoria.ToString() + "Prezzo - " + _prezzo + ", Sconto - " + _sconto + ", Giacenza - " + _giacenza; 
         }
+
+        public override bool Equals(object obj)
+        {
+            var prodotto = obj as Prodotto;
+            return prodotto != null &&
+                   _id == prodotto._id &&
+                   Id == prodotto.Id &&
+                   _denominazione == prodotto._denominazione &&
+                   Denominazione == prodotto.Denominazione &&
+                   _descrizione == prodotto._descrizione &&
+                   Descrizione == prodotto.Descrizione &&
+                   EqualityComparer<Categoria>.Default.Equals(_categoria, prodotto._categoria) &&
+                   EqualityComparer<Categoria>.Default.Equals(Categoria, prodotto.Categoria) &&
+                   _prezzo == prodotto._prezzo &&
+                   Prezzo == prodotto.Prezzo &&
+                   _sconto == prodotto._sconto &&
+                   Sconto == prodotto.Sconto &&
+                   _giacenza == prodotto._giacenza &&
+                   Giacenza == prodotto.Giacenza;
+        }
     }
 }

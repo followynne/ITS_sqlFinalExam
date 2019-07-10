@@ -134,6 +134,8 @@ namespace Shop_Gregoricchio.Classes
             set { _sitoWeb = value; }
         }
 
+
+
         public override string ToString()
         {
             return "Cliente: ID -  " + _id + ", P.Iva - " + _piva + ", C.Fiscale - " + _codFiscale 
@@ -141,6 +143,42 @@ namespace Shop_Gregoricchio.Classes
                 + ", Via - " + _via + ", Città - " + _città + ", CAP - " + _cap + ", PV - " + _pv 
                 + ", Telefono - " + _telefono + ", Cellulare - " + _cellulare
                 + ", Fax - " + _fax + ", Mail - " + _mail + ", Sito Web - " + _sitoWeb + ".\r\n";
+        }
+
+        public override bool Equals(object obj)
+        {
+            var cliente = obj as Cliente;
+            return cliente != null &&
+                   _id == cliente._id &&
+                   Id == cliente.Id &&
+                   _piva == cliente._piva &&
+                   PartitaIva == cliente.PartitaIva &&
+                   _codFiscale == cliente._codFiscale &&
+                   CodiceFiscale == cliente.CodiceFiscale &&
+                   _ragioneSociale == cliente._ragioneSociale &&
+                   RagioneSociale == cliente.RagioneSociale &&
+                   _nome == cliente._nome &&
+                   Nome == cliente.Nome &&
+                   _cognome == cliente._cognome &&
+                   Cognome == cliente.Cognome &&
+                   _via == cliente._via &&
+                   Via == cliente.Via &&
+                   _città == cliente._città &&
+                   Città == cliente.Città &&
+                   _cap == cliente._cap &&
+                   Cap == cliente.Cap &&
+                   _pv == cliente._pv &&
+                   PV == cliente.PV &&
+                   _telefono == cliente._telefono &&
+                   Telefono == cliente.Telefono &&
+                   _fax == cliente._fax &&
+                   Fax == cliente.Fax &&
+                   _cellulare == cliente._cellulare &&
+                   Cellulare == cliente.Cellulare &&
+                   _mail == cliente._mail &&
+                   Mail == cliente.Mail &&
+                   _sitoWeb == cliente._sitoWeb &&
+                   SitoWeb == cliente.SitoWeb;
         }
     }
 }

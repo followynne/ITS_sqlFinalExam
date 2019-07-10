@@ -44,8 +44,8 @@ namespace Shop_Gregoricchio.CRUD_Form
             }
             Cliente client = new Cliente(int.Parse(txtId.Text), txtPIva.Text, txtCF.Text, txtRSoc.Text, txtNome.Text, txtCognome2.Text, txtVia.Text,
                  txtCity.Text, cap, txtPV.Text, txtTel.Text, txtFax.Text, txtCell.Text, txtMail.Text, txtSito.Text);
-            bool res = c.UpdCliente(client);
-            if (res)
+            int res = c.UpdCliente(client);
+            if (res!=0)
             {
                 MessageBox.Show("Cliente aggiornato!");
             }

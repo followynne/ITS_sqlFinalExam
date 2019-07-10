@@ -80,6 +80,9 @@ BEGIN
 	from DettaglioOrdine d inner join Prodotto p on p.Id = d.IdProdotto group by IdOrdine
     
 	END
+	
+	/*select IdOrdine, SUM((p.PrezzoNoIva+(p.PrezzoNoIva*22/100) - (p.PrezzoNoIva+(p.PrezzoNoIva*22/100))*d.ScontoApplicato/100))*d.Quantita) as prezzo 
+	from DettaglioOrdine d inner join Prodotto p on p.Id = d.IdProdotto group by IdOrdine*/
 GO
 
 ---------------------

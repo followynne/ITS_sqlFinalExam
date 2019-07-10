@@ -37,11 +37,23 @@ namespace Shop_Gregoricchio.Classes
             set { _descrizione = value; }
         }
 
+
+
         public override string ToString()
         {
             return "Categoria: " + _id + ", " + _denominazione + ", " + _descrizione + ".\r\n";
         }
 
-
+        public override bool Equals(object obj)
+        {
+            var categoria = obj as Categoria;
+            return categoria != null &&
+                   _id == categoria._id &&
+                   Id == categoria.Id &&
+                   _denominazione == categoria._denominazione &&
+                   Denominazione == categoria.Denominazione &&
+                   _descrizione == categoria._descrizione &&
+                   Descrizione == categoria.Descrizione;
+        }
     }
 }

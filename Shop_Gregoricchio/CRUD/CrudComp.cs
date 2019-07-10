@@ -22,28 +22,34 @@ namespace Shop_Gregoricchio.CRUD
         public int NewProdotto(Prodotto p)
         {
             int x = 0;
-            using (SqlConnection connection = new SqlConnection(db.ConnectionString))
+            try
             {
-                connection.Open();
-                string sql = "insert into Prodotto values (@denominazione,@descrizione," +
-                    "@idcategoria,@prezzonoiva,@sconto, @giacenza)";
-                using (SqlCommand command = new SqlCommand(sql, connection))
+                using (SqlConnection connection = new SqlConnection(db.ConnectionString))
                 {
-                    command.Parameters.Add("@denominazione", SqlDbType.VarChar).Value = p.Denominazione;
-                    if (p.Descrizione == "")
+                    connection.Open();
+                    string sql = "insert into Prodotto values (@denominazione,@descrizione," +
+                        "@idcategoria,@prezzonoiva,@sconto, @giacenza)";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
                     {
-                        command.Parameters.Add("@descrizione", SqlDbType.Text).Value = DBNull.Value;
+                        command.Parameters.Add("@denominazione", SqlDbType.VarChar).Value = p.Denominazione;
+                        if (p.Descrizione == "" || p.Descrizione.ToUpper() == "NULL")
+                        {
+                            command.Parameters.Add("@descrizione", SqlDbType.Text).Value = DBNull.Value;
+                        }
+                        else
+                        {
+                            command.Parameters.Add("@descrizione", SqlDbType.VarChar).Value = p.Descrizione;
+                        }
+                        command.Parameters.Add("@idcategoria", SqlDbType.Int).Value = p.Categoria.Id;
+                        command.Parameters.Add("@prezzonoiva", SqlDbType.Float).Value = p.Prezzo;
+                        command.Parameters.Add("@sconto", SqlDbType.Float).Value = p.Sconto;
+                        command.Parameters.Add("@giacenza", SqlDbType.Int).Value = p.Giacenza;
+                        x = command.ExecuteNonQuery();
                     }
-                    else
-                    {
-                        command.Parameters.Add("@descrizione", SqlDbType.VarChar).Value = p.Descrizione;
-                    }
-                    command.Parameters.Add("@idcategoria", SqlDbType.Int).Value = p.Categoria.Id;
-                    command.Parameters.Add("@prezzonoiva", SqlDbType.Float).Value = p.Prezzo;
-                    command.Parameters.Add("@sconto", SqlDbType.Float).Value = p.Sconto;
-                    command.Parameters.Add("@giacenza", SqlDbType.Int).Value = p.Giacenza;
-                    x = command.ExecuteNonQuery();
                 }
+            }
+            catch (Exception)
+            {
             }
             return x;
         }
@@ -51,23 +57,29 @@ namespace Shop_Gregoricchio.CRUD
         public int NewCategoria(Categoria p)
         {
             int x = 0;
-            using (SqlConnection connection = new SqlConnection(db.ConnectionString))
+            try
             {
-                connection.Open();
-                string sql = "insert into Categoria values (@denominazione,@descrizione)";
-                using (SqlCommand command = new SqlCommand(sql, connection))
+                using (SqlConnection connection = new SqlConnection(db.ConnectionString))
                 {
-                    command.Parameters.Add("@denominazione", SqlDbType.VarChar).Value = p.Denominazione;
-                    if (p.Descrizione == "")
+                    connection.Open();
+                    string sql = "insert into Categoria values (@denominazione,@descrizione)";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
                     {
-                        command.Parameters.Add("@descrizione", SqlDbType.Text).Value = DBNull.Value;
+                        command.Parameters.Add("@denominazione", SqlDbType.VarChar).Value = p.Denominazione;
+                        if (p.Descrizione == "" || p.Descrizione.ToUpper() == "NULL")
+                        {
+                            command.Parameters.Add("@descrizione", SqlDbType.Text).Value = DBNull.Value;
+                        }
+                        else
+                        {
+                            command.Parameters.Add("@descrizione", SqlDbType.VarChar).Value = p.Descrizione;
+                        }
+                        x = command.ExecuteNonQuery();
                     }
-                    else
-                    {
-                        command.Parameters.Add("@descrizione", SqlDbType.VarChar).Value = p.Descrizione;
-                    }
-                    x = command.ExecuteNonQuery();
                 }
+            }
+            catch (Exception)
+            {
             }
             return x;
         }
@@ -84,50 +96,56 @@ namespace Shop_Gregoricchio.CRUD
         public int NewCliente(Cliente p)
         {
             int x = 0;
-            using (SqlConnection connection = new SqlConnection(db.ConnectionString))
+            try
             {
-                connection.Open();
-                string sql = "insert into Cliente values (@PartitaIva, @CF, @RagioneSociale, @Nome, @Cognome," +
-                    "@Via, @Cap, @Citta, @Provincia, @Telefono, @Cellulare, @Fax, @Email, @Sito)";
-                using (SqlCommand command = new SqlCommand(sql, connection))
+                using (SqlConnection connection = new SqlConnection(db.ConnectionString))
                 {
-                    command.Parameters.Add("@PartitaIva", SqlDbType.VarChar).Value = p.PartitaIva;
-                    command.Parameters.Add("@CF", SqlDbType.VarChar).Value = p.CodiceFiscale;
-                    command.Parameters.Add("@RagioneSociale", SqlDbType.VarChar).Value = p.RagioneSociale;
-                    command.Parameters.Add("@Nome", SqlDbType.VarChar).Value = p.Nome;
-                    command.Parameters.Add("@Cognome", SqlDbType.VarChar).Value = p.Cognome;
-                    command.Parameters.Add("@Via", SqlDbType.VarChar).Value = p.Via;
-                    command.Parameters.Add("@Cap", SqlDbType.Int).Value = p.Cap;
-                    command.Parameters.Add("@Citta", SqlDbType.VarChar).Value = p.Città;
-                    command.Parameters.Add("@Provincia", SqlDbType.VarChar).Value = p.PV;
-                    if (p.Telefono == "")
+                    connection.Open();
+                    string sql = "insert into Cliente values (@PartitaIva, @CF, @RagioneSociale, @Nome, @Cognome," +
+                        "@Via, @Cap, @Citta, @Provincia, @Telefono, @Cellulare, @Fax, @Email, @Sito)";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
                     {
-                        command.Parameters.Add("@Telefono", SqlDbType.VarChar).Value = DBNull.Value;
+                        command.Parameters.Add("@PartitaIva", SqlDbType.VarChar).Value = p.PartitaIva;
+                        command.Parameters.Add("@CF", SqlDbType.VarChar).Value = p.CodiceFiscale;
+                        command.Parameters.Add("@RagioneSociale", SqlDbType.VarChar).Value = p.RagioneSociale;
+                        command.Parameters.Add("@Nome", SqlDbType.VarChar).Value = p.Nome;
+                        command.Parameters.Add("@Cognome", SqlDbType.VarChar).Value = p.Cognome;
+                        command.Parameters.Add("@Via", SqlDbType.VarChar).Value = p.Via;
+                        command.Parameters.Add("@Cap", SqlDbType.Int).Value = p.Cap;
+                        command.Parameters.Add("@Citta", SqlDbType.VarChar).Value = p.Città;
+                        command.Parameters.Add("@Provincia", SqlDbType.VarChar).Value = p.PV;
+                        if (p.Telefono == "" || p.Telefono.ToUpper() == "NULL")
+                        {
+                            command.Parameters.Add("@Telefono", SqlDbType.VarChar).Value = DBNull.Value;
+                        }
+                        else
+                        {
+                            command.Parameters.Add("@Telefono", SqlDbType.VarChar).Value = p.Telefono;
+                        }
+                        command.Parameters.Add("@Cellulare", SqlDbType.VarChar).Value = p.Cellulare;
+                        if (p.Fax == "" || p.Fax.ToUpper() == "NULL")
+                        {
+                            command.Parameters.Add("@Fax", SqlDbType.VarChar).Value = DBNull.Value;
+                        }
+                        else
+                        {
+                            command.Parameters.Add("@Fax", SqlDbType.VarChar).Value = p.Fax;
+                        }
+                        command.Parameters.Add("@Email", SqlDbType.VarChar).Value = p.Mail;
+                        if (p.SitoWeb == "" || p.SitoWeb.ToUpper() == "NULL")
+                        {
+                            command.Parameters.Add("@Sito", SqlDbType.VarChar).Value = DBNull.Value;
+                        }
+                        else
+                        {
+                            command.Parameters.Add("@Sito", SqlDbType.VarChar).Value = p.SitoWeb;
+                        }
+                        x = command.ExecuteNonQuery();
                     }
-                    else
-                    {
-                        command.Parameters.Add("@Telefono", SqlDbType.VarChar).Value = p.Telefono;
-                    }
-                    command.Parameters.Add("@Cellulare", SqlDbType.VarChar).Value = p.Cellulare;
-                    if (p.Fax == "")
-                    {
-                        command.Parameters.Add("@Fax", SqlDbType.VarChar).Value = DBNull.Value;
-                    }
-                    else
-                    {
-                        command.Parameters.Add("@Fax", SqlDbType.VarChar).Value = p.Fax;
-                    }
-                    command.Parameters.Add("@Email", SqlDbType.VarChar).Value = p.Mail;
-                    if (p.SitoWeb == "")
-                    {
-                        command.Parameters.Add("@Sito", SqlDbType.VarChar).Value = DBNull.Value;
-                    }
-                    else
-                    {
-                        command.Parameters.Add("@Sito", SqlDbType.VarChar).Value = p.SitoWeb;
-                    }
-                    command.ExecuteNonQuery();
                 }
+            }
+            catch (Exception)
+            {
             }
             return x;
         }
@@ -138,11 +156,35 @@ namespace Shop_Gregoricchio.CRUD
             //openDb --> query sql insert into ... passandogli i dati di P + l'Id Casuale
             return true;
         }
-        public bool UpdCategoria(Categoria p)
+        public int UpdCategoria(Categoria p)
         {
-            //connDb
-            //openDb --> query sql insert into ... passandogli i dati di P + l'Id Casuale
-            return true;
+            int x = 0;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(db.ConnectionString))
+                {
+                    connection.Open();
+                    string sql = "update Categoria set denominazione = @denominazione, descrizione = @descrizione where id = @id";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.Add("@id", SqlDbType.Int).Value = p.Id;
+                        command.Parameters.Add("@denominazione", SqlDbType.VarChar).Value = p.Denominazione;
+                        if (p.Descrizione == "" || p.Descrizione.ToUpper() == "NULL")
+                        {
+                            command.Parameters.Add("@descrizione", SqlDbType.Text).Value = DBNull.Value;
+                        }
+                        else
+                        {
+                            command.Parameters.Add("@descrizione", SqlDbType.VarChar).Value = p.Descrizione;
+                        }
+                        x = command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+            }
+            return x;
         }
         public bool UpdOrdine(Ordine p)
         {
@@ -150,11 +192,63 @@ namespace Shop_Gregoricchio.CRUD
             //openDb --> query sql insert into ... passandogli i dati di P + l'Id Casuale
             return true;
         }
-        public bool UpdCliente(Cliente p)
+        public int UpdCliente(Cliente p)
         {
-            //connDb
-            //openDb --> query sql isert into ... passandogli i dati di P + l'Id Casuale
-            return true;
+            int x = 0;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(db.ConnectionString))
+                {
+                    connection.Open();
+                    string sql = "update Cliente set PartitaIva=@PartitaIva, CF = @CF, RagioneSociale = @RagioneSociale, Nome = @Nome, Cognome=@Cognome," +
+                        "Via = @Via, Cap = @Cap, Citta = @Citta, Provincia = @Provincia, Telefono = @Telefono, Cellulare =@Cellulare, Fax = @Fax, Email =  @Email, " +
+                        "Sito = @Sito where Id = @id";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.Add("@PartitaIva", SqlDbType.VarChar).Value = p.PartitaIva;
+                        command.Parameters.Add("@CF", SqlDbType.VarChar).Value = p.CodiceFiscale;
+                        command.Parameters.Add("@RagioneSociale", SqlDbType.VarChar).Value = p.RagioneSociale;
+                        command.Parameters.Add("@Nome", SqlDbType.VarChar).Value = p.Nome;
+                        command.Parameters.Add("@Cognome", SqlDbType.VarChar).Value = p.Cognome;
+                        command.Parameters.Add("@Via", SqlDbType.VarChar).Value = p.Via;
+                        command.Parameters.Add("@Cap", SqlDbType.Int).Value = p.Cap;
+                        command.Parameters.Add("@Citta", SqlDbType.VarChar).Value = p.Città;
+                        command.Parameters.Add("@Provincia", SqlDbType.VarChar).Value = p.PV;
+                        if (p.Telefono == "" || p.Telefono.ToUpper() == "NULL")
+                        {
+                            command.Parameters.Add("@Telefono", SqlDbType.VarChar).Value = DBNull.Value;
+                        }
+                        else
+                        {
+                            command.Parameters.Add("@Telefono", SqlDbType.VarChar).Value = p.Telefono;
+                        }
+                        command.Parameters.Add("@Cellulare", SqlDbType.VarChar).Value = p.Cellulare;
+                        if (p.Fax == "" || p.Fax.ToUpper() == "NULL")
+                        {
+                            command.Parameters.Add("@Fax", SqlDbType.VarChar).Value = DBNull.Value;
+                        }
+                        else
+                        {
+                            command.Parameters.Add("@Fax", SqlDbType.VarChar).Value = p.Fax;
+                        }
+                        command.Parameters.Add("@Email", SqlDbType.VarChar).Value = p.Mail;
+                        if (p.SitoWeb == "" || p.SitoWeb.ToUpper() == "NULL")
+                        {
+                            command.Parameters.Add("@Sito", SqlDbType.VarChar).Value = DBNull.Value;
+                        }
+                        else
+                        {
+                            command.Parameters.Add("@Sito", SqlDbType.VarChar).Value = p.SitoWeb;
+                        }
+                        command.Parameters.Add("Id", SqlDbType.Int).Value = p.Id;
+                        x = command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+            }
+            return x;
         }
         public bool DelProdotto(Prodotto p)
         {
@@ -162,11 +256,26 @@ namespace Shop_Gregoricchio.CRUD
             //openDb --> query sql insert into ... passandogli i dati di P + l'Id Casuale
             return true;
         }
-        public bool DelCategoria(Categoria p)
+        public int DelCategoria(Categoria p)
         {
-            //connDb
-            //openDb --> query sql insert into ... passandogli i dati di P + l'Id Casuale
-            return true;
+            int x = 0;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(db.ConnectionString))
+                {
+                    connection.Open();
+                    string sql = "delete from Categoria where id = @id";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.Add("@id", SqlDbType.Int).Value = p.Id;
+                        x = command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (SqlException)
+            {
+            }
+            return x;
         }
         public bool DelOrdine(Ordine p)
         {
@@ -174,21 +283,101 @@ namespace Shop_Gregoricchio.CRUD
             //openDb --> query sql insert into ... passandogli i dati di P + l'Id Casuale
             return true;
         }
-        public bool DelCliente(Cliente p)
+        public int DelCliente(Cliente p)
         {
-            //connDb
-            //openDb --> query sql isert into ... passandogli i dati di P + l'Id Casuale
-            return true;
+            int x = 0;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(db.ConnectionString))
+                {
+                    connection.Open();
+                    string sql = "delete from Cliente where id = @id";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.Add("@id", SqlDbType.Int).Value = p.Id;
+                        x = command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (SqlException)
+            {
+            }
+            return x;
         }
         public Prodotto SearchProdotto(int id)
         {
             Prodotto p = null;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(db.ConnectionString))
+                {
+                    connection.Open();
+                    string sql = "select * from Prodotto where id = @id";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string descrip = "";
+
+                                if (reader.IsDBNull(2))
+                                {
+                                    descrip = "NULL";
+                                }
+                                else
+                                {
+                                    descrip = reader.GetTextReader(2).ToString();
+                                }
+                                p = new Prodotto(reader.GetInt32(0), reader.GetString(1), descrip, SearchCategoria(reader.GetInt32(3)), float.Parse(reader["PrezzoNoIva"].ToString()),
+                                    float.Parse(reader["Sconto"].ToString()), reader.GetInt32(6));
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+               
+            }
             return p;
         }
         public Categoria SearchCategoria(int id)
         {
-            Categoria p = null;
-            return p;
+            Categoria cat = null;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(db.ConnectionString))
+                {
+                    connection.Open();
+                    string sql = "select * from Categoria where id = @id";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string descrip = "";
+                                if (reader.IsDBNull(2))
+                                {
+                                    descrip = "NULL";
+                                }
+                                else
+                                {
+                                    descrip = reader.GetString(2);
+                                }
+                                cat = new Categoria(reader.GetInt32(0), reader.GetString(1), descrip);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+            }
+            return cat;
         }
 
         public Ordine SearchOrdine(int id)
@@ -199,12 +388,100 @@ namespace Shop_Gregoricchio.CRUD
         public Cliente SearchCliente(int id)
         {
             Cliente client = null;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(db.ConnectionString))
+                {
+                    connection.Open();
+                    string sql = "SELECT * FROM Cliente where Id = @id";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.Add("@Id", SqlDbType.Int).Value = id;
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string tel = "";
+                                string fax = "";
+                                string sito = "";
+                                if (reader.IsDBNull(10))
+                                {
+                                    tel = "NULL";
+                                }
+                                else
+                                {
+                                    tel = reader.GetString(10);
+                                }
+                                if (reader.IsDBNull(12))
+                                {
+                                    fax = "NULL";
+                                }
+                                else
+                                {
+                                    fax = reader.GetString(12);
+                                }
+                                if (reader.IsDBNull(14))
+                                {
+                                    sito = "NULL";
+                                }
+                                else
+                                {
+                                    sito = reader.GetString(14);
+                                }
+                                int.TryParse(reader.GetString(7), out int cap);
+                                client = new Cliente(
+                                    reader.GetInt32(0),
+                                    reader.GetString(1),
+                                    reader.GetString(2),
+                                    reader.GetString(3),
+                                    reader.GetString(4),
+                                    reader.GetString(5),
+                                    reader.GetString(6),
+                                    reader.GetString(8),
+                                    cap,
+                                    reader.GetString(9),
+                                    tel,
+                                    fax,
+                                    reader.GetString(11),
+                                    reader.GetString(13),
+                                    sito
+                                );
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+            }
             return client;
         }
         public TipiPagamento SearchPagamento(int id)
         {
-            TipiPagamento o = null;
-            return o;
+            TipiPagamento cat = null;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(db.ConnectionString))
+                {
+                    connection.Open();
+                    string sql = "select * from TipiPagamento where id = @id";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                cat = new TipiPagamento(reader.GetInt32(0), reader.GetString(1), reader.GetBoolean(2));
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+            }
+            return cat;
         }
 
         //public List<Ordine> SearchAllOrdine()
@@ -238,121 +515,151 @@ namespace Shop_Gregoricchio.CRUD
         public List<Cliente> SearchAllCliente()
         {
             List<Cliente> l = new List<Cliente>();
-            using (SqlConnection connection = new SqlConnection(db.ConnectionString))
+            try
             {
-                connection.Open();
-                string sql = "SELECT * FROM Cliente";
-                using (SqlCommand command = new SqlCommand(sql, connection))
+                using (SqlConnection connection = new SqlConnection(db.ConnectionString))
                 {
-                    using (SqlDataReader reader = command.ExecuteReader())
+                    connection.Open();
+                    string sql = "SELECT * FROM Cliente";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
                     {
-                        while (reader.Read())
+                        using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            string tel = "";
-                            string fax = "";
-                            string sito = "";
-                            try
+                            while (reader.Read())
                             {
-                                tel = reader.GetString(10);
-                                fax = reader.GetString(11);
-                                sito = reader.GetString(14);
+                                string tel = "";
+                                string fax = "";
+                                string sito = "";
+                                if (reader.IsDBNull(10))
+                                {
+                                    tel = "NULL";
+                                }
+                                else
+                                {
+                                    tel = reader.GetString(10);
+                                }
+                                if (reader.IsDBNull(11))
+                                {
+                                    fax = "NULL";
+                                }
+                                else
+                                {
+                                    fax = reader.GetString(11);
+                                }
+                                if (reader.IsDBNull(14))
+                                {
+                                    sito = "NULL";
+                                }
+                                else
+                                {
+                                    sito = reader.GetString(14);
+                                }
+                                l.Add(new Cliente(
+                                    reader.GetInt32(0),
+                                    reader.GetString(1),
+                                    reader.GetString(2),
+                                    reader.GetString(3),
+                                    reader.GetString(4),
+                                    reader.GetString(5),
+                                    reader.GetString(6),
+                                    reader.GetString(7),
+                                    reader.GetInt32(8),
+                                    reader.GetString(9),
+                                    tel,
+                                    fax,
+                                    reader.GetString(12),
+                                    reader.GetString(13),
+                                    sito
+                                ));
                             }
-                            catch (SqlNullValueException)
-                            {
-                                tel = null;
-                                fax = null;
-                                sito = null;
-                            }
-                            l.Add(new Cliente(
-                                reader.GetInt32(0),
-                                reader.GetString(1),
-                                reader.GetString(2),
-                                reader.GetString(3),
-                                reader.GetString(4),
-                                reader.GetString(5),
-                                reader.GetString(6),
-                                reader.GetString(7),
-                                reader.GetInt32(8),
-                                reader.GetString(9),
-                                tel,
-                                fax,
-                                reader.GetString(12),
-                                reader.GetString(13),
-                                sito
-                            ));
                         }
                     }
                 }
+            }
+            catch (Exception)
+            {
             }
             return l;
         }
         public List<Prodotto> SearchAllProdotto()
         {
             List<Prodotto> l = new List<Prodotto>();
-            using (SqlConnection connection = new SqlConnection(db.ConnectionString))
+            try
             {
-                connection.Open();
-                string sql = "SELECT * FROM Prodotto";
-                using (SqlCommand command = new SqlCommand(sql, connection))
+                using (SqlConnection connection = new SqlConnection(db.ConnectionString))
                 {
-                    using (SqlDataReader reader = command.ExecuteReader())
+                    connection.Open();
+                    string sql = "SELECT * FROM Prodotto";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
                     {
-                        while (reader.Read())
+                        using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            string descrip = "";
-                            try
+                            while (reader.Read())
                             {
-                                descrip = reader.GetString(2);
+                                string descrip = "";
+                                if (reader.IsDBNull(2))
+                                {
+                                    descrip = "NULL";
+                                }
+                                else
+                                {
+                                    descrip = reader.GetString(2);
+                                }
+                                l.Add(new Prodotto(
+                                    reader.GetInt32(0),
+                                    reader.GetString(1),
+                                    descrip,
+                                    SearchCategoria(reader.GetInt32(3)),
+                                    float.Parse(reader["PrezzoNoIva"].ToString()),
+                                    float.Parse(reader["Sconto"].ToString()),
+                                    reader.GetInt32(6)
+                                ));
                             }
-                            catch (SqlNullValueException)
-                            {
-                                descrip = null;
-                            }
-                            l.Add(new Prodotto(
-                                reader.GetInt32(0),
-                                reader.GetString(1),
-                                descrip,
-                                SearchCategoria(reader.GetInt32(3)),
-                                reader.GetFloat(4),
-                                reader.GetFloat(5),
-                                reader.GetInt32(6)
-                            ));
                         }
                     }
                 }
+            }
+            catch (Exception)
+            {
             }
             return l;
         }
         public List<Categoria> SearchAllCategoria()
         {
             List<Categoria> l = new List<Categoria>();
-            using (SqlConnection connection = new SqlConnection(db.ConnectionString))
+            try
             {
-                connection.Open();
-                string sql = "SELECT * FROM Categoria";
-                using (SqlCommand command = new SqlCommand(sql, connection))
+                using (SqlConnection connection = new SqlConnection(db.ConnectionString))
                 {
-                    using (SqlDataReader reader = command.ExecuteReader())
+                    connection.Open();
+                    string sql = "SELECT * FROM Categoria";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
                     {
-                        while (reader.Read())
+                        using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            string descrip = "";
-                            try
+                            while (reader.Read())
                             {
-                                descrip = reader.GetString(2);
+                                string descrip = "";
+                                if (reader.IsDBNull(2))
+                                {
+                                    descrip = "NULL";
+                                }
+                                else
+                                {
+                                    descrip = reader.GetString(2);
+                                }
+                                l.Add(new Categoria(
+                                    reader.GetInt32(0),
+                                    reader.GetString(1),
+                                    descrip
+                                ));
                             }
-                            catch (SqlNullValueException)
-                            {
-                                descrip = null;
-                            }
-                            l.Add(new Categoria(
-                                reader.GetInt32(0),
-                                reader.GetString(1),
-                                descrip
-                            ));
                         }
                     }
                 }
+            }
+            catch (Exception)
+            {
             }
             return l;
         }

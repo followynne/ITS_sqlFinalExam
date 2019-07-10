@@ -68,7 +68,7 @@ namespace Shop_Gregoricchio
                             while (reader.Read())
                             {
                                 textBox1.Text += "ID " + reader.GetInt32(0) + " - " + reader.GetString(1)
-                                    + " - Giacenza: " + reader.GetString(6) + "\r\n";
+                                    + " - Giacenza: " + reader.GetInt32(6) + "\r\n";
                             }
                         }
                     }

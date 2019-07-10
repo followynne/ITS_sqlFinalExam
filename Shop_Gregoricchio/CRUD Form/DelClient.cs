@@ -38,7 +38,6 @@ namespace Shop_Gregoricchio.CRUD_Form
             else
             {
                 txtPIva.Text = client.PartitaIva;
-                txtPIva.Enabled = true;
                 txtCF.Text = client.CodiceFiscale;
                 txtRSoc.Text = client.RagioneSociale;
                 txtNome.Text = client.Nome;
@@ -52,20 +51,7 @@ namespace Shop_Gregoricchio.CRUD_Form
                 txtCell.Text = client.Cellulare;
                 txtMail.Text = client.Mail;
                 txtSito.Text = client.SitoWeb;
-                txtCF.Enabled = true;
-                txtRSoc.Enabled = true;
-                txtNome.Enabled = true;
-                txtCognome.Enabled = true;
-                txtVia.Enabled = true;
-                txtCity.Enabled = true;
-                txtCap.Enabled = true;
-                txtPV.Enabled = true;
-                txtTel.Enabled = true;
-                txtFax.Enabled = true;
-                txtCell.Enabled = true;
-                txtMail.Enabled = true;
-                txtSito.Enabled = true;
-                btnSend.Enabled = true;
+
 
             }
         }
@@ -74,19 +60,19 @@ namespace Shop_Gregoricchio.CRUD_Form
         {
             if (!int.TryParse(txtId.Text, out int id2) || (id2!=id))
             {
-                MessageBox.Show("Errore, dato non valido.");
+                MessageBox.Show("Errore, id modificato rispetto alla search, non valido.");
                 return;
             }
             Cliente client = new Cliente(int.Parse(txtId.Text), txtPIva.Text, txtCF.Text, txtRSoc.Text, txtNome.Text, txtCognome.Text, txtVia.Text,
                  txtCity.Text, int.Parse(txtCap.Text), txtPV.Text, txtTel.Text, txtFax.Text, txtCell.Text, txtMail.Text, txtSito.Text);
-            bool res = c.DelCliente(client);
-            if (res)
+            int res = c.DelCliente(client);
+            if (res!=0)
             {
-                MessageBox.Show("Cliente aggiornato!");
+                MessageBox.Show("Cliente eliminato!");
             }
             else
             {
-                MessageBox.Show("Cliente non aggiornato!");
+                MessageBox.Show("Errore, cliente non cancellato. Vincolo di integrità referenziale attivo.");
             }
         }
     }

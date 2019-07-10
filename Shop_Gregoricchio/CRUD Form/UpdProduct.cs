@@ -19,7 +19,15 @@ namespace Shop_Gregoricchio.CRUD_Form
         {
             InitializeComponent();
             cc = new CrudComp();
-            //connection + insert all category plus select predefined the one existing
+            List<Categoria> l = cc.SearchAllCategoria();
+            foreach(Categoria cat in l)
+            {
+                cbxCategoria.Items.Add(cat);
+            }
+            if (cbxCategoria.Items.Count != 0)
+            {
+                cbxCategoria.SelectedIndex = 0;
+            }
         }
 
         private void btnSend_Click(object sender, EventArgs e)
@@ -63,7 +71,13 @@ namespace Shop_Gregoricchio.CRUD_Form
                 txtNome.Enabled = true;
                 txtDescrizione.Text = p.Descrizione;
                 txtDescrizione.Enabled = true;
-                cbxCategoria.SelectedItem = p.Categoria;
+                foreach(Categoria c in cbxCategoria.Items)
+                {
+                    if (c.Equals(p.Categoria))
+                    {
+                        cbxCategoria.SelectedItem = c;
+                    }
+                }
                 cbxCategoria.Enabled = true;
                 txtPrezzo.Text = "" + p.Prezzo;
                 txtPrezzo.Enabled = true;
@@ -79,11 +93,12 @@ namespace Shop_Gregoricchio.CRUD_Form
         private void btnReset_Click(object sender, EventArgs e)
         {
             txtId.Enabled = true;
+            txtId.Text = "";
             txtNome.Text = "";
             txtNome.Enabled = false;
             txtDescrizione.Text = "";
             txtDescrizione.Enabled = false;
-            cbxCategoria.SelectedItem = "";
+            cbxCategoria.SelectedIndex = 0;
             cbxCategoria.Enabled = false;
             txtPrezzo.Text = "";
             txtPrezzo.Enabled = false;

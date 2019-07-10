@@ -23,7 +23,10 @@ namespace Shop_Gregoricchio.CRUD_Form
             c = new CrudComp();
             _listaP = new Dictionary<Prodotto, int>();
             // codice per caricare tutti i clienti
-            // codice per tirare fuori i tipi di pagamento
+            // codice per caricare tutti i pagamenti
+
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
