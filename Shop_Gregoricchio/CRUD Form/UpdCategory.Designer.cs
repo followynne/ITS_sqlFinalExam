@@ -42,10 +42,11 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(516, 100);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSearch.Location = new System.Drawing.Point(398, 92);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(124, 36);
+            this.btnSearch.Size = new System.Drawing.Size(93, 29);
             this.btnSearch.TabIndex = 41;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -53,38 +54,44 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(285, 130);
-            this.txtId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtId.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtId.Location = new System.Drawing.Point(225, 117);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(145, 22);
+            this.txtId.Size = new System.Drawing.Size(110, 20);
             this.txtId.TabIndex = 40;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(164, 130);
+            this.label1.Location = new System.Drawing.Point(134, 117);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 17);
+            this.label1.Size = new System.Drawing.Size(16, 13);
             this.label1.TabIndex = 39;
             this.label1.Text = "Id";
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(280, 57);
+            this.label7.Location = new System.Drawing.Point(221, 46);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(210, 25);
+            this.label7.Size = new System.Drawing.Size(168, 20);
             this.label7.TabIndex = 38;
             this.label7.Text = "UPDATE CATEGORY";
             // 
             // btnSend
             // 
+            this.btnSend.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSend.Enabled = false;
-            this.btnSend.Location = new System.Drawing.Point(307, 369);
-            this.btnSend.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSend.Location = new System.Drawing.Point(241, 311);
+            this.btnSend.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(124, 36);
+            this.btnSend.Size = new System.Drawing.Size(93, 29);
             this.btnSend.TabIndex = 37;
             this.btnSend.Text = "UPDATE";
             this.btnSend.UseVisualStyleBackColor = true;
@@ -92,46 +99,53 @@
             // 
             // txtDescrizione
             // 
+            this.txtDescrizione.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtDescrizione.Enabled = false;
-            this.txtDescrizione.Location = new System.Drawing.Point(285, 283);
-            this.txtDescrizione.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDescrizione.Location = new System.Drawing.Point(225, 241);
+            this.txtDescrizione.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDescrizione.Name = "txtDescrizione";
-            this.txtDescrizione.Size = new System.Drawing.Size(295, 22);
+            this.txtDescrizione.Size = new System.Drawing.Size(222, 20);
             this.txtDescrizione.TabIndex = 28;
             // 
             // Descrizione
             // 
+            this.Descrizione.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Descrizione.AutoSize = true;
-            this.Descrizione.Location = new System.Drawing.Point(160, 283);
+            this.Descrizione.Location = new System.Drawing.Point(131, 241);
+            this.Descrizione.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Descrizione.Name = "Descrizione";
-            this.Descrizione.Size = new System.Drawing.Size(82, 17);
+            this.Descrizione.Size = new System.Drawing.Size(62, 13);
             this.Descrizione.TabIndex = 27;
             this.Descrizione.Text = "Descrizione";
             // 
             // txtNome
             // 
+            this.txtNome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNome.Enabled = false;
-            this.txtNome.Location = new System.Drawing.Point(285, 233);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNome.Location = new System.Drawing.Point(225, 200);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(295, 22);
+            this.txtNome.Size = new System.Drawing.Size(222, 20);
             this.txtNome.TabIndex = 26;
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(160, 233);
+            this.label2.Location = new System.Drawing.Point(131, 200);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 17);
+            this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 25;
             this.label2.Text = "Nome";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(516, 154);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.Location = new System.Drawing.Point(398, 136);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 36);
+            this.button1.Size = new System.Drawing.Size(93, 29);
             this.button1.TabIndex = 42;
             this.button1.Text = "RESET";
             this.button1.UseVisualStyleBackColor = true;
@@ -139,9 +153,9 @@
             // 
             // UpdCategory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(816, 510);
+            this.ClientSize = new System.Drawing.Size(635, 451);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtId);
@@ -152,7 +166,7 @@
             this.Controls.Add(this.Descrizione);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UpdCategory";
             this.Text = "UpdCategory";
             this.ResumeLayout(false);

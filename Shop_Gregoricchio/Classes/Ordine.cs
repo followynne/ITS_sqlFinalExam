@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shop_Gregoricchio.CRUD;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -74,13 +75,15 @@ namespace Shop_Gregoricchio.Classes
 
         public override string ToString()
         {
-            string fattura = "Categoria: ID - " + _id + ", Codice - " + _codiceordine + ", " + _cliente.ToString()
-                + "Data - " + _data + ", " + _tipopagamento.ToString() + ", Prodotti:\r\n";
+            string fattura = "ID: " + _id + ", Codice: " + _codiceordine + "\r\n" + _cliente.ToString()
+                + "Data: " + _data + ", " + _tipopagamento.ToString() + "\r\nProdotti:\r\n";
             foreach(KeyValuePair<Prodotto, int> p in _listaprodotti)
             {
-                fattura += p.Key.Denominazione + " - prezzo (iva inclusa): " + p.Key.Prezzo + " - quantità" + p.Value + "\r\n";
+                fattura += p.Key.Denominazione + ", prezzo (iva inclusa): " + p.Key.PrezzoIvato() + "€, quantità: " + p.Value + "\r\n";
             }
-            return fattura += "Totale con Iva: " + TotaleIvato() + "\r\nTotale Scontato: " + "";
+            CrudComp c = new CrudComp();
+            return fattura += "Totale con Iva: " + TotaleIvato() +
+                "€\r\nTotale Complessivo: " + c.PrezzoTotaleOrdineConSconto(_id) + "€\r\n";
         }
 
         public override bool Equals(object obj)
@@ -99,6 +102,24 @@ namespace Shop_Gregoricchio.Classes
                    EqualityComparer<TipiPagamento>.Default.Equals(TipoPagamento, ordine.TipoPagamento) &&
                    EqualityComparer<Dictionary<Prodotto, int>>.Default.Equals(_listaprodotti, ordine._listaprodotti) &&
                    EqualityComparer<Dictionary<Prodotto, int>>.Default.Equals(ListaProdotti, ordine.ListaProdotti);
+        }
+
+        public override int GetHashCode()
+        {
+            var hashCode = -2098260800;
+            hashCode = hashCode * -1521134295 + _id.GetHashCode();
+            hashCode = hashCode * -1521134295 + Id.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(_codiceordine);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(CodiceOrdine);
+            hashCode = hashCode * -1521134295 + EqualityComparer<Cliente>.Default.GetHashCode(_cliente);
+            hashCode = hashCode * -1521134295 + EqualityComparer<Cliente>.Default.GetHashCode(Cliente);
+            hashCode = hashCode * -1521134295 + _data.GetHashCode();
+            hashCode = hashCode * -1521134295 + Data.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<TipiPagamento>.Default.GetHashCode(_tipopagamento);
+            hashCode = hashCode * -1521134295 + EqualityComparer<TipiPagamento>.Default.GetHashCode(TipoPagamento);
+            hashCode = hashCode * -1521134295 + EqualityComparer<Dictionary<Prodotto, int>>.Default.GetHashCode(_listaprodotti);
+            hashCode = hashCode * -1521134295 + EqualityComparer<Dictionary<Prodotto, int>>.Default.GetHashCode(ListaProdotti);
+            return hashCode;
         }
     }
 }

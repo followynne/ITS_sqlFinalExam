@@ -36,7 +36,7 @@ namespace Shop_Gregoricchio.CRUD_Form
                 || !int.TryParse(txtGiacenza.Text, out int giacenza) || txtNome.Text == "" || cbxCategoria.SelectedItem == null
                 || txtPrezzo.Text.Contains('.') || txtSconto.Text.Contains('.'))
             {
-                MessageBox.Show("Errore, dato non valido.");
+                MessageBox.Show("Errore, dati non valido.");
                 return;
             }
 
@@ -49,7 +49,7 @@ namespace Shop_Gregoricchio.CRUD_Form
             }
             else
             {
-                MessageBox.Show("Prodotto non aggiunto!");
+                MessageBox.Show("Prodotto non aggiunto. Errore nei dati.");
             }
         }
     }

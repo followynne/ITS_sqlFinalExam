@@ -26,7 +26,7 @@ namespace Shop_Gregoricchio.CRUD_Form
         {
             if (!int.TryParse(txtId.Text, out id))
             {
-                MessageBox.Show("Errore, dato non valido.");
+                MessageBox.Show("Errore, id non valido.");
                 return;
             }
             Cliente client = c.SearchCliente(id);
@@ -51,7 +51,7 @@ namespace Shop_Gregoricchio.CRUD_Form
                 txtCell.Text = client.Cellulare;
                 txtMail.Text = client.Mail;
                 txtSito.Text = client.SitoWeb;
-
+                btnSend.Enabled = true;
 
             }
         }

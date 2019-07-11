@@ -28,7 +28,7 @@ namespace Shop_Gregoricchio.CRUD_Form
             string description = txtDescrizione.Text;
             if (!int.TryParse(txtId.Text, out int id))
             {
-                MessageBox.Show("Errore, dato non valido.");
+                MessageBox.Show("Errore, id non valido.");
                 return;
             }
             if (name == "")
@@ -44,7 +44,7 @@ namespace Shop_Gregoricchio.CRUD_Form
             }
             else
             {
-                MessageBox.Show("Errore, dato non inserito.");
+                MessageBox.Show("Errore, categoria non inserita.");
             }
         }
 
@@ -52,7 +52,7 @@ namespace Shop_Gregoricchio.CRUD_Form
         {
             if (!int.TryParse(txtId.Text, out int id))
             {
-                MessageBox.Show("Errore, dato non valido.");
+                MessageBox.Show("Errore, id non valido.");
                 return;
             };
             Categoria cat = c.SearchCategoria(id);

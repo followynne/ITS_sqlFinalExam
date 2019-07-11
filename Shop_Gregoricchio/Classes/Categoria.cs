@@ -41,7 +41,7 @@ namespace Shop_Gregoricchio.Classes
 
         public override string ToString()
         {
-            return "Categoria: " + _id + ", " + _denominazione + ", " + _descrizione + ".\r\n";
+            return "Categoria: " + _id + ", " + _denominazione + ", " + _descrizione + "\r\n";
         }
 
         public override bool Equals(object obj)

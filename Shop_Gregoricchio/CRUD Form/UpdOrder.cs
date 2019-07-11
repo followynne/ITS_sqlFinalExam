@@ -53,7 +53,7 @@ namespace Shop_Gregoricchio.CRUD_Form
             textBox1.Text = "";
             foreach (KeyValuePair<Prodotto, int> k in _listaP)
             {
-                textBox1.Text += k.Key + " - " + k.Value + "\r\n";
+                textBox1.Text += k.Key + "Quantità: " + k.Value + "\r\n";
             }
         }
 
@@ -61,10 +61,10 @@ namespace Shop_Gregoricchio.CRUD_Form
         {
             if (!int.TryParse(txtId.Text, out int id))
             {
-                MessageBox.Show("Errore, dato non valido.");
+                MessageBox.Show("Errore, id non valido.");
                 return;
             }
-            Ordine order = c.SearchOrdine(id);
+            Ordine order = c.SearchOrdinebyId(id);
             if (order == null)
             {
                 MessageBox.Show("Dato non trovato");
@@ -85,7 +85,7 @@ namespace Shop_Gregoricchio.CRUD_Form
                 textBox1.Text = "";
                 foreach (KeyValuePair<Prodotto, int> k in _listaP)
                 {
-                    textBox1.Text += k.Key + " - " + k.Value + "\r\n";
+                    textBox1.Text += k.Key + "Quantità: " + k.Value + "\r\n";
                 }
                 btnSend.Enabled = true;
             }
@@ -119,11 +119,11 @@ namespace Shop_Gregoricchio.CRUD_Form
             int res = c.UpdOrdine(order);
             if (res!=0)
             {
-                MessageBox.Show("Cliente aggiornato!");
+                MessageBox.Show("Ordine aggiornato!");
             }
             else
             {
-                MessageBox.Show("Cliente non aggiornato!");
+                MessageBox.Show("Ordine non aggiornato, controlla per favore i dati.");
             }
         }
     }

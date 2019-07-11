@@ -62,6 +62,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(222, 8);
@@ -73,8 +74,9 @@
             // 
             // btnSend
             // 
+            this.btnSend.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSend.Location = new System.Drawing.Point(488, 293);
-            this.btnSend.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSend.Margin = new System.Windows.Forms.Padding(2);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(106, 50);
             this.btnSend.TabIndex = 37;
@@ -84,6 +86,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(124, 215);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -94,14 +97,16 @@
             // 
             // txtVia
             // 
+            this.txtVia.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtVia.Location = new System.Drawing.Point(226, 249);
-            this.txtVia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtVia.Margin = new System.Windows.Forms.Padding(2);
             this.txtVia.Name = "txtVia";
             this.txtVia.Size = new System.Drawing.Size(222, 20);
             this.txtVia.TabIndex = 34;
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(124, 254);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -112,14 +117,16 @@
             // 
             // txtRSoc
             // 
+            this.txtRSoc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtRSoc.Location = new System.Drawing.Point(226, 97);
-            this.txtRSoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRSoc.Margin = new System.Windows.Forms.Padding(2);
             this.txtRSoc.Name = "txtRSoc";
             this.txtRSoc.Size = new System.Drawing.Size(222, 20);
             this.txtRSoc.TabIndex = 32;
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(124, 101);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -130,14 +137,16 @@
             // 
             // txtPIva
             // 
+            this.txtPIva.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPIva.Location = new System.Drawing.Point(226, 58);
-            this.txtPIva.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPIva.Margin = new System.Windows.Forms.Padding(2);
             this.txtPIva.Name = "txtPIva";
             this.txtPIva.Size = new System.Drawing.Size(222, 20);
             this.txtPIva.TabIndex = 30;
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(124, 63);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -148,14 +157,16 @@
             // 
             // txtCognome
             // 
+            this.txtCognome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCognome.Location = new System.Drawing.Point(226, 173);
-            this.txtCognome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCognome.Margin = new System.Windows.Forms.Padding(2);
             this.txtCognome.Name = "txtCognome";
             this.txtCognome.Size = new System.Drawing.Size(222, 20);
             this.txtCognome.TabIndex = 28;
             // 
             // Descrizione
             // 
+            this.Descrizione.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Descrizione.AutoSize = true;
             this.Descrizione.Location = new System.Drawing.Point(124, 177);
             this.Descrizione.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -166,14 +177,16 @@
             // 
             // txtNome
             // 
+            this.txtNome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNome.Location = new System.Drawing.Point(226, 135);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(2);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(222, 20);
             this.txtNome.TabIndex = 26;
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(124, 139);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -184,14 +197,16 @@
             // 
             // txtCity
             // 
+            this.txtCity.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCity.Location = new System.Drawing.Point(226, 288);
-            this.txtCity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCity.Margin = new System.Windows.Forms.Padding(2);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(222, 20);
             this.txtCity.TabIndex = 40;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(124, 292);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -202,14 +217,16 @@
             // 
             // txtCap
             // 
+            this.txtCap.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCap.Location = new System.Drawing.Point(226, 326);
-            this.txtCap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCap.Margin = new System.Windows.Forms.Padding(2);
             this.txtCap.Name = "txtCap";
             this.txtCap.Size = new System.Drawing.Size(222, 20);
             this.txtCap.TabIndex = 42;
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(124, 330);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -220,14 +237,16 @@
             // 
             // txtPV
             // 
+            this.txtPV.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPV.Location = new System.Drawing.Point(226, 364);
-            this.txtPV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPV.Margin = new System.Windows.Forms.Padding(2);
             this.txtPV.Name = "txtPV";
             this.txtPV.Size = new System.Drawing.Size(222, 20);
             this.txtPV.TabIndex = 44;
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(124, 368);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -238,14 +257,16 @@
             // 
             // txtMail
             // 
+            this.txtMail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtMail.Location = new System.Drawing.Point(226, 517);
-            this.txtMail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMail.Margin = new System.Windows.Forms.Padding(2);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(222, 20);
             this.txtMail.TabIndex = 52;
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(124, 521);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -256,14 +277,16 @@
             // 
             // txtFax
             // 
+            this.txtFax.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtFax.Location = new System.Drawing.Point(226, 479);
-            this.txtFax.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFax.Margin = new System.Windows.Forms.Padding(2);
             this.txtFax.Name = "txtFax";
             this.txtFax.Size = new System.Drawing.Size(222, 20);
             this.txtFax.TabIndex = 50;
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(124, 483);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -274,14 +297,16 @@
             // 
             // txtCell
             // 
+            this.txtCell.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCell.Location = new System.Drawing.Point(226, 440);
-            this.txtCell.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCell.Margin = new System.Windows.Forms.Padding(2);
             this.txtCell.Name = "txtCell";
             this.txtCell.Size = new System.Drawing.Size(222, 20);
             this.txtCell.TabIndex = 48;
             // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(124, 444);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -292,14 +317,16 @@
             // 
             // txtTel
             // 
+            this.txtTel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTel.Location = new System.Drawing.Point(226, 402);
-            this.txtTel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTel.Margin = new System.Windows.Forms.Padding(2);
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(222, 20);
             this.txtTel.TabIndex = 46;
             // 
             // label13
             // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(124, 406);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -310,22 +337,25 @@
             // 
             // txtCF
             // 
+            this.txtCF.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCF.Location = new System.Drawing.Point(226, 211);
-            this.txtCF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCF.Margin = new System.Windows.Forms.Padding(2);
             this.txtCF.Name = "txtCF";
             this.txtCF.Size = new System.Drawing.Size(222, 20);
             this.txtCF.TabIndex = 53;
             // 
             // txtSito
             // 
+            this.txtSito.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSito.Location = new System.Drawing.Point(226, 555);
-            this.txtSito.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSito.Margin = new System.Windows.Forms.Padding(2);
             this.txtSito.Name = "txtSito";
             this.txtSito.Size = new System.Drawing.Size(222, 20);
             this.txtSito.TabIndex = 55;
             // 
             // label14
             // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(124, 559);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -369,7 +399,7 @@
             this.Controls.Add(this.Descrizione);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NewClient";
             this.Text = "NewClient";
             this.ResumeLayout(false);

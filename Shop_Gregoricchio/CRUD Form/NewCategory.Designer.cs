@@ -38,6 +38,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(213, 70);
@@ -49,6 +50,7 @@
             // 
             // btnSend
             // 
+            this.btnSend.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSend.Location = new System.Drawing.Point(236, 252);
             this.btnSend.Margin = new System.Windows.Forms.Padding(2);
             this.btnSend.Name = "btnSend";
@@ -60,6 +62,7 @@
             // 
             // txtDescrizione
             // 
+            this.txtDescrizione.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtDescrizione.Location = new System.Drawing.Point(217, 167);
             this.txtDescrizione.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescrizione.Name = "txtDescrizione";
@@ -68,6 +71,7 @@
             // 
             // Descrizione
             // 
+            this.Descrizione.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Descrizione.AutoSize = true;
             this.Descrizione.Location = new System.Drawing.Point(123, 167);
             this.Descrizione.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -78,6 +82,7 @@
             // 
             // txtNome
             // 
+            this.txtNome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNome.Location = new System.Drawing.Point(217, 126);
             this.txtNome.Margin = new System.Windows.Forms.Padding(2);
             this.txtNome.Name = "txtNome";
@@ -86,6 +91,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(123, 126);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);

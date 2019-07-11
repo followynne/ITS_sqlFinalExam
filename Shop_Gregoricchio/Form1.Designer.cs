@@ -47,7 +47,6 @@
             this.tsmElenco = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmDettaglio = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.mnuPrincipale.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,9 +64,9 @@
             this.tsmDettaglio});
             this.mnuPrincipale.Location = new System.Drawing.Point(0, 0);
             this.mnuPrincipale.Name = "mnuPrincipale";
-            this.mnuPrincipale.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.mnuPrincipale.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
             this.mnuPrincipale.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.mnuPrincipale.Size = new System.Drawing.Size(1187, 28);
+            this.mnuPrincipale.Size = new System.Drawing.Size(786, 24);
             this.mnuPrincipale.TabIndex = 0;
             this.mnuPrincipale.Text = "Menù Principale";
             // 
@@ -79,34 +78,34 @@
             this.tsiNewProdotto,
             this.tsiNewCategoria});
             this.tsmNew.Name = "tsmNew";
-            this.tsmNew.Size = new System.Drawing.Size(51, 24);
+            this.tsmNew.Size = new System.Drawing.Size(43, 20);
             this.tsmNew.Text = "New";
             // 
             // tsiNewOrdine
             // 
             this.tsiNewOrdine.Name = "tsiNewOrdine";
-            this.tsiNewOrdine.Size = new System.Drawing.Size(149, 26);
+            this.tsiNewOrdine.Size = new System.Drawing.Size(125, 22);
             this.tsiNewOrdine.Text = "Ordine";
             this.tsiNewOrdine.Click += new System.EventHandler(this.tsiNewOrdine_Click);
             // 
             // tsiNewCliente
             // 
             this.tsiNewCliente.Name = "tsiNewCliente";
-            this.tsiNewCliente.Size = new System.Drawing.Size(149, 26);
+            this.tsiNewCliente.Size = new System.Drawing.Size(125, 22);
             this.tsiNewCliente.Text = "Cliente";
             this.tsiNewCliente.Click += new System.EventHandler(this.tsiNewCliente_Click);
             // 
             // tsiNewProdotto
             // 
             this.tsiNewProdotto.Name = "tsiNewProdotto";
-            this.tsiNewProdotto.Size = new System.Drawing.Size(149, 26);
+            this.tsiNewProdotto.Size = new System.Drawing.Size(125, 22);
             this.tsiNewProdotto.Text = "Prodotto";
             this.tsiNewProdotto.Click += new System.EventHandler(this.tsiNewProdotto_Click);
             // 
             // tsiNewCategoria
             // 
             this.tsiNewCategoria.Name = "tsiNewCategoria";
-            this.tsiNewCategoria.Size = new System.Drawing.Size(149, 26);
+            this.tsiNewCategoria.Size = new System.Drawing.Size(125, 22);
             this.tsiNewCategoria.Text = "Categoria";
             this.tsiNewCategoria.Click += new System.EventHandler(this.tsiNewCategoria_Click);
             // 
@@ -118,34 +117,34 @@
             this.tsiUpdProdotto,
             this.tsiUpdCategoria});
             this.tsmUpdate.Name = "tsmUpdate";
-            this.tsmUpdate.Size = new System.Drawing.Size(70, 24);
+            this.tsmUpdate.Size = new System.Drawing.Size(57, 20);
             this.tsmUpdate.Text = "Update";
             // 
             // tsiUpdOrdine
             // 
             this.tsiUpdOrdine.Name = "tsiUpdOrdine";
-            this.tsiUpdOrdine.Size = new System.Drawing.Size(149, 26);
+            this.tsiUpdOrdine.Size = new System.Drawing.Size(125, 22);
             this.tsiUpdOrdine.Text = "Ordine";
             this.tsiUpdOrdine.Click += new System.EventHandler(this.tsiUpdOrdine_Click);
             // 
             // tsiUpdCliente
             // 
             this.tsiUpdCliente.Name = "tsiUpdCliente";
-            this.tsiUpdCliente.Size = new System.Drawing.Size(149, 26);
+            this.tsiUpdCliente.Size = new System.Drawing.Size(125, 22);
             this.tsiUpdCliente.Text = "Cliente";
             this.tsiUpdCliente.Click += new System.EventHandler(this.tsiUpdCliente_Click);
             // 
             // tsiUpdProdotto
             // 
             this.tsiUpdProdotto.Name = "tsiUpdProdotto";
-            this.tsiUpdProdotto.Size = new System.Drawing.Size(149, 26);
+            this.tsiUpdProdotto.Size = new System.Drawing.Size(125, 22);
             this.tsiUpdProdotto.Text = "Prodotto";
             this.tsiUpdProdotto.Click += new System.EventHandler(this.tsiUpdProdotto_Click);
             // 
             // tsiUpdCategoria
             // 
             this.tsiUpdCategoria.Name = "tsiUpdCategoria";
-            this.tsiUpdCategoria.Size = new System.Drawing.Size(149, 26);
+            this.tsiUpdCategoria.Size = new System.Drawing.Size(125, 22);
             this.tsiUpdCategoria.Text = "Categoria";
             this.tsiUpdCategoria.Click += new System.EventHandler(this.tsiUpdCategoria_Click);
             // 
@@ -157,85 +156,80 @@
             this.toolStripMenuItem10,
             this.toolStripMenuItem11});
             this.tsmDelete.Name = "tsmDelete";
-            this.tsmDelete.Size = new System.Drawing.Size(65, 24);
+            this.tsmDelete.Size = new System.Drawing.Size(52, 20);
             this.tsmDelete.Text = "Delete";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(149, 26);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(125, 22);
             this.toolStripMenuItem2.Text = "Ordine";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // toolStripMenuItem9
             // 
             this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(149, 26);
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(125, 22);
             this.toolStripMenuItem9.Text = "Cliente";
             this.toolStripMenuItem9.Click += new System.EventHandler(this.toolStripMenuItem9_Click);
             // 
             // toolStripMenuItem10
             // 
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
-            this.toolStripMenuItem10.Size = new System.Drawing.Size(149, 26);
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(125, 22);
             this.toolStripMenuItem10.Text = "Prodotto";
             this.toolStripMenuItem10.Click += new System.EventHandler(this.toolStripMenuItem10_Click);
             // 
             // toolStripMenuItem11
             // 
             this.toolStripMenuItem11.Name = "toolStripMenuItem11";
-            this.toolStripMenuItem11.Size = new System.Drawing.Size(149, 26);
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(125, 22);
             this.toolStripMenuItem11.Text = "Categoria";
             this.toolStripMenuItem11.Click += new System.EventHandler(this.toolStripMenuItem11_Click);
             // 
             // tsmElenco
             // 
             this.tsmElenco.Name = "tsmElenco";
-            this.tsmElenco.Size = new System.Drawing.Size(135, 24);
+            this.tsmElenco.Size = new System.Drawing.Size(110, 20);
             this.tsmElenco.Text = "Elenco Completo";
             this.tsmElenco.Click += new System.EventHandler(this.tsmElenco_Click);
             // 
             // tsmDettaglio
             // 
             this.tsmDettaglio.Name = "tsmDettaglio";
-            this.tsmDettaglio.Size = new System.Drawing.Size(102, 24);
+            this.tsmDettaglio.Size = new System.Drawing.Size(81, 20);
             this.tsmDettaglio.Text = "Al Dettaglio";
             this.tsmDettaglio.Click += new System.EventHandler(this.tsmDettaglio_Click);
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.Font = new System.Drawing.Font("Georgia", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Georgia", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(69, 96);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Location = new System.Drawing.Point(85, 81);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(741, 426);
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.textBox1.Size = new System.Drawing.Size(605, 391);
             this.textBox1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(688, 77);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 29);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Dashboard";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1187, 584);
-            this.Controls.Add(this.label1);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(786, 574);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.mnuPrincipale);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Location = new System.Drawing.Point(400, 400);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
             this.mnuPrincipale.ResumeLayout(false);
             this.mnuPrincipale.PerformLayout();
@@ -265,7 +259,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem10;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem11;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
     }
 }
 

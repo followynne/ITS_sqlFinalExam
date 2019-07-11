@@ -40,8 +40,8 @@ namespace Shop_Gregoricchio.CRUD_Form
             }
             else if (rdbOrder.Checked)
             {
-                if (c.SearchOrdine(id) != null)
-                    textBox1.Text = c.SearchOrdine(id).ToString();
+                if (c.SearchOrdinebyId(id) != null)
+                    textBox1.Text = c.SearchOrdinebyId(id).ToString();
             }
             else if (rdbProduct.Checked)
             {

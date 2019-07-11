@@ -27,7 +27,7 @@ namespace Shop_Gregoricchio.CRUD_Form
         {
             if (!int.TryParse(txtId.Text, out id))
             {
-                MessageBox.Show("Errore, dato non valido.");
+                MessageBox.Show("Errore, id non valido.");
                 return;
             };
             Categoria cat = c.SearchCategoria(id);

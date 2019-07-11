@@ -37,7 +37,7 @@ namespace Shop_Gregoricchio.CRUD_Form
         {
             if (!int.TryParse(txtId.Text, out idd))
             {
-                MessageBox.Show("Errore, dato non valido.");
+                MessageBox.Show("Errore, id non valido.");
                 return;
             }
             Prodotto p = c.SearchProdotto(idd);
@@ -87,7 +87,7 @@ namespace Shop_Gregoricchio.CRUD_Form
             }
             else
             {
-                MessageBox.Show("Errore, categoria non cancellata. Vincolo di integrità referenziale attivo.");
+                MessageBox.Show("Errore, prodotto non cancellata. Vincolo di integrità referenziale attivo.");
             }
         }
     }

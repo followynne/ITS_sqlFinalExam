@@ -22,10 +22,17 @@ namespace Shop_Gregoricchio.CRUD_Form
             InitializeComponent();
             c = new CrudComp();
             _listaP = new Dictionary<Prodotto, int>();
+            int temp = 0, maxWidth = 0;
             foreach (Cliente c in c.SearchAllCliente())
             {
                 cbxCliente.Items.Add(c);
+                temp = TextRenderer.MeasureText(c.ToString(), cbxCliente.Font).Width;
+                if (temp > maxWidth)
+                {
+                    maxWidth = temp;
+                }
             }
+            cbxCliente.DropDownWidth = maxWidth;
             if (cbxCliente.Items.Count != 0)
             {
                 cbxCliente.SelectedIndex = 0;

@@ -40,10 +40,9 @@
             // rdbClient
             // 
             this.rdbClient.AutoSize = true;
-            this.rdbClient.Location = new System.Drawing.Point(592, 34);
-            this.rdbClient.Margin = new System.Windows.Forms.Padding(4);
+            this.rdbClient.Location = new System.Drawing.Point(444, 28);
             this.rdbClient.Name = "rdbClient";
-            this.rdbClient.Size = new System.Drawing.Size(64, 21);
+            this.rdbClient.Size = new System.Drawing.Size(51, 17);
             this.rdbClient.TabIndex = 11;
             this.rdbClient.TabStop = true;
             this.rdbClient.Text = "Client";
@@ -52,10 +51,9 @@
             // rdbCategory
             // 
             this.rdbCategory.AutoSize = true;
-            this.rdbCategory.Location = new System.Drawing.Point(71, 34);
-            this.rdbCategory.Margin = new System.Windows.Forms.Padding(4);
+            this.rdbCategory.Location = new System.Drawing.Point(53, 28);
             this.rdbCategory.Name = "rdbCategory";
-            this.rdbCategory.Size = new System.Drawing.Size(86, 21);
+            this.rdbCategory.Size = new System.Drawing.Size(67, 17);
             this.rdbCategory.TabIndex = 10;
             this.rdbCategory.TabStop = true;
             this.rdbCategory.Text = "Category";
@@ -64,10 +62,9 @@
             // rdbProduct
             // 
             this.rdbProduct.AutoSize = true;
-            this.rdbProduct.Location = new System.Drawing.Point(235, 34);
-            this.rdbProduct.Margin = new System.Windows.Forms.Padding(4);
+            this.rdbProduct.Location = new System.Drawing.Point(176, 28);
             this.rdbProduct.Name = "rdbProduct";
-            this.rdbProduct.Size = new System.Drawing.Size(78, 21);
+            this.rdbProduct.Size = new System.Drawing.Size(62, 17);
             this.rdbProduct.TabIndex = 9;
             this.rdbProduct.TabStop = true;
             this.rdbProduct.Text = "Product";
@@ -76,10 +73,9 @@
             // rdbOrder
             // 
             this.rdbOrder.AutoSize = true;
-            this.rdbOrder.Location = new System.Drawing.Point(425, 34);
-            this.rdbOrder.Margin = new System.Windows.Forms.Padding(4);
+            this.rdbOrder.Location = new System.Drawing.Point(319, 28);
             this.rdbOrder.Name = "rdbOrder";
-            this.rdbOrder.Size = new System.Drawing.Size(66, 21);
+            this.rdbOrder.Size = new System.Drawing.Size(51, 17);
             this.rdbOrder.TabIndex = 8;
             this.rdbOrder.TabStop = true;
             this.rdbOrder.Text = "Order";
@@ -87,42 +83,41 @@
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(129, 151);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Location = new System.Drawing.Point(124, 133);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(731, 365);
+            this.textBox1.Size = new System.Drawing.Size(549, 297);
             this.textBox1.TabIndex = 7;
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.groupBox1.Controls.Add(this.rdbProduct);
             this.groupBox1.Controls.Add(this.rdbClient);
             this.groupBox1.Controls.Add(this.rdbCategory);
             this.groupBox1.Controls.Add(this.rdbOrder);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.ForeColor = System.Drawing.Color.Crimson;
-            this.groupBox1.Location = new System.Drawing.Point(129, 43);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(124, 45);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(731, 79);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(549, 63);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             // 
             // ShowAll
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 554);
+            this.ClientSize = new System.Drawing.Size(821, 540);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ShowAll";
             this.Text = "ShowAll";
             this.groupBox1.ResumeLayout(false);

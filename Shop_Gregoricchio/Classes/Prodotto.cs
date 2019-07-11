@@ -82,8 +82,8 @@ namespace Shop_Gregoricchio.Classes
 
         public override string ToString()
         {
-            return "Prodotto: ID - " + _id + ", Nome - " + _denominazione + ", Descrizione - " + _descrizione
-                + ", " + _categoria.ToString() + "Prezzo - " + _prezzo + ", Sconto - " + _sconto + ", Giacenza - " + _giacenza +"\r\n"; 
+            return "Prodotto: ID " + _id + ", Nome " + _denominazione + ", Descrizione " + _descrizione
+                + ", " + _categoria.ToString() + "Prezzo " + _prezzo + "€, Sconto " + _sconto + "%, Giacenza " + _giacenza +"\r\n"; 
         }
 
         public override bool Equals(object obj)

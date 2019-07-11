@@ -14,7 +14,6 @@ namespace Shop_Gregoricchio.CRUD_Form
 {
     internal partial class ProductsToOrder : Form
     {
-        Dictionary<Prodotto, int> d = null;
         Dictionary<Prodotto, int> dReceived = null;
         public Dictionary<Prodotto, int> _result { get; set; }
 
@@ -62,7 +61,7 @@ namespace Shop_Gregoricchio.CRUD_Form
                 MessageBox.Show("Quantità non valida.");
                 return;
             }
-            if (c.CheckGiacenza(p.Id, p.Giacenza))
+            if (c.CheckGiacenza(p.Id, quantity))
             {
                 MessageBox.Show("La giacenza non consente tale richiesta.");
                 return;
@@ -93,7 +92,7 @@ namespace Shop_Gregoricchio.CRUD_Form
             {
                 quantity = q;
             }
-            if (c.CheckGiacenza(p.Id, p.Giacenza))
+            if (c.CheckGiacenza(p.Id, quantity))
             {
                 MessageBox.Show("La giacenza non consente tale richiesta.");
                 return;

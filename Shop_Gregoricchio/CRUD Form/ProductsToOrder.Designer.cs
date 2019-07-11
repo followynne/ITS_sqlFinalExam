@@ -44,39 +44,40 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(144, 290);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox1.Location = new System.Drawing.Point(151, 246);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(675, 237);
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(568, 294);
             this.textBox1.TabIndex = 0;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(141, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(157, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 17);
+            this.label1.Size = new System.Drawing.Size(66, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Add Product";
             // 
             // cbxNewProd
             // 
+            this.cbxNewProd.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxNewProd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxNewProd.FormattingEnabled = true;
-            this.cbxNewProd.Location = new System.Drawing.Point(56, 97);
-            this.cbxNewProd.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxNewProd.Location = new System.Drawing.Point(93, 89);
             this.cbxNewProd.Name = "cbxNewProd";
-            this.cbxNewProd.Size = new System.Drawing.Size(275, 24);
+            this.cbxNewProd.Size = new System.Drawing.Size(207, 21);
             this.cbxNewProd.TabIndex = 2;
             // 
             // btnNewProd
             // 
-            this.btnNewProd.Location = new System.Drawing.Point(133, 207);
-            this.btnNewProd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNewProd.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnNewProd.Location = new System.Drawing.Point(151, 178);
             this.btnNewProd.Name = "btnNewProd";
-            this.btnNewProd.Size = new System.Drawing.Size(123, 44);
+            this.btnNewProd.Size = new System.Drawing.Size(92, 36);
             this.btnNewProd.TabIndex = 3;
             this.btnNewProd.Text = "Send";
             this.btnNewProd.UseVisualStyleBackColor = true;
@@ -84,28 +85,28 @@
             // 
             // txtNewProd
             // 
-            this.txtNewProd.Location = new System.Drawing.Point(56, 146);
-            this.txtNewProd.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNewProd.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtNewProd.Location = new System.Drawing.Point(93, 129);
             this.txtNewProd.Name = "txtNewProd";
-            this.txtNewProd.Size = new System.Drawing.Size(275, 22);
+            this.txtNewProd.Size = new System.Drawing.Size(207, 20);
             this.txtNewProd.TabIndex = 4;
             // 
             // txtModProd
             // 
+            this.txtModProd.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtModProd.Enabled = false;
-            this.txtModProd.Location = new System.Drawing.Point(386, 146);
-            this.txtModProd.Margin = new System.Windows.Forms.Padding(4);
+            this.txtModProd.Location = new System.Drawing.Point(341, 129);
             this.txtModProd.Name = "txtModProd";
-            this.txtModProd.Size = new System.Drawing.Size(275, 22);
+            this.txtModProd.Size = new System.Drawing.Size(207, 20);
             this.txtModProd.TabIndex = 8;
             // 
             // btnModProd
             // 
+            this.btnModProd.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnModProd.Enabled = false;
-            this.btnModProd.Location = new System.Drawing.Point(463, 207);
-            this.btnModProd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModProd.Location = new System.Drawing.Point(398, 178);
             this.btnModProd.Name = "btnModProd";
-            this.btnModProd.Size = new System.Drawing.Size(123, 44);
+            this.btnModProd.Size = new System.Drawing.Size(92, 36);
             this.btnModProd.TabIndex = 7;
             this.btnModProd.Text = "Send";
             this.btnModProd.UseVisualStyleBackColor = true;
@@ -113,31 +114,31 @@
             // 
             // cbxModProd
             // 
+            this.cbxModProd.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxModProd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxModProd.Enabled = false;
             this.cbxModProd.FormattingEnabled = true;
-            this.cbxModProd.Location = new System.Drawing.Point(386, 97);
-            this.cbxModProd.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxModProd.Location = new System.Drawing.Point(341, 89);
             this.cbxModProd.Name = "cbxModProd";
-            this.cbxModProd.Size = new System.Drawing.Size(275, 24);
+            this.cbxModProd.Size = new System.Drawing.Size(207, 21);
             this.cbxModProd.TabIndex = 6;
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(471, 44);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(404, 46);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 17);
+            this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Modify Product";
             // 
             // btnDel
             // 
-            this.btnDel.Location = new System.Drawing.Point(768, 207);
-            this.btnDel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnDel.Location = new System.Drawing.Point(627, 178);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(123, 44);
+            this.btnDel.Size = new System.Drawing.Size(92, 36);
             this.btnDel.TabIndex = 11;
             this.btnDel.Text = "Send";
             this.btnDel.UseVisualStyleBackColor = true;
@@ -145,29 +146,29 @@
             // 
             // cbxDelProd
             // 
+            this.cbxDelProd.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxDelProd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxDelProd.FormattingEnabled = true;
-            this.cbxDelProd.Location = new System.Drawing.Point(691, 97);
-            this.cbxDelProd.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxDelProd.Location = new System.Drawing.Point(569, 89);
             this.cbxDelProd.Name = "cbxDelProd";
-            this.cbxDelProd.Size = new System.Drawing.Size(275, 24);
+            this.cbxDelProd.Size = new System.Drawing.Size(207, 21);
             this.cbxDelProd.TabIndex = 10;
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(776, 44);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(633, 46);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 17);
+            this.label3.Size = new System.Drawing.Size(78, 13);
             this.label3.TabIndex = 9;
             this.label3.Text = "Delete Product";
             // 
             // ProductsToOrder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(977, 590);
+            this.ClientSize = new System.Drawing.Size(873, 599);
             this.Controls.Add(this.btnDel);
             this.Controls.Add(this.cbxDelProd);
             this.Controls.Add(this.label3);
@@ -180,7 +181,6 @@
             this.Controls.Add(this.cbxNewProd);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ProductsToOrder";
             this.Text = "ProductsToOrder";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ProductsToOrder_FormClosing);

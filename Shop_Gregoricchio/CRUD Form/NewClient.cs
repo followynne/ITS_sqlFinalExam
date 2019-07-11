@@ -26,7 +26,7 @@ namespace Shop_Gregoricchio.CRUD_Form
         {
             Regex cp = new Regex(@"^\d{5,6}$");
             Regex prov = new Regex(@"^\w{2,3}$");
-            Regex cFiscaleEiva = new Regex(@"^[a-zA-Z0-9]+$");
+            Regex cFiscaleEiva = new Regex(@"^[A-Z0-9]+$");
 
             if (txtPIva.Text.Length != 11 || txtCF.Text.Length != 16 ||
                 (txtCap.Text.Length < 5 || txtCap.Text.Length > 7) || !int.TryParse(txtCap.Text, out int cap)
@@ -51,7 +51,7 @@ namespace Shop_Gregoricchio.CRUD_Form
             }
             else
             {
-                MessageBox.Show("Cliente non aggiunto!");
+                MessageBox.Show("Cliente non aggiunto. È già presente in database.");
             }
         }
     }

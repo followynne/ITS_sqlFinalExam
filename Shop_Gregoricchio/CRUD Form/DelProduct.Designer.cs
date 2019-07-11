@@ -49,10 +49,11 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(499, 97);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSearch.Location = new System.Drawing.Point(374, 79);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(138, 40);
+            this.btnSearch.Size = new System.Drawing.Size(104, 32);
             this.btnSearch.TabIndex = 41;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -60,38 +61,44 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(284, 106);
-            this.txtId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtId.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtId.Location = new System.Drawing.Point(213, 86);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(145, 22);
+            this.txtId.Size = new System.Drawing.Size(110, 20);
             this.txtId.TabIndex = 40;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(161, 106);
+            this.label1.Location = new System.Drawing.Point(121, 86);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 17);
+            this.label1.Size = new System.Drawing.Size(16, 13);
             this.label1.TabIndex = 39;
             this.label1.Text = "Id";
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(279, 50);
+            this.label7.Location = new System.Drawing.Point(209, 41);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(192, 25);
+            this.label7.Size = new System.Drawing.Size(154, 20);
             this.label7.TabIndex = 38;
             this.label7.Text = "DELETE PRODUCT";
             // 
             // btnSend
             // 
+            this.btnSend.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSend.Enabled = false;
-            this.btnSend.Location = new System.Drawing.Point(317, 468);
-            this.btnSend.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSend.Location = new System.Drawing.Point(238, 380);
+            this.btnSend.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(138, 40);
+            this.btnSend.Size = new System.Drawing.Size(104, 32);
             this.btnSend.TabIndex = 37;
             this.btnSend.Text = "DELETE";
             this.btnSend.UseVisualStyleBackColor = true;
@@ -99,118 +106,136 @@
             // 
             // cbxCategoria
             // 
+            this.cbxCategoria.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxCategoria.Enabled = false;
             this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Location = new System.Drawing.Point(280, 266);
-            this.cbxCategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbxCategoria.Location = new System.Drawing.Point(210, 216);
+            this.cbxCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxCategoria.Name = "cbxCategoria";
-            this.cbxCategoria.Size = new System.Drawing.Size(295, 24);
+            this.cbxCategoria.Size = new System.Drawing.Size(222, 21);
             this.cbxCategoria.TabIndex = 36;
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(155, 266);
+            this.label6.Location = new System.Drawing.Point(116, 216);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 17);
+            this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 35;
             this.label6.Text = "Categoria";
             // 
             // txtGiacenza
             // 
+            this.txtGiacenza.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtGiacenza.Enabled = false;
-            this.txtGiacenza.Location = new System.Drawing.Point(280, 421);
-            this.txtGiacenza.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtGiacenza.Location = new System.Drawing.Point(210, 342);
+            this.txtGiacenza.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtGiacenza.Name = "txtGiacenza";
-            this.txtGiacenza.Size = new System.Drawing.Size(295, 22);
+            this.txtGiacenza.Size = new System.Drawing.Size(222, 20);
             this.txtGiacenza.TabIndex = 34;
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(155, 420);
+            this.label5.Location = new System.Drawing.Point(116, 341);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 17);
+            this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 33;
             this.label5.Text = "Giacenza";
             // 
             // txtSconto
             // 
+            this.txtSconto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSconto.Enabled = false;
-            this.txtSconto.Location = new System.Drawing.Point(280, 370);
-            this.txtSconto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSconto.Location = new System.Drawing.Point(210, 301);
+            this.txtSconto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSconto.Name = "txtSconto";
-            this.txtSconto.Size = new System.Drawing.Size(295, 22);
+            this.txtSconto.Size = new System.Drawing.Size(222, 20);
             this.txtSconto.TabIndex = 32;
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(155, 368);
+            this.label4.Location = new System.Drawing.Point(116, 299);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 17);
+            this.label4.Size = new System.Drawing.Size(41, 13);
             this.label4.TabIndex = 31;
             this.label4.Text = "Sconto";
             // 
             // txtPrezzo
             // 
+            this.txtPrezzo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPrezzo.Enabled = false;
-            this.txtPrezzo.Location = new System.Drawing.Point(280, 319);
-            this.txtPrezzo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPrezzo.Location = new System.Drawing.Point(210, 259);
+            this.txtPrezzo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPrezzo.Name = "txtPrezzo";
-            this.txtPrezzo.Size = new System.Drawing.Size(295, 22);
+            this.txtPrezzo.Size = new System.Drawing.Size(222, 20);
             this.txtPrezzo.TabIndex = 30;
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(155, 317);
+            this.label3.Location = new System.Drawing.Point(116, 258);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 17);
+            this.label3.Size = new System.Drawing.Size(39, 13);
             this.label3.TabIndex = 29;
             this.label3.Text = "Prezzo";
             // 
             // txtDescrizione
             // 
+            this.txtDescrizione.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtDescrizione.Enabled = false;
-            this.txtDescrizione.Location = new System.Drawing.Point(280, 215);
-            this.txtDescrizione.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDescrizione.Location = new System.Drawing.Point(210, 175);
+            this.txtDescrizione.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDescrizione.Name = "txtDescrizione";
-            this.txtDescrizione.Size = new System.Drawing.Size(295, 22);
+            this.txtDescrizione.Size = new System.Drawing.Size(222, 20);
             this.txtDescrizione.TabIndex = 28;
             // 
             // Descrizione
             // 
+            this.Descrizione.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Descrizione.AutoSize = true;
-            this.Descrizione.Location = new System.Drawing.Point(155, 215);
+            this.Descrizione.Location = new System.Drawing.Point(116, 175);
+            this.Descrizione.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Descrizione.Name = "Descrizione";
-            this.Descrizione.Size = new System.Drawing.Size(82, 17);
+            this.Descrizione.Size = new System.Drawing.Size(62, 13);
             this.Descrizione.TabIndex = 27;
             this.Descrizione.Text = "Descrizione";
             // 
             // txtNome
             // 
+            this.txtNome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNome.Enabled = false;
-            this.txtNome.Location = new System.Drawing.Point(280, 164);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNome.Location = new System.Drawing.Point(210, 133);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(295, 22);
+            this.txtNome.Size = new System.Drawing.Size(222, 20);
             this.txtNome.TabIndex = 26;
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(155, 164);
+            this.label2.Location = new System.Drawing.Point(116, 133);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 17);
+            this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 25;
             this.label2.Text = "Nome";
             // 
             // DelProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 615);
+            this.ClientSize = new System.Drawing.Size(615, 500);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
@@ -228,7 +253,7 @@
             this.Controls.Add(this.Descrizione);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DelProduct";
             this.Text = "DelProduct";
             this.ResumeLayout(false);

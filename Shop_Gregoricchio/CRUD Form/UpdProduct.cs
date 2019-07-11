@@ -20,10 +20,17 @@ namespace Shop_Gregoricchio.CRUD_Form
             InitializeComponent();
             cc = new CrudComp();
             List<Categoria> l = cc.SearchAllCategoria();
-            foreach(Categoria cat in l)
+            int temp = 0, maxWidth = 0;
+            foreach (Categoria cat in l)
             {
                 cbxCategoria.Items.Add(cat);
+                temp = TextRenderer.MeasureText(cat.ToString(), cbxCategoria.Font).Width;
+                if (temp > maxWidth)
+                {
+                    maxWidth = temp;
+                }
             }
+            cbxCategoria.DropDownWidth = maxWidth;
             if (cbxCategoria.Items.Count != 0)
             {
                 cbxCategoria.SelectedIndex = 0;
@@ -33,7 +40,8 @@ namespace Shop_Gregoricchio.CRUD_Form
         private void btnSend_Click(object sender, EventArgs e)
         {
             if (!int.TryParse(txtId.Text, out int id) || !float.TryParse(txtPrezzo.Text, out float price)
-                || !float.TryParse(txtSconto.Text, out float sale) || !int.TryParse(txtGiacenza.Text, out int giacenza) || txtNome.Text=="")
+                || !float.TryParse(txtSconto.Text, out float sale) || !int.TryParse(txtGiacenza.Text, out int giacenza) || txtNome.Text==""
+                || txtPrezzo.Text.Contains('.') || txtSconto.Text.Contains('.'))
             {
                 MessageBox.Show("Errore, dati non valido.");
                 return;
@@ -55,7 +63,7 @@ namespace Shop_Gregoricchio.CRUD_Form
         {
             if (!int.TryParse(txtId.Text, out int id))
             {
-                MessageBox.Show("Errore, dato non valido.");
+                MessageBox.Show("Errore, id non valido.");
                 return;
             }
             Prodotto p = cc.SearchProdotto(id);

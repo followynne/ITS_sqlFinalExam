@@ -138,11 +138,11 @@ namespace Shop_Gregoricchio.Classes
 
         public override string ToString()
         {
-            return "Cliente: ID -  " + _id + ", P.Iva - " + _piva + ", C.Fiscale - " + _codFiscale 
-                + ", Rag. Sociale - " + _ragioneSociale + ", Nome - " + _nome + ", Cognome - " + _cognome
-                + ", Via - " + _via + ", Città - " + _città + ", CAP - " + _cap + ", PV - " + _pv 
-                + ", Telefono - " + _telefono + ", Cellulare - " + _cellulare
-                + ", Fax - " + _fax + ", Mail - " + _mail + ", Sito Web - " + _sitoWeb + ".\r\n";
+            return "Cliente: ID " + _id + ", P.IVA " + _piva + ", C.FISCALE " + _codFiscale 
+                + ", RAG. SOCIALE " + _ragioneSociale + ", NOME " + _nome + ", COGNOME " + _cognome
+                + ", VIA " + _via + ", CITTÀ " + _città + ", CAP " + _cap + ", PV " + _pv 
+                + ", TELEFONO " + _telefono + ", CELLULARE " + _cellulare
+                + ", FAX " + _fax + ", MAIL " + _mail + ", SITO WEB " + _sitoWeb + "\r\n";
         }
 
         public override bool Equals(object obj)

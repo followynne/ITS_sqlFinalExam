@@ -36,7 +36,9 @@ BEGIN
 
     -- Insert statements for procedure here
 	
-	SELECT TOP 1 IdProdotto, SUM(Quantita) as SommaAcquisto FROM DettaglioOrdine group by IdProdotto order by SommaAcquisto DESC
+	SELECT TOP 1 IdProdotto, Prodotto.Denominazione as Nome, SUM(Quantita) as SommaAcquisto FROM DettaglioOrdine
+	inner join Prodotto on DettaglioOrdine.IdProdotto = Prodotto.Id
+	group by IdProdotto, Prodotto.Denominazione order by SommaAcquisto DESC
 
 	END
 GO
@@ -109,8 +111,33 @@ BEGIN
 	
     -- Insert statements for procedure here
 
-	 select TOP 10 o.IdCliente, SUM(t.totale) as fatturato from @temp_table t inner join
-	 Ordine o on o.Id = t.IdOrdine group by o.IdCliente order by fatturato DESC
+	 select TOP 10 o.IdCliente, c.Nome, SUM(t.totale) as fatturato from @temp_table t inner join
+	 Ordine o on o.Id = t.IdOrdine inner join Cliente c on c.Id = o.IdCliente group by o.IdCliente, c.Nome
+	 order by fatturato DESC
 
+	END
+GO
+
+------------------------
+USE [Shop_Gregoricchio]
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[sp_totale_ordine_con_sconto]
+@id int
+	
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	
+	select IdOrdine, SUM((p.PrezzoNoIva+(p.PrezzoNoIva*22/100) - ((p.PrezzoNoIva+(p.PrezzoNoIva*22/100))*d.ScontoApplicato/100))*d.Quantita)
+	as prezzo from DettaglioOrdine d inner join Prodotto p on p.Id = d.IdProdotto where IdOrdine = @id group by IdOrdine
+    
 	END
 GO

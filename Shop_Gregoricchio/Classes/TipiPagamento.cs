@@ -41,7 +41,7 @@ namespace Shop_Gregoricchio.Classes
 
         public override string ToString()
         {
-            return "Pagamento scelto : " + _denominazione + ".";
+            return "Pagamento scelto : " + _denominazione + ", Attivo: " + _attivo;
         }
 
         public override bool Equals(object obj)
