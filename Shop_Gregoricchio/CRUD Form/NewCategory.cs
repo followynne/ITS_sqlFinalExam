@@ -20,6 +20,10 @@ namespace Shop_Gregoricchio.CRUD_Form
         {
             InitializeComponent();
             c = new CrudComp();
+            cbxIva.Items.Add("4");
+            cbxIva.Items.Add("10");
+            cbxIva.Items.Add("22");
+            cbxIva.SelectedIndex = 2;
         }
 
         private void btnSend_Click(object sender, EventArgs e)
@@ -31,11 +35,14 @@ namespace Shop_Gregoricchio.CRUD_Form
                 MessageBox.Show("Errore, nome non inserito.");
                 return;
             }
-            Categoria cat = new Categoria(1, name, description);
+            Categoria cat = new Categoria(1, name, description, int.Parse(cbxIva.SelectedItem.ToString()));
             int result = c.NewCategoria(cat);
             if (result!=0)
             {
                 MessageBox.Show("Nuova categoria inserita!");
+                txtNome.Text = "";
+                txtDescrizione.Text = "";
+                cbxIva.SelectedIndex = 2;
             } else
             {
                 MessageBox.Show("Errore, dato non inserito.");

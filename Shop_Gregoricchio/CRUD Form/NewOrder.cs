@@ -80,12 +80,22 @@ namespace Shop_Gregoricchio.CRUD_Form
                 MessageBox.Show("Errore, non hai inserito prodotti.");
                 return;
             }
+            if (cbxCliente.SelectedItem==null || cbxPagamento.SelectedItem == null)
+            {
+                MessageBox.Show("Dati mancanti.");
+                return;
+            }
             Ordine o = new Ordine(1, "", (Cliente)cbxCliente.SelectedItem, dtpDate.Value,
                 (TipiPagamento)cbxPagamento.SelectedItem, _listaP);
             int res = c.NewOrdine(o);
             if (res!=0)
             {
                 MessageBox.Show("Ordine aggiunto!");
+                cbxCliente.SelectedIndex = 0;
+                dtpDate.Value = DateTime.Now;
+                cbxPagamento.SelectedIndex = 0;
+                _listaP = new Dictionary<Prodotto, int>();
+                txtShow.Text = "";
             }
             else
             {

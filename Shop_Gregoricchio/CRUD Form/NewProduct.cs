@@ -35,6 +35,7 @@ namespace Shop_Gregoricchio.CRUD_Form
                 cbxCategoria.SelectedIndex = 0;
                 cbxCategoria.DropDownWidth = maxWidth;
             }
+            txtSconto.Text = "0";
         }
 
         private void btnSend_Click(object sender, EventArgs e)
@@ -54,6 +55,12 @@ namespace Shop_Gregoricchio.CRUD_Form
             if (res != 0)
             {
                 MessageBox.Show("Prodotto aggiunto!");
+                txtNome.Text = "";
+                txtDescrizione.Text = "";
+                cbxCategoria.SelectedIndex = 0;
+                txtPrezzo.Text = "";
+                txtSconto.Text = "";
+                txtGiacenza.Text = "";
             }
             else
             {

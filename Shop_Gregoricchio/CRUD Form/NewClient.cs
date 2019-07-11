@@ -48,6 +48,20 @@ namespace Shop_Gregoricchio.CRUD_Form
             if (res!=0)
             {
                 MessageBox.Show("Cliente aggiunto!");
+                txtPIva.Text = "";
+                txtCF.Text = "";
+                txtRSoc.Text = "";
+                txtNome.Text = "";
+                txtCognome.Text = "";
+                txtVia.Text = "";
+                txtCity.Text = "";
+                txtCap.Text = "";
+                txtPV.Text = "";
+                txtTel.Text = "";
+                txtFax.Text = "";
+                txtCell.Text = "";
+                txtMail.Text = "";
+                txtSito.Text = "";
             }
             else
             {

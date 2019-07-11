@@ -87,8 +87,8 @@ BEGIN
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
 	
-	select IdOrdine, SUM((p.PrezzoNoIva+(p.PrezzoNoIva*22/100) - (p.PrezzoNoIva*d.ScontoApplicato/100))*d.Quantita) as prezzo 
-	from DettaglioOrdine d inner join Prodotto p on p.Id = d.IdProdotto group by IdOrdine
+	select IdOrdine, SUM((p.PrezzoNoIva+(p.PrezzoNoIva*c.Iva/100) - ((p.PrezzoNoIva+(p.PrezzoNoIva*c.Iva/100))*d.ScontoApplicato/100))*d.Quantita)
+	as prezzo from DettaglioOrdine d inner join Prodotto p on p.Id = d.IdProdotto inner join Categoria c on c.Id = p.IdCategoria group by IdOrdine
     
 	END
 
@@ -149,7 +149,8 @@ BEGIN
 	SET NOCOUNT ON;
 	
 	select IdOrdine, SUM((p.PrezzoNoIva+(p.PrezzoNoIva*22/100) - ((p.PrezzoNoIva+(p.PrezzoNoIva*22/100))*d.ScontoApplicato/100))*d.Quantita)
-	as prezzo from DettaglioOrdine d inner join Prodotto p on p.Id = d.IdProdotto where IdOrdine = @id group by IdOrdine
-    
+	as prezzo from DettaglioOrdine d inner join Prodotto p on p.Id = d.IdProdotto inner join Categoria c on c.Id = p.IdCategoria
+	where IdOrdine = @id group by IdOrdine
+
 	END
 GO

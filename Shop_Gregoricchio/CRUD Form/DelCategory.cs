@@ -21,6 +21,10 @@ namespace Shop_Gregoricchio.CRUD_Form
         {
             InitializeComponent();
             c = new CrudComp();
+            cbxIva.Items.Add("4");
+            cbxIva.Items.Add("10");
+            cbxIva.Items.Add("22");
+            cbxIva.SelectedIndex = 2;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -39,6 +43,7 @@ namespace Shop_Gregoricchio.CRUD_Form
             {
                 txtNome.Text = cat.Denominazione;
                 txtDescrizione.Text = cat.Descrizione;
+                cbxIva.Text = ""+cat.Iva;
                 btnSend.Enabled = true;
             }
         }
@@ -52,7 +57,7 @@ namespace Shop_Gregoricchio.CRUD_Form
                 MessageBox.Show("Errore, id modificato rispetto alla search, non valido.");
                 return;
             };
-            Categoria cat = new Categoria(id, name, description);
+            Categoria cat = new Categoria(id, name, description, int.Parse(cbxIva.SelectedItem.ToString()));
 
             int result = c.DelCategoria(cat);
             if (result!=0)

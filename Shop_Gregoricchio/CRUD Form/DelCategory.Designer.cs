@@ -37,13 +37,15 @@
             this.Descrizione = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbxIva = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnSearch
             // 
             this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSearch.Location = new System.Drawing.Point(370, 89);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(93, 29);
             this.btnSearch.TabIndex = 41;
@@ -55,7 +57,7 @@
             // 
             this.txtId.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtId.Location = new System.Drawing.Point(216, 97);
-            this.txtId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(110, 20);
             this.txtId.TabIndex = 40;
@@ -87,10 +89,10 @@
             // 
             this.btnSend.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSend.Enabled = false;
-            this.btnSend.Location = new System.Drawing.Point(232, 287);
-            this.btnSend.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSend.Location = new System.Drawing.Point(227, 303);
+            this.btnSend.Margin = new System.Windows.Forms.Padding(2);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(93, 29);
+            this.btnSend.Size = new System.Drawing.Size(120, 44);
             this.btnSend.TabIndex = 37;
             this.btnSend.Text = "DELETE";
             this.btnSend.UseVisualStyleBackColor = true;
@@ -101,7 +103,7 @@
             this.txtDescrizione.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtDescrizione.Enabled = false;
             this.txtDescrizione.Location = new System.Drawing.Point(216, 218);
-            this.txtDescrizione.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescrizione.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescrizione.Name = "txtDescrizione";
             this.txtDescrizione.Size = new System.Drawing.Size(222, 20);
             this.txtDescrizione.TabIndex = 28;
@@ -122,7 +124,7 @@
             this.txtNome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNome.Enabled = false;
             this.txtNome.Location = new System.Drawing.Point(216, 177);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(2);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(222, 20);
             this.txtNome.TabIndex = 26;
@@ -138,11 +140,34 @@
             this.label2.TabIndex = 25;
             this.label2.Text = "Nome";
             // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(123, 256);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(22, 13);
+            this.label3.TabIndex = 42;
+            this.label3.Text = "Iva";
+            // 
+            // cbxIva
+            // 
+            this.cbxIva.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxIva.Enabled = false;
+            this.cbxIva.FormattingEnabled = true;
+            this.cbxIva.Location = new System.Drawing.Point(216, 253);
+            this.cbxIva.Name = "cbxIva";
+            this.cbxIva.Size = new System.Drawing.Size(222, 21);
+            this.cbxIva.TabIndex = 46;
+            // 
             // DelCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(602, 406);
+            this.Controls.Add(this.cbxIva);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
@@ -152,7 +177,7 @@
             this.Controls.Add(this.Descrizione);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DelCategory";
             this.Text = "DelCategory";
             this.ResumeLayout(false);
@@ -171,5 +196,7 @@
         private System.Windows.Forms.Label Descrizione;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbxIva;
     }
 }

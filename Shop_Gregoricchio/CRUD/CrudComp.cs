@@ -62,7 +62,7 @@ namespace Shop_Gregoricchio.CRUD
                 using (SqlConnection connection = new SqlConnection(db.ConnectionString))
                 {
                     connection.Open();
-                    string sql = "insert into Categoria values (@denominazione,@descrizione)";
+                    string sql = "insert into Categoria values (@denominazione,@descrizione,@iva)";
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
                         command.Parameters.Add("@denominazione", SqlDbType.VarChar).Value = p.Denominazione;
@@ -74,6 +74,7 @@ namespace Shop_Gregoricchio.CRUD
                         {
                             command.Parameters.Add("@descrizione", SqlDbType.VarChar).Value = p.Descrizione;
                         }
+                        command.Parameters.Add("@iva", SqlDbType.Int).Value = p.Iva;
                         x = command.ExecuteNonQuery();
                     }
                 }
@@ -254,7 +255,7 @@ namespace Shop_Gregoricchio.CRUD
                 using (SqlConnection connection = new SqlConnection(db.ConnectionString))
                 {
                     connection.Open();
-                    string sql = "update Categoria set denominazione = @denominazione, descrizione = @descrizione where id = @id";
+                    string sql = "update Categoria set denominazione = @denominazione, descrizione = @descrizione, Iva = @iva where id = @id";
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
                         command.Parameters.Add("@id", SqlDbType.Int).Value = p.Id;
@@ -267,6 +268,7 @@ namespace Shop_Gregoricchio.CRUD
                         {
                             command.Parameters.Add("@descrizione", SqlDbType.VarChar).Value = p.Descrizione;
                         }
+                        command.Parameters.Add("@iva", SqlDbType.Int).Value = p.Iva;
                         x = command.ExecuteNonQuery();
                     }
                 }
@@ -506,17 +508,17 @@ namespace Shop_Gregoricchio.CRUD
                 using (SqlConnection connection = new SqlConnection(db.ConnectionString))
                 {
                     connection.Open();
-                    string sql = "delete from Ordine where Id = @id";
-                    using (SqlCommand command = new SqlCommand(sql, connection))
-                    {
-                        command.Parameters.Add("@id", SqlDbType.Int).Value = p.Id;
-                        x = command.ExecuteNonQuery();
-                    }
                     string sql2 = "delete from DettaglioOrdine where IdOrdine = @id";
                     using (SqlCommand command2 = new SqlCommand(sql2, connection))
                     {
                         command2.Parameters.Add("@id", SqlDbType.Int).Value = p.Id;
                         command2.ExecuteNonQuery();
+                    }
+                    string sql = "delete from Ordine where Id = @id";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.Add("@id", SqlDbType.Int).Value = p.Id;
+                        x = command.ExecuteNonQuery();
                     }
                 }
             }
@@ -550,7 +552,7 @@ namespace Shop_Gregoricchio.CRUD
                                 }
                                 else
                                 {
-                                    descrip = reader.GetTextReader(2).ToString();
+                                    descrip = reader.GetString(2);
                                 }
                                 p = new Prodotto(reader.GetInt32(0), reader.GetString(1), descrip, SearchCategoria(reader.GetInt32(3)), float.Parse(reader["PrezzoNoIva"].ToString()),
                                     float.Parse(reader["Sconto"].ToString()), reader.GetInt32(6));
@@ -590,7 +592,7 @@ namespace Shop_Gregoricchio.CRUD
                                 {
                                     descrip = reader.GetString(2);
                                 }
-                                cat = new Categoria(reader.GetInt32(0), reader.GetString(1), descrip);
+                                cat = new Categoria(reader.GetInt32(0), reader.GetString(1), descrip, reader.GetInt32(3));
                             }
                         }
                     }
@@ -938,7 +940,8 @@ namespace Shop_Gregoricchio.CRUD
                                 l.Add(new Categoria(
                                     reader.GetInt32(0),
                                     reader.GetString(1),
-                                    descrip
+                                    descrip, 
+                                    reader.GetInt32(3)
                                 ));
                             }
                         }

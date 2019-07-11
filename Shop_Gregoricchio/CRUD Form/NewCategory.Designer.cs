@@ -34,6 +34,8 @@
             this.Descrizione = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbxIva = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label7
@@ -54,7 +56,7 @@
             this.btnSend.Location = new System.Drawing.Point(236, 252);
             this.btnSend.Margin = new System.Windows.Forms.Padding(2);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(93, 29);
+            this.btnSend.Size = new System.Drawing.Size(119, 32);
             this.btnSend.TabIndex = 37;
             this.btnSend.Text = "CREATE";
             this.btnSend.UseVisualStyleBackColor = true;
@@ -100,11 +102,33 @@
             this.label2.TabIndex = 25;
             this.label2.Text = "Nome";
             // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(124, 208);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(22, 13);
+            this.label3.TabIndex = 44;
+            this.label3.Text = "Iva";
+            // 
+            // cbxIva
+            // 
+            this.cbxIva.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxIva.FormattingEnabled = true;
+            this.cbxIva.Location = new System.Drawing.Point(217, 200);
+            this.cbxIva.Name = "cbxIva";
+            this.cbxIva.Size = new System.Drawing.Size(222, 21);
+            this.cbxIva.TabIndex = 46;
+            // 
             // NewCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(585, 381);
+            this.Controls.Add(this.cbxIva);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.txtDescrizione);
@@ -126,5 +150,7 @@
         private System.Windows.Forms.Label Descrizione;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbxIva;
     }
 }

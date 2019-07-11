@@ -73,10 +73,12 @@
             // 
             this.txtDescrizione.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtDescrizione.Enabled = false;
-            this.txtDescrizione.Location = new System.Drawing.Point(222, 202);
+            this.txtDescrizione.Location = new System.Drawing.Point(222, 184);
             this.txtDescrizione.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDescrizione.Multiline = true;
             this.txtDescrizione.Name = "txtDescrizione";
-            this.txtDescrizione.Size = new System.Drawing.Size(222, 20);
+            this.txtDescrizione.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtDescrizione.Size = new System.Drawing.Size(222, 55);
             this.txtDescrizione.TabIndex = 11;
             // 
             // Descrizione
@@ -94,7 +96,7 @@
             // 
             this.txtPrezzo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPrezzo.Enabled = false;
-            this.txtPrezzo.Location = new System.Drawing.Point(222, 286);
+            this.txtPrezzo.Location = new System.Drawing.Point(222, 296);
             this.txtPrezzo.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrezzo.Name = "txtPrezzo";
             this.txtPrezzo.Size = new System.Drawing.Size(222, 20);
@@ -104,7 +106,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(128, 285);
+            this.label3.Location = new System.Drawing.Point(128, 295);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 13);
@@ -115,7 +117,7 @@
             // 
             this.txtSconto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSconto.Enabled = false;
-            this.txtSconto.Location = new System.Drawing.Point(222, 328);
+            this.txtSconto.Location = new System.Drawing.Point(222, 338);
             this.txtSconto.Margin = new System.Windows.Forms.Padding(2);
             this.txtSconto.Name = "txtSconto";
             this.txtSconto.Size = new System.Drawing.Size(222, 20);
@@ -125,7 +127,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(128, 326);
+            this.label4.Location = new System.Drawing.Point(128, 336);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 13);
@@ -136,7 +138,7 @@
             // 
             this.txtGiacenza.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtGiacenza.Enabled = false;
-            this.txtGiacenza.Location = new System.Drawing.Point(222, 369);
+            this.txtGiacenza.Location = new System.Drawing.Point(222, 379);
             this.txtGiacenza.Margin = new System.Windows.Forms.Padding(2);
             this.txtGiacenza.Name = "txtGiacenza";
             this.txtGiacenza.Size = new System.Drawing.Size(222, 20);
@@ -146,7 +148,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(128, 367);
+            this.label5.Location = new System.Drawing.Point(128, 377);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
@@ -157,7 +159,7 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(128, 243);
+            this.label6.Location = new System.Drawing.Point(128, 253);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 13);
@@ -169,7 +171,7 @@
             this.cbxCategoria.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxCategoria.Enabled = false;
             this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Location = new System.Drawing.Point(222, 243);
+            this.cbxCategoria.Location = new System.Drawing.Point(222, 253);
             this.cbxCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.cbxCategoria.Name = "cbxCategoria";
             this.cbxCategoria.Size = new System.Drawing.Size(222, 21);
@@ -179,7 +181,7 @@
             // 
             this.btnSend.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSend.Enabled = false;
-            this.btnSend.Location = new System.Drawing.Point(231, 406);
+            this.btnSend.Location = new System.Drawing.Point(231, 416);
             this.btnSend.Margin = new System.Windows.Forms.Padding(2);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(118, 39);

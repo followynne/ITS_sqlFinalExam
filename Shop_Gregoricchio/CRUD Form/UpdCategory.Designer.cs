@@ -38,13 +38,15 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbxIva = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnSearch
             // 
             this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSearch.Location = new System.Drawing.Point(398, 92);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(93, 29);
             this.btnSearch.TabIndex = 41;
@@ -56,7 +58,7 @@
             // 
             this.txtId.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtId.Location = new System.Drawing.Point(225, 117);
-            this.txtId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(110, 20);
             this.txtId.TabIndex = 40;
@@ -88,10 +90,10 @@
             // 
             this.btnSend.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSend.Enabled = false;
-            this.btnSend.Location = new System.Drawing.Point(241, 311);
-            this.btnSend.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSend.Location = new System.Drawing.Point(225, 322);
+            this.btnSend.Margin = new System.Windows.Forms.Padding(2);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(93, 29);
+            this.btnSend.Size = new System.Drawing.Size(110, 35);
             this.btnSend.TabIndex = 37;
             this.btnSend.Text = "UPDATE";
             this.btnSend.UseVisualStyleBackColor = true;
@@ -102,7 +104,8 @@
             this.txtDescrizione.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtDescrizione.Enabled = false;
             this.txtDescrizione.Location = new System.Drawing.Point(225, 241);
-            this.txtDescrizione.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescrizione.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDescrizione.Multiline = true;
             this.txtDescrizione.Name = "txtDescrizione";
             this.txtDescrizione.Size = new System.Drawing.Size(222, 20);
             this.txtDescrizione.TabIndex = 28;
@@ -123,7 +126,7 @@
             this.txtNome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNome.Enabled = false;
             this.txtNome.Location = new System.Drawing.Point(225, 200);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(2);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(222, 20);
             this.txtNome.TabIndex = 26;
@@ -143,7 +146,7 @@
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button1.Location = new System.Drawing.Point(398, 136);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 29);
             this.button1.TabIndex = 42;
@@ -151,11 +154,34 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(132, 280);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(22, 13);
+            this.label3.TabIndex = 44;
+            this.label3.Text = "Iva";
+            // 
+            // cbxIva
+            // 
+            this.cbxIva.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxIva.Enabled = false;
+            this.cbxIva.FormattingEnabled = true;
+            this.cbxIva.Location = new System.Drawing.Point(225, 280);
+            this.cbxIva.Name = "cbxIva";
+            this.cbxIva.Size = new System.Drawing.Size(222, 21);
+            this.cbxIva.TabIndex = 45;
+            // 
             // UpdCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(635, 451);
+            this.Controls.Add(this.cbxIva);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtId);
@@ -166,7 +192,7 @@
             this.Controls.Add(this.Descrizione);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UpdCategory";
             this.Text = "UpdCategory";
             this.ResumeLayout(false);
@@ -186,5 +212,7 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbxIva;
     }
 }

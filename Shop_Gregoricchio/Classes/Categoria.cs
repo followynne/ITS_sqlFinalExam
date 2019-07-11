@@ -8,11 +8,12 @@ namespace Shop_Gregoricchio.Classes
 {
     class Categoria
     {
-        public Categoria(int id, string denom, string descrip)
+        public Categoria(int id, string denom, string descrip, int iva)
         {
             _id = id;
             _denominazione = denom;
             _descrizione = descrip;
+            _iva = iva;
         }
 
         private int _id;
@@ -37,11 +38,17 @@ namespace Shop_Gregoricchio.Classes
             set { _descrizione = value; }
         }
 
+        private int _iva;
 
+        public int Iva
+        {
+            get { return _iva; }
+            set { _iva = value; }
+        }
 
         public override string ToString()
         {
-            return "Categoria: " + _id + ", " + _denominazione + ", " + _descrizione + "\r\n";
+            return "Categoria: " + _id + ", " + _denominazione + ", " + _descrizione + ", Iva al " + _iva + "%\r\n";
         }
 
         public override bool Equals(object obj)

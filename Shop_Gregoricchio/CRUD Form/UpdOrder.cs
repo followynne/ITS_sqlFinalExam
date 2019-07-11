@@ -111,11 +111,11 @@ namespace Shop_Gregoricchio.CRUD_Form
             txtId.Enabled = true;
             txtId.Text = "";
             txtCodOrdine.Text = "";
-            cbxCliente.SelectedItem = "";
+            cbxCliente.SelectedIndex = 0;
             cbxCliente.Enabled = false;
             dtpDate.Value = DateTime.Now;
             dtpDate.Enabled = false;
-            cbxPagamento.SelectedItem = "";
+            cbxPagamento.SelectedItem = 0;
             cbxPagamento.Enabled = false;
             button1.Enabled = false;
             _listaP = null;
