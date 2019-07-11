@@ -1,3 +1,5 @@
+--------- SP per avere il numero totale di Ordini Completati ------
+
 use Shop_Gregoricchio
 GO
 
@@ -20,7 +22,10 @@ BEGIN
 
 	END
 GO
-----------------------------------
+
+-------------------------------------------------
+--------- SP per ottenere il Prodotto più Venduto in DB
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -43,7 +48,9 @@ BEGIN
 	END
 GO
 
-------------------------
+-------------------------------------------
+--------- SP per ottenere i Prodotti attualmente in scorta (giacenza <= 10)
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -59,12 +66,14 @@ BEGIN
 
     -- Insert statements for procedure here
 
-	SELECT * FROM Prodotto where Giacenza <= 10
+	SELECT * FROM Prodotto where Giacenza < 10
 
 	END
 GO
 
-------------------
+--------------------------------------------
+--------- SP per ottenere il Prezzo Complessivo, con Iva e Sconto (applicato a ogni prodotto), di ogni ordine eseguito
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -82,12 +91,13 @@ BEGIN
 	from DettaglioOrdine d inner join Prodotto p on p.Id = d.IdProdotto group by IdOrdine
     
 	END
-	
-	/*select IdOrdine, SUM((p.PrezzoNoIva+(p.PrezzoNoIva*22/100) - (p.PrezzoNoIva+(p.PrezzoNoIva*22/100))*d.ScontoApplicato/100))*d.Quantita) as prezzo 
-	from DettaglioOrdine d inner join Prodotto p on p.Id = d.IdProdotto group by IdOrdine*/
+
 GO
 
----------------------
+
+----------------------------------------------------
+--------- SP per ottenere i 10 clienti con il maggior Fatturato (calcolato come il totale speso con tutti gli ordini eseguiti)
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -118,7 +128,9 @@ BEGIN
 	END
 GO
 
-------------------------
+------------------------------------------------
+--------- SP per ottenere il Prezzo Complessivo, con Iva e Sconto (applicato per ogni prodotto), di un singolo ordine
+
 USE [Shop_Gregoricchio]
 GO
 

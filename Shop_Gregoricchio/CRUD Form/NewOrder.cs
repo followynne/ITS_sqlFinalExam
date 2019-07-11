@@ -32,18 +32,27 @@ namespace Shop_Gregoricchio.CRUD_Form
                     maxWidth = temp;
                 }
             }
-            cbxCliente.DropDownWidth = maxWidth;
             if (cbxCliente.Items.Count != 0)
             {
                 cbxCliente.SelectedIndex = 0;
+                cbxCliente.DropDownWidth = maxWidth;
+
             }
+            temp = 0; maxWidth = 0;
             foreach (TipiPagamento t in c.SearchAllTipiPagamento())
             {
                 cbxPagamento.Items.Add(t);
+
+                temp = TextRenderer.MeasureText(t.ToString(), cbxPagamento.Font).Width;
+                if (temp > maxWidth)
+                {
+                    maxWidth = temp;
+                }
             }
             if (cbxPagamento.Items.Count != 0)
             {
                 cbxPagamento.SelectedIndex = 0;
+                cbxPagamento.DropDownWidth = maxWidth;
             }
 
 

@@ -1,0 +1,24 @@
+Nel caso si verifichi un errore legato al dbo, che impedisce l'apertura del
+diagramma database, dopo aver ripristinato il DB tramite .bak, eseguire i seguenti passaggi:
+
+- Al ripristino del db, controllare per il database sotto Sicurezza->Utenti che in dbo sia
+presente, come Account Access Name, l'account generale del dbowner (NB ossia che il campo non sia vuoto)
+
+Se Account Access Name è vuoto, eseguire tale comando inserendo il proprio
+account d'accesso al posto di placeholder:
+
+ALTER AUTHORIZATION
+ON DATABASE::Shop_Gregoricchio
+to [placeholder];
+
+Se, dopo questa azione, l'accesso al DB tramite l'utente ITS_IBS non è
+consentito, controllare che anche per questo utente sia presente nel db il
+campo Account Name Access.
+Se il tipo utente di ITS_IBS è "Utente SQL senza Account di Accesso", bisogna
+eliminare l'utente e ricrearlo, indicando come Nome account di accesso
+ITS_IBS e controllando che nel server l'utente relazionato abbia accesso
+da dbowner al Database indicato.
+
+***********************
+
+L'alternativa, più semplice, è creare un nuovo DATABASE Shop_Gregoricchio, aprire il file .sql con lo script di recupero del database e successivamente ricreare il diagramma selezionando tutte le tabelle (il diagramma è già completo).

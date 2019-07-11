@@ -30,10 +30,10 @@ namespace Shop_Gregoricchio.CRUD_Form
                     maxWidth = temp;
                 }
             }
-            cbxCategoria.DropDownWidth = maxWidth;
             if (cbxCategoria.Items.Count != 0)
             {
                 cbxCategoria.SelectedIndex = 0;
+                cbxCategoria.DropDownWidth = maxWidth;
             }
         }
 

@@ -38,10 +38,10 @@ namespace Shop_Gregoricchio.CRUD_Form
                     maxWidth = temp;
                 }
             }
-            cbxNewProd.DropDownWidth = maxWidth;
             if (cbxNewProd.Items.Count != 0)
             {
                 cbxNewProd.SelectedIndex = 0;
+                cbxNewProd.DropDownWidth = maxWidth;
             }
             FillCheckBox(cbxModProd, dReceived);
 
@@ -118,13 +118,21 @@ namespace Shop_Gregoricchio.CRUD_Form
         private void FillCheckBox(ComboBox c, Dictionary<Prodotto, int> d)
         {
             c.Items.Clear();
+            int temp = 0, maxWidth = 0;
             foreach (KeyValuePair<Prodotto, int> k in d)
             {
                 c.Items.Add(k.Key);
+
+                temp = TextRenderer.MeasureText(k.Key.ToString(), c.Font).Width;
+                if (temp > maxWidth)
+                {
+                    maxWidth = temp;
+                }
             }
             if (d.Count != 0)
             {
                 c.SelectedIndex = 0;
+                c.DropDownWidth = maxWidth;
             }
         }
 
